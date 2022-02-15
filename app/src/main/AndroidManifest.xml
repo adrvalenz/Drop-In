@@ -10,14 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DropIn">
         <activity
-            android:name=".MainHome"
-            android:exported="true">
+            android:name=".SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".SetSecretQuestion"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotLoginDetails"
+            android:exported="false" />
+        <activity
+            android:name=".LogIn"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainHome"
+            android:exported="false"/>
     </application>
 
 </manifest>
