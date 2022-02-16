@@ -12,3 +12,5 @@ public class LogIn extends AppCompatActivity {
         setContentView(R.layout.activity_log_in);
     }
 }
+
+//This is an edit
