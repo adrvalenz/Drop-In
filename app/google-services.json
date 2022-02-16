@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "956050734470",
+    "project_id": "drop-in-49efc",
+    "storage_bucket": "drop-in-49efc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956050734470:android:733807e4959644006b0007",
+        "android_client_info": {
+          "package_name": "com.swe4550.dropin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956050734470-vq1gfit9jgaoold1u1jfh293uhihvkis.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwIzugVwRrcMPP_Ar_5mQLh8NDELj6a88"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "956050734470-vq1gfit9jgaoold1u1jfh293uhihvkis.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
