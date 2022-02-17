@@ -43,6 +43,4 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     //Dependency for the Firebase Authentication library
     implementation 'com.google.firebase:firebase-auth'
-    //java.simple
-    implementation 'com.googlecode.json-simple'
 }
