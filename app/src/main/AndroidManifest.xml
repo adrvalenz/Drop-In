@@ -10,11 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DropIn">
         <activity
+            android:name=".SetUpProfile"
+            android:exported="false" />
+        <activity
             android:name=".SignUp"
             android:exported="false" />
         <activity
             android:name=".LogIn"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +26,7 @@
         </activity>
         <activity
             android:name=".MainHome"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>
