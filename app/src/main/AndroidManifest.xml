@@ -13,12 +13,6 @@
             android:name=".SignUp"
             android:exported="false" />
         <activity
-            android:name=".SetSecretQuestion"
-            android:exported="false" />
-        <activity
-            android:name=".ForgotLoginDetails"
-            android:exported="false" />
-        <activity
             android:name=".LogIn"
             android:exported="true" >
             <intent-filter>
