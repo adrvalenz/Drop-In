@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Drop In</string>
+    <string name="logo_placeholder">logo_placeholder</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="careate_account">Careate Account</string>
 </resources>
