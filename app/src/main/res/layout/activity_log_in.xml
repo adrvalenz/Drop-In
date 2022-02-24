@@ -15,12 +15,16 @@
         android:layout_height="65dp"
         android:layout_marginStart="88dp"
         android:layout_marginTop="332dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="28dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColorHint="#311B92"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,12 +34,16 @@
         android:layout_height="65dp"
         android:layout_marginStart="88dp"
         android:layout_marginTop="264dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="3dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/username"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:textColorHint="#311B92"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
