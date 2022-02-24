@@ -8,39 +8,33 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="274dp"
+        android:layout_height="56dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Username"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="312dp" />
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="323dp" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="273dp"
+        android:layout_height="53dp"
         android:ems="10"
         android:inputType="textPassword"
         android:text="Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="384dp" />
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="397dp" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="273dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="Email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="227dp" />
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="245dp" />
 
     <Button
         android:id="@+id/button4"
@@ -53,13 +47,22 @@
 
     <CheckedTextView
         android:id="@+id/checkedTextView"
-        android:layout_width="208dp"
-        android:layout_height="40dp"
+        android:layout_width="268dp"
+        android:layout_height="57dp"
         android:text="Password Check"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="473dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="128dp"
+        android:layout_height="169dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintVertical_bias="0.074"
+        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
