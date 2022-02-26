@@ -82,7 +82,7 @@
         android:layout_marginTop="22dp"
         android:layout_marginEnd="134dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/sign_up"
+        android:text="@string/log_in"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
