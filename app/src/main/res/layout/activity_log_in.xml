@@ -101,13 +101,12 @@
         android:layout_marginStart="31dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="31dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginBottom="17dp"
         android:contentDescription="@string/drop_in_logo"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/drop_in_logo"
         tools:ignore="ImageContrastCheck" />
 
