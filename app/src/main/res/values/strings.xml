@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Drop In</string>
-    <string name="logo_placeholder">logo_placeholder</string>
+    <string name="drop_in_logo">drop_in_logo</string>
     <string name="username">username</string>
     <string name="password">password</string>
-    <string name="careate_account">Careate Account</string>
+    <string name="create_account">Create Account</string>
     <string name="forgot_password">Forgot Password</string>
     <string name="email">email</string>
     <string name="sign_in">Sign In</string>
