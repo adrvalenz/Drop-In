@@ -38,7 +38,7 @@
         android:layout_marginBottom="3dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/username"
+        android:hint="@string/username_email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:textColorHint="#311B92"

@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">Drop In</string>
     <string name="drop_in_logo">drop_in_logo</string>
-    <string name="username">username</string>
-    <string name="password">password</string>
+    <string name="logo_placeholder">logo_placeholder</string>
+    <string name="username">Username</string>
+    <string name="username_email">Username/Email</string>
+    <string name="password">Password</string>
     <string name="create_account">Create Account</string>
     <string name="forgot_password">Forgot Password</string>
-    <string name="email">email</string>
+    <string name="email">Email</string>
     <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
     <string name="go_back">Go Back</string>
 </resources>
