@@ -5,24 +5,18 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class User {
 
-    String userID;
-    String userName;
-    String userEmail;
-    String userPassword;
+    private String userName;
+    private String userEmail;
+    private String userPassword;
 
     public User() {
 
     }
 
-    public User(String userID, String userName, String userEmail, String userPassword) {
-        this.userID = userID;
+    public User( String userName, String userEmail, String userPassword) {
         this.userName = userName;
         this.userEmail = userEmail;
         this.userPassword = userPassword;
-    }
-
-    public String getUserID() {
-        return userID;
     }
 
     public String getUserName() {
@@ -37,14 +31,17 @@ public class User {
         return userPassword;
     }
 
-    static void addNewUser(String name, String email, String password) {
+    static boolean addNewUser(String name, String email, String password) {
         DatabaseReference mDatabase;
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        String ID = mDatabase.push().getKey();
+        if(!name.isEmpty() || !email.isEmpty() || !password.isEmpty()) {
+            User user = new User(name, email, password);
 
-        User user = new User(ID, name, email, password);
-
-        mDatabase.child("Users").child(ID).setValue(user);
+            mDatabase.child("Users").child(name).setValue(user);
+            return true;
+        }
+        else
+            return false;
     }
 }
