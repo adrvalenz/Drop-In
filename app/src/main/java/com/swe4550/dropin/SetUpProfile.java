@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class SetSecretQuestion extends AppCompatActivity {
+public class SetUpProfile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_set_secret_question);
+        setContentView(R.layout.activity_set_up_profile);
     }
 }

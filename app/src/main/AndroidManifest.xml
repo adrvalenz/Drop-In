@@ -10,26 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DropIn">
         <activity
+            android:name=".SetUpProfile"
+            android:exported="false" />
+        <activity
             android:name=".SignUp"
             android:exported="false" />
         <activity
-            android:name=".SetSecretQuestion"
-            android:exported="false" />
-        <activity
-            android:name=".ForgotLoginDetails"
-            android:exported="false" />
-        <activity
             android:name=".LogIn"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        </activity><intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
         <activity
             android:name=".MainHome"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>
