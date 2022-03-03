@@ -4,11 +4,15 @@
     <string name="logo_placeholder">logo_placeholder</string>
     <string name="username">Username</string>
     <string name="username_email">Username/Email</string>
-    <string name="password">Password</string>
+    <string name="user_password">Password</string>
     <string name="create_account">Create Account</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="email">Email</string>
     <string name="sign_in">Sign In</string>
     <string name="log_in">Log In</string>
     <string name="go_back">Go Back</string>
+    <string name="log_in_text">Log-In</string>
+    <string name="drop_in_text">Drop In</string>
+    <string name="signup_btn">Sign-Up</string>
+    <string name="login_btn">Log-In</string>
 </resources>
