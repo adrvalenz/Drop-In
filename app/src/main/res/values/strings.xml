@@ -18,6 +18,6 @@
     <string name="user_new_password">Password</string>
     <string name="user_new_password_confirm">Confirm Password</string>
     <string name="signup_new_btn">Sign-Up</string>
-    <string name="back_to_btn">Go Back</string>
+    <string name="back_to_login_btn">Go Back</string>
 
 </resources>
