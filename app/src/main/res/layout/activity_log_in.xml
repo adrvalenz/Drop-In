@@ -68,7 +68,7 @@
         android:background="@color/purple_500"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="@string/user_email_name"
+        android:text="@string/user_email"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
