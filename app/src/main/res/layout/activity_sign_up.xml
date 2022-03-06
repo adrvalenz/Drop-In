@@ -160,15 +160,16 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/back_to_btn"
+        android:id="@+id/back_to_login_btn"
         android:layout_width="101dp"
         android:layout_height="48dp"
         android:layout_marginStart="155dp"
         android:layout_marginEnd="155dp"
-        android:text="@string/back_to_btn"
+        android:text="@string/back_to_login_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_new_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_new_btn"
+        android:background="@color/purple_500" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
