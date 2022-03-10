@@ -6,7 +6,7 @@
 
     //log-in page
     <string name="log_in_text">Log-In</string>
-    <string name="user_email">Email</string>
+    <string name="user_email">Username/Email</string>
     <string name="user_password">Password</string>
     <string name="login_btn">Log-In</string>
     <string name="signup_btn">Sign-Up</string>
