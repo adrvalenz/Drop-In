@@ -1,17 +1,17 @@
 <resources>
 
-    //logo
+    <!--logo-->
     <string name="app_name">Drop In</string>
     <string name="drop_in_logo">drop_in_logo</string>
 
-    //log-in page
+    <!--log-in page-->
     <string name="log_in_text">Log-In</string>
     <string name="user_email">Username/Email</string>
     <string name="user_password">Password</string>
     <string name="login_btn">Log-In</string>
     <string name="signup_btn">Sign-Up</string>
 
-    //sign-up page
+    <!--sign-up page-->
     <string name="sign_up_text">Sign-Up</string>
     <string name="user_new_name">Username</string>
     <string name="user_new_email">Email</string>
