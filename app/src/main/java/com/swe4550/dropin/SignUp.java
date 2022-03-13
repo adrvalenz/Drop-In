@@ -51,7 +51,7 @@ public class SignUp extends AppCompatActivity {
                                         //Display Error Message
                                     }
                                 });
-                                //Display Error Message
+
                             }
                         }
                     });
