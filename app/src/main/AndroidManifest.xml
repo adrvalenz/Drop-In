@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainHome"
+            android:name=".Discover"
             android:exported="false" />
     </application>
 

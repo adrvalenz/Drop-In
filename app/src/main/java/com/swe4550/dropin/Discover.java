@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainHome extends AppCompatActivity {
+public class Discover extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
