@@ -20,7 +20,7 @@ public class LogIn extends AppCompatActivity {
 
 
 
-    static void useLogIn(String email, String password){
+    static void userLogIn(String email, String password){
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
