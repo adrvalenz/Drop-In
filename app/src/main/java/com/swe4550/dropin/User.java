@@ -1,5 +1,13 @@
 package com.swe4550.dropin;
 
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -29,19 +37,5 @@ public class User {
 
     public String getUserPassword() {
         return userPassword;
-    }
-
-    static boolean addNewUser(String name, String email, String password) {
-        DatabaseReference mDatabase;
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-
-        if(!name.isEmpty() || !email.isEmpty() || !password.isEmpty()) {
-            User user = new User(name, email, password);
-
-            mDatabase.child("Users").child(name).setValue(user);
-            return true;
-        }
-        else
-            return false;
     }
 }

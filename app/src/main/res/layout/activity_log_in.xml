@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/drop_in_logo" />
 
     <EditText
-        android:id="@+id/user_email_name"
+        android:id="@+id/user_email"
         style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
         android:layout_width="221dp"
         android:layout_height="68dp"
@@ -65,14 +65,14 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="95dp"
         android:autofillHints=""
-        android:background="@color/purple_500"
+        android:background="@drawable/curved"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="@string/user_email"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,18 +87,18 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="95dp"
         android:autofillHints=""
-        android:background="@color/purple_500"
+        android:background="@drawable/curved"
         android:ems="10"
         android:inputType="textPassword"
         android:text="@string/user_password"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_email_name" />
+        app:layout_constraintTop_toBottomOf="@+id/user_email" />
 
     <Button
         android:id="@+id/login_btn"
@@ -107,6 +107,7 @@
         android:layout_marginStart="149dp"
         android:layout_marginTop="53dp"
         android:layout_marginEnd="149dp"
+        android:background="@drawable/curved"
         android:text="@string/login_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,6 +121,7 @@
         android:layout_marginStart="155dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="155dp"
+        android:background="@drawable/curved"
         android:text="@string/signup_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

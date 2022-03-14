@@ -43,5 +43,5 @@ dependencies {
     //Dependency for the Firebase SDK for Google Analytics
     implementation 'com.google.firebase:firebase-analytics'
     //Dependency for the Firebase Authentication library
-    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
 }
