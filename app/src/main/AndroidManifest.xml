@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.swe4550.dropin">
-    <!--This allows the app to connect to the internet.-->
+    <!-- This allows the app to connect to the internet. -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -12,6 +12,12 @@
         android:roundIcon="@mipmap/drop_in_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DropIn">
+        <activity
+            android:name=".PokeView"
+            android:exported="false" />
+        <activity
+            android:name=".ViewProfile"
+            android:exported="false" />
         <activity
             android:name=".SetUpProfile"
             android:exported="false" />
