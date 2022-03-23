@@ -47,10 +47,32 @@ public class LogIn extends AppCompatActivity {
                 }
                 else{
                         Toast.makeText(LogIn.this, "Incorrect Email or Password. Make sure credentials are correct.", Toast.LENGTH_LONG).show();
+                    }
                 }
             }
-        }
-    });
+        });
+
+        signupBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //if statement checks if the email field has been filled
+                if (userEmail.getText().toString().trim().length() > 0){
+                    /*if it does have valid amount input it will gather it all and
+                    put it in the text field of the sign up page*/
+                    Intent a_intent = new Intent(LogIn.this, SignUp.class);
+                    String  USER_EMAIL  = userEmail.getText().toString().trim();
+                    a_intent.putExtra( "USER EMAIL", USER_EMAIL);
+                    startActivity(a_intent);
+                    // the code above will send the user to the sign up screen with the email already filled
+                }
+                else{
+                    startActivity(new Intent(LogIn.this, SignUp.class));
+                    //send user to the sign up screen with out any prefilled email field
+                }
+            }
+        });
+
+
     }
 
 
@@ -59,25 +81,22 @@ public class LogIn extends AppCompatActivity {
 
 
 
-    boolean userLogIn(String email, String password){
-        //initialize variables
+    static boolean userLogIn(String email, String password){
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        final boolean[] TaskSuccessful = new boolean[1];
 
-        //Sign in and check if task is completed correctly or not
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
-                    TaskSuccessful[0] = true;
+                    //code to redirect user to home activity
+
                 }else{
-                    TaskSuccessful[0] = false;
+                    //Toast with Error message
+
                 }
             }
         });
-
-        //return succesful status
-        return TaskSuccessful[0];
+        return false;
     }
 }
 
