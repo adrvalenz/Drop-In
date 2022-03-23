@@ -98,7 +98,7 @@ public class LogIn extends AppCompatActivity {
             }
         });
 
-        //return succesful status
+        //return successful status
         return TaskSuccessful[0];
     }
 }
