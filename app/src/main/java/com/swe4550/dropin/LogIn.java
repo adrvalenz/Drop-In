@@ -81,22 +81,25 @@ public class LogIn extends AppCompatActivity {
 
 
 
-    static boolean userLogIn(String email, String password){
+    boolean userLogIn(String email, String password){
+        //initialize variables
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        final boolean[] TaskSuccessful = new boolean[1];
 
+        //Sign in and check if task is completed correctly or not
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
-                    //code to redirect user to home activity
-
+                    TaskSuccessful[0] = true;
                 }else{
-                    //Toast with Error message
-
+                    TaskSuccessful[0] = false;
                 }
             }
         });
-        return false;
+
+        //return successful status
+        return TaskSuccessful[0];
     }
 }
 
