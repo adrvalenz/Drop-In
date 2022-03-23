@@ -14,8 +14,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class User {
 
     private String userName;
-    private String PFP;
-    private String Biography;
+    private String pfp;
+    private String biography;
     private String interest1;
     private String interest2;
     private String interest3;
@@ -34,8 +34,8 @@ public class User {
                  String interest1, String interest2, String interest3, String interest4,
                  String game1, String game2, String game3, String game4) {
         this.userName = userName;
-        this.PFP = PFP;
-        this.Biography = Biography;
+        this.pfp = pfp;
+        this.biography = biography;
         this.interest1 = interest1;
         this.interest2 = interest2;
         this.interest3 = interest3;
@@ -50,8 +50,8 @@ public class User {
     public String getUserName() {
         return userName;
     }
-    public String getPFP() { return PFP; }
-    public String getBiography() { return Biography; }
+    public String getpfp() { return pfp; }
+    public String getBiography() { return biography; }
     public String getInterest1() { return interest1; }
     public String getInterest2() { return interest2; }
     public String getInterest3() { return interest3; }
@@ -63,8 +63,8 @@ public class User {
 
     //setter functions
     public void setUserName(String userName) { this.userName = userName; }
-    public void setPFP(String PFP) { this.PFP = PFP; }
-    public void setBiography(String biography) { this.Biography = biography; }
+    public void setPFP(String pfp) { this.pfp = pfp; }
+    public void setBiography(String biography) { this.biography = biography; }
     public void setInterest1(String interest1) { this.interest1 = interest1; }
     public void setInterest2(String interest2) { this.interest2 = interest2; }
     public void setInterest3(String interest3) { this.interest3 = interest3; }
