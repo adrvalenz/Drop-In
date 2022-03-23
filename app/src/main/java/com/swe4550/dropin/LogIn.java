@@ -49,7 +49,8 @@ public class LogIn extends AppCompatActivity {
                         Toast.makeText(LogIn.this, "Incorrect Email or Password. Make sure credentials are correct.", Toast.LENGTH_LONG).show();
                 }
             }
-        });
+        }
+    });
     }
 
 
