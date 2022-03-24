@@ -101,31 +101,35 @@ public class SignUp extends AppCompatActivity {
 
 
     // Add new user to Firebase Database and Auth
-    static void addNewUser(String name, String email, String password) {
+    static boolean addNewUser(String name, String email, String password) {
+        //initialize variable
         DatabaseReference mDatabase;
         mDatabase = FirebaseDatabase.getInstance().getReference("Users");
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        final boolean[] TaskSuccessful = new boolean[1];
 
+        //Sign up and check if task completed correctly or not
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    User user = new User(name, email, password);
+                    User user = new User(name," "," "," "," "," "," "," "," "," "," ");
 
+                    // This will return the ID for the user
                     mDatabase.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
 
                             if (task.isSuccessful()) {
-                                //Sign up is successful, redirect to Set Up Profile.
-
-                                //Code to send to Set Up Activity
+                                //Sign up is successful
+                                TaskSuccessful[0] = true;
                             } else {
                                 //If sign up fails on the database side then delete user from FirebaseAuth.
                                 FirebaseAuth.getInstance().getCurrentUser().delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
-                                        //Display Error Message
+                                        TaskSuccessful[0] = false;
+
 
                                     }
                                 });
@@ -134,11 +138,13 @@ public class SignUp extends AppCompatActivity {
                         }
                     });
                 } else {
-                    //If sign up fails on the database side display this message to user.
-
-                    //Display Error Message
+                    //If sign up fails on the database side
+                    TaskSuccessful[0] = false;
                 }
             }
         });
+
+        //return successful status
+        return TaskSuccessful[0];
     }
 }
