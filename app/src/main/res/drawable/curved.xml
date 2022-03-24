@@ -5,5 +5,5 @@
 
     ns:android="http://schemas.android.com/apk/res/android">
     <corners android:radius="20dp"/>
-    <stroke android:color="@color/purple_500" android:width="3dp"/>
+    <solid android:color="@color/purple_500" android:width="3dp"/>
 </shape>
