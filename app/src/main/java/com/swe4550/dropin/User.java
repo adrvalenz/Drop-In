@@ -30,7 +30,7 @@ public class User {
     public User() {
     }
 
-    public User( String userName, String PFP, String Biography,
+    public User( String userName, String pfp, String biography,
                  String interest1, String interest2, String interest3, String interest4,
                  String game1, String game2, String game3, String game4) {
         this.userName = userName;
@@ -50,7 +50,7 @@ public class User {
     public String getUserName() {
         return userName;
     }
-    public String getpfp() { return pfp; }
+    public String getPfp() { return pfp; }
     public String getBiography() { return biography; }
     public String getInterest1() { return interest1; }
     public String getInterest2() { return interest2; }
@@ -63,7 +63,7 @@ public class User {
 
     //setter functions
     public void setUserName(String userName) { this.userName = userName; }
-    public void setPFP(String pfp) { this.pfp = pfp; }
+    public void setPfp(String pfp) { this.pfp = pfp; }
     public void setBiography(String biography) { this.biography = biography; }
     public void setInterest1(String interest1) { this.interest1 = interest1; }
     public void setInterest2(String interest2) { this.interest2 = interest2; }
