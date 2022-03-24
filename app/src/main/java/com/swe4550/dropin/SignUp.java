@@ -62,7 +62,7 @@ public class SignUp extends AppCompatActivity {
             // Confirm password and confirmPassword match correctly, otherwise display error toast
             else {
                 if (userNewPassword.getText().toString().equals(userNewPassword_confirm.getText().toString())) {
-                    if (addNewUser(userNewEmail.getText().toString(), userNewPassword.getText().toString(), userNewName.getText().toString())) {
+                    if (addNewUser(userNewName.getText().toString().trim(),  userNewEmail.getText().toString().trim(),  userNewPassword.getText().toString().trim())) {
                         startActivity(new Intent(SignUp.this, SetUpProfile.class));
                     } else {
                         Toast.makeText(SignUp.this, "Error Registering User",
