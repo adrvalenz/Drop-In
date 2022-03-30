@@ -62,14 +62,7 @@ public class SignUp extends AppCompatActivity {
             // Confirm password and confirmPassword match correctly, otherwise display error toast
             else {
                 if (userNewPassword.getText().toString().equals(userNewPassword_confirm.getText().toString())) {
-                    if (addNewUser(userNewName.getText().toString().trim(),  userNewEmail.getText().toString().trim(),  userNewPassword.getText().toString().trim())) {
-                        startActivity(new Intent(SignUp.this, SetUpProfile.class));
-                    } else {
-                        Toast.makeText(SignUp.this, "Error Registering User",
-                                Toast.LENGTH_LONG).show();
-                    }
-
-
+                    addNewUser(userNewName.getText().toString().trim(), userNewEmail.getText().toString().trim(), userNewPassword.getText().toString().trim());
 
                 } else {
                     Toast.makeText(SignUp.this, "There has been an error: the passwords do not match",
@@ -101,12 +94,11 @@ public class SignUp extends AppCompatActivity {
 
 
     // Add new user to Firebase Database and Auth
-    static boolean addNewUser(String name, String email, String password) {
+    public void addNewUser(String name, String email, String password) {
         //initialize variable
         DatabaseReference mDatabase;
         mDatabase = FirebaseDatabase.getInstance().getReference("Users");
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        final boolean[] TaskSuccessful = new boolean[1];
 
         //Sign up and check if task completed correctly or not
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -122,13 +114,14 @@ public class SignUp extends AppCompatActivity {
 
                             if (task.isSuccessful()) {
                                 //Sign up is successful
-                                TaskSuccessful[0] = true;
+                                startActivity(new Intent(SignUp.this, SetUpProfile.class));
                             } else {
                                 //If sign up fails on the database side then delete user from FirebaseAuth.
                                 FirebaseAuth.getInstance().getCurrentUser().delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
-                                        TaskSuccessful[0] = false;
+                                        Toast.makeText(SignUp.this, "Error Registering User",
+                                                Toast.LENGTH_LONG).show();
 
 
                                     }
@@ -139,12 +132,12 @@ public class SignUp extends AppCompatActivity {
                     });
                 } else {
                     //If sign up fails on the database side
-                    TaskSuccessful[0] = false;
+                    Toast.makeText(SignUp.this, "User Registration failed",
+                            Toast.LENGTH_LONG).show();
                 }
             }
         });
 
         //return successful status
-        return TaskSuccessful[0];
     }
 }
