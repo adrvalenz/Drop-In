@@ -95,16 +95,6 @@ public class LogIn extends AppCompatActivity {
         });
     }
 }
-
- //loginBtn.setOnClickListener(
-//@Override void OnClick(View v){   }
-
-
-
-
-
-
-
 // 3/14/22 stuff
 
 // public void onClick(view v) {
@@ -113,18 +103,5 @@ public class LogIn extends AppCompatActivity {
     startActivity(new Layout(getTheme()));
           }
      }
- }                                  */
-
-
-
-
-
-
-
-//This is an edit
-//This is an another edit
-// This yet another edit
-// Sandwich
-//saveState
-// This yet another edit
-// Sandwich
+ }
+ */
