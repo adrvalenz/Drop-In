@@ -28,7 +28,11 @@ public class LogIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
-
+        //Check if a user is logged in, send to discover activity if there is one on startup.
+        if(FirebaseAuth.getInstance().getCurrentUser() != null)
+        {
+            startActivity(new Intent(LogIn.this, Discover.class));
+        }
         userEmail = findViewById(R.id.user_email);
         userPassword = findViewById(R.id.user_password);
         loginBtn = findViewById(R.id.login_btn);
@@ -42,12 +46,7 @@ public class LogIn extends AppCompatActivity {
                     Toast.makeText(LogIn.this, "Email and Password must be filled and Password longer than six characters", Toast.LENGTH_LONG).show();
                 }
                 else{
-                    if(userLogIn(userEmail.getText().toString().trim(), userPassword.getText().toString().trim())){
-                        startActivity(new Intent(LogIn.this, Discover.class));
-                }
-                else{
-                        Toast.makeText(LogIn.this, "Incorrect Email or Password. Make sure credentials are correct.", Toast.LENGTH_LONG).show();
-                    }
+                    userLogIn(userEmail.getText().toString().trim(), userPassword.getText().toString().trim());
                 }
             }
         });
@@ -81,37 +80,25 @@ public class LogIn extends AppCompatActivity {
 
 
 
-    boolean userLogIn(String email, String password){
+    public void userLogIn(String email, String password){
         //initialize variables
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        final boolean[] TaskSuccessful = new boolean[1];
 
         //Sign in and check if task is completed correctly or not
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
-                    TaskSuccessful[0] = true;
+                    //send to discover activity
+                    startActivity(new Intent(LogIn.this, Discover.class));
                 }else{
-                    TaskSuccessful[0] = false;
+                    //error message
+                    Toast.makeText(LogIn.this, "Incorrect Email or Password. Make sure credentials are correct.", Toast.LENGTH_LONG).show();
                 }
             }
         });
-
-        //return successful status
-        return TaskSuccessful[0];
     }
 }
-
- //loginBtn.setOnClickListener(
-//@Override void OnClick(View v){   }
-
-
-
-
-
-
-
 // 3/14/22 stuff
 
 // public void onClick(view v) {
@@ -120,18 +107,5 @@ public class LogIn extends AppCompatActivity {
     startActivity(new Layout(getTheme()));
           }
      }
- }                                  */
-
-
-
-
-
-
-
-//This is an edit
-//This is an another edit
-// This yet another edit
-// Sandwich
-//saveState
-// This yet another edit
-// Sandwich
+ }
+ */
