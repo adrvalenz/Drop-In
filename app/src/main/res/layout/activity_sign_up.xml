@@ -57,37 +57,14 @@
         tools:ignore="DuplicateIds" />
 
     <EditText
-        android:id="@+id/user_new_name"
-        style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
-        android:layout_width="221dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="95dp"
-        android:autofillHints=""
-        android:background="@drawable/curved"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="@string/user_new_name"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textIsSelectable="false"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_up_text" />
-
-    <EditText
         android:id="@+id/user_new_email"
         style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
         android:layout_width="221dp"
         android:layout_height="56dp"
         android:layout_marginStart="95dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="95dp"
-        android:autofillHints=""
+        android:hint="@string/user_new_email"
         android:background="@drawable/curved"
         android:ems="10"
         android:inputType="textEmailAddress"
@@ -99,7 +76,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_new_name" />
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_text"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/user_new_password"
@@ -109,7 +87,7 @@
         android:layout_marginStart="95dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="95dp"
-        android:autofillHints=""
+        android:hint="@string/user_new_password"
         android:background="@drawable/curved"
         android:ems="10"
         android:inputType="textPassword"
@@ -121,7 +99,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_new_email" />
+        app:layout_constraintTop_toBottomOf="@+id/user_new_email"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/user_new_password_confirm"
@@ -131,7 +110,7 @@
         android:layout_marginStart="95dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="95dp"
-        android:autofillHints=""
+        android:hint="@string/user_new_password_confirm"
         android:background="@drawable/curved"
         android:ems="10"
         android:inputType="textPassword"
@@ -143,7 +122,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_new_password" />
+        app:layout_constraintTop_toBottomOf="@+id/user_new_password"
+        tools:ignore="Autofill" />
 
     <Button
         android:id="@+id/signup_new_btn"
