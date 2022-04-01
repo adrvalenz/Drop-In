@@ -13,10 +13,9 @@ import java.util.Locale;
 
 public class Discover extends AppCompatActivity {
 
-    //bonding variables
     User current_user;
-    User user_list;
-    String user_keys;
+    ArrayList<User> user_list;
+    ArrayList<String> user_keys;
     Button summary_one;
     Button summary_two;
     Button summary_three;
@@ -50,8 +49,8 @@ public class Discover extends AppCompatActivity {
         getUserKeys();
         getCurrentUsers();
         getCurrentUserData();
-        // Sort the arrayList using an algorithm that ranks users with the most amount of interests and games in common
-        //Rank users by interests and games in common at the top (lowest index) to bottom (higher index)
+        //Sort ArrayList to prepare for displaying on Discover page, with the currently logged in user as the reference for "best"
+
 
     }
     public void getUserKeys(){}
