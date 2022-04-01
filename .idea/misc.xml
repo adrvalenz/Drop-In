@@ -8,21 +8,23 @@
         <entry key="..\:/Users/Juan/Drop-In/app/src/main/res/drawable/curved.xml" value="0.2115" />
         <entry key="..\:/Users/Juan/Drop-In/app/src/main/res/layout/activity_log_in.xml" value="0.25" />
         <entry key="..\:/Users/Juan/Drop-In/app/src/main/res/layout/activity_set_up_profile.xml" value="0.22" />
-        <entry key="..\:/Users/Juan/Drop-In/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/Users/Juan/Drop-In/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
+        <entry key="..\:/Users/adrva/AndroidStudioProjects/DropIn/app/src/main/res/drawable/curved.xml" value="0.217" />
+        <entry key="..\:/Users/adrva/AndroidStudioProjects/DropIn/app/src/main/res/drawable/edtbackground.xml" value="0.217" />
+        <entry key="..\:/Users/adrva/AndroidStudioProjects/DropIn/app/src/main/res/drawable/ic_launcher_background.xml" value="0.217" />
         <entry key="..\:/Users/adrva/AndroidStudioProjects/DropIn/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2095" />
         <entry key="..\:/Users/adrva/AndroidStudioProjects/DropIn/app/src/main/res/layout/activity_forgot_login_details.xml" value="0.25" />
         <entry key="..\:/Users/adrva/AndroidStudioProjects/DropIn/app/src/main/res/layout/activity_log_in.xml" value="0.25" />
         <entry key="..\:/Users/adrva/AndroidStudioProjects/DropIn/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
-        <entry key="..\:/Users/adrva/AndroidStudioProjects/DropIn/app/src/main/res/layout/activity_poke_view.xml" value="0.25" />
         <entry key="..\:/Users/adrva/AndroidStudioProjects/DropIn/app/src/main/res/layout/activity_set_secret_question.xml" value="0.25" />
         <entry key="..\:/Users/adrva/AndroidStudioProjects/DropIn/app/src/main/res/layout/activity_set_up_profile.xml" value="0.25" />
         <entry key="..\:/Users/adrva/AndroidStudioProjects/DropIn/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
-        <entry key="..\:/Users/adrva/AndroidStudioProjects/DropIn/app/src/main/res/layout/activity_view_profile.xml" value="0.25" />
         <entry key="..\:/Users/brand/AndroidStudioProjects/Drop-In/app/src/main/res/layout/activity_log_in.xml" value="0.358695652173913" />
         <entry key="..\:/Users/brand/AndroidStudioProjects/Drop-In/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/brand/AndroidStudioProjects/Drop-In/app/src/main/res/layout/activity_poke_view.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/brand/AndroidStudioProjects/Drop-In/app/src/main/res/layout/activity_set_up_profile.xml" value="0.358695652173913" />
         <entry key="..\:/Users/brand/AndroidStudioProjects/Drop-In/app/src/main/res/layout/activity_sign_up.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/mattl/AndroidStudioProjects/Drop-In/app/src/main/res/layout/activity_log_in.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/brand/AndroidStudioProjects/Drop-In/app/src/main/res/layout/activity_view_profile.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
