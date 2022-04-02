@@ -49,6 +49,7 @@ public class SetUpProfile extends AppCompatActivity {
         //set the variables to their UI counter parts
         userPfp = findViewById(R.id.user_pfp);
         userName = findViewById(R.id.user_name);
+        bio = findViewById(R.id.biography);
         pfp_one = findViewById(R.id.pfp_1);
         pfp_two = findViewById(R.id.pfp_2);
         pfp_three = findViewById(R.id.pfp_3);
@@ -188,6 +189,7 @@ public class SetUpProfile extends AppCompatActivity {
                 startActivity(new Intent(SetUpProfile.this, Discover.class));
             }
         });
+
         /* this is the creation of the submit button which will check if the
         all the correct parameters have been filled and then save all the info
         */
@@ -196,8 +198,12 @@ public class SetUpProfile extends AppCompatActivity {
             public void onClick(View view) {
                 if (user_info.getPfp().equals(" ")){
                     Toast.makeText(SetUpProfile.this, "You must Select a Profile Picture.", Toast.LENGTH_LONG).show();
-                }else if (){
-
+                }else if (user_info.getGame1().equals(" ") && user_info.getGame2().equals(" ") && user_info.getGame3().equals(" ") && user_info.getGame4().equals(" ")){
+                    Toast.makeText(SetUpProfile.this, "You must Select at least one game Picture.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getInterest1().equals(" ") && user_info.getInterest2().equals(" ") && user_info.getInterest3().equals(" ") && user_info.getInterest4().equals(" ")){
+                    Toast.makeText(SetUpProfile.this, "You must Select at least one game Picture.", Toast.LENGTH_LONG).show();
+                }else{
+                    user_info.setBiography();
                 }
             }
         });
@@ -205,6 +211,10 @@ public class SetUpProfile extends AppCompatActivity {
     }
 
     public void getCurrentUserData(){
+
+    }
+
+    public void editCurrentUser(){
 
     }
 }
