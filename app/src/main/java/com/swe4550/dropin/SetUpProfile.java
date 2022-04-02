@@ -134,6 +134,26 @@ public class SetUpProfile extends AppCompatActivity {
         game_one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (user_info.getGame1().equals("Elden Ring")) {
+                    user_info.setGame1(" ");
+                    Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame2().equals("Elden Ring")){
+                    user_info.setGame2(" ");
+                    Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame3().equals("Elden Ring")){
+                    user_info.setGame3(" ");
+                    Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame4().equals("Elden Ring")){
+                    user_info.setGame4(" ");
+                    Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame1().equals(" ")){
+                    for (user_info.getGame2().equals("Elden Ring") || user_info.getGame3().equals("Elden Ring") || user_info.getGame4().equals("Elden Ring")){
+
+                    }
+                    user_info.setGame2("Elden Ring");
+                    Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game two spot.", Toast.LENGTH_LONG).show();
+                }
+
 
             }
         });
