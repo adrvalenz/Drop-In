@@ -2,6 +2,7 @@ package com.swe4550.dropin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -134,6 +135,7 @@ public class SetUpProfile extends AppCompatActivity {
         game_one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
                 if (user_info.getGame1().equals("Elden Ring")) {
                     user_info.setGame1(" ");
                     Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game One spot.", Toast.LENGTH_LONG).show();
@@ -177,6 +179,15 @@ public class SetUpProfile extends AppCompatActivity {
         });
 
 
+
+
+        // creating the cancel button
+        cancelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SetUpProfile.this, Discover.class));
+            }
+        });
 
 
     }
