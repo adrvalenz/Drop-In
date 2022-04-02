@@ -147,14 +147,32 @@ public class SetUpProfile extends AppCompatActivity {
                     user_info.setGame4(" ");
                     Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game four spot.", Toast.LENGTH_LONG).show();
                 }else if (user_info.getGame1().equals(" ")){
-                    for (user_info.getGame2().equals("Elden Ring") || user_info.getGame3().equals("Elden Ring") || user_info.getGame4().equals("Elden Ring")){
-
-                    }
+                    if (user_info.getGame2().equals("Elden Ring") || user_info.getGame3().equals("Elden Ring") || user_info.getGame4().equals("Elden Ring")){
+                        Toast.makeText(SetUpProfile.this,"This game is already in your games played list.", Toast.LENGTH_LONG).show();
+                    }else
+                    user_info.setGame1("Elden Ring");
+                    Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game one spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame2().equals(" ")){
+                    if (user_info.getGame1().equals("Elden Ring") || user_info.getGame3().equals("Elden Ring") || user_info.getGame4().equals("Elden Ring")){
+                        Toast.makeText(SetUpProfile.this,"This game is already in your games played list", Toast.LENGTH_LONG).show();
+                    }else
                     user_info.setGame2("Elden Ring");
                     Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game two spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame3().equals(" ")){
+                    if (user_info.getGame1().equals("Elden Ring") || user_info.getGame2().equals("Elden Ring") || user_info.getGame4().equals("Elden Ring")){
+                        Toast.makeText(SetUpProfile.this,"This game is already in your games played list", Toast.LENGTH_LONG).show();
+                    }else
+                    user_info.setGame3("Elden Ring");
+                    Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game three spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame4().equals(" ")){
+                    if (user_info.getGame1().equals("Elden Ring") || user_info.getGame2().equals("Elden Ring") || user_info.getGame3().equals("Elden Ring")){
+                        Toast.makeText(SetUpProfile.this,"This game is already in your games played list", Toast.LENGTH_LONG).show();
+                    }else
+                    user_info.setGame4("Elden Ring");
+                    Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game four spot.", Toast.LENGTH_LONG).show();
+                }else{
+                    Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
                 }
-
-
             }
         });
 
