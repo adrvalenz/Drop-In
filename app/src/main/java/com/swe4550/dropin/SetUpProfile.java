@@ -181,14 +181,26 @@ public class SetUpProfile extends AppCompatActivity {
 
 
 
-        // creating the cancel button
+        // creating the cancel button which will send user to discovery page
         cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(SetUpProfile.this, Discover.class));
             }
         });
+        /* this is the creation of the submit button which will check if the
+        all the correct parameters have been filled and then save all the info
+        */
+        submitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (user_info.getPfp().equals(" ")){
+                    Toast.makeText(SetUpProfile.this, "You must Select a Profile Picture.", Toast.LENGTH_LONG).show();
+                }else if (){
 
+                }
+            }
+        });
 
     }
 
