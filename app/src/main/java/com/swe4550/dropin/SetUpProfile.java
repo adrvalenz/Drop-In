@@ -807,6 +807,34 @@ public class SetUpProfile extends AppCompatActivity {
             }
         });
 
+
+        // creating the cancel button which will send user to discovery page
+        cancelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SetUpProfile.this, Discover.class));
+            }
+        });
+
+        /* this is the creation of the submit button which will check if the
+        all the correct parameters have been filled and then save all the info
+        */
+        submitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (user_info.getPfp().equals(" ")){
+                    Toast.makeText(SetUpProfile.this, "You must Select a Profile Picture.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame1().equals(" ") && user_info.getGame2().equals(" ") && user_info.getGame3().equals(" ") && user_info.getGame4().equals(" ")){
+                    Toast.makeText(SetUpProfile.this, "You must Select at least one game.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getInterest1().equals(" ") && user_info.getInterest2().equals(" ") && user_info.getInterest3().equals(" ") && user_info.getInterest4().equals(" ")){
+                    Toast.makeText(SetUpProfile.this, "You must Select at least one interest.", Toast.LENGTH_LONG).show();
+                }else{
+                    user_info.setBiography(bio.getText().toString().trim());
+                    editCurrentUser(user_info);
+                }
+            }
+        });
+
     }
 
     public void getCurrentUserData(){
