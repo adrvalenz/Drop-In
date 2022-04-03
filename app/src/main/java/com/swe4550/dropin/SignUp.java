@@ -123,7 +123,6 @@ public class SignUp extends AppCompatActivity {
                                         Toast.makeText(SignUp.this, "Error Registering User",
                                                 Toast.LENGTH_LONG).show();
 
-
                                     }
                                 });
 

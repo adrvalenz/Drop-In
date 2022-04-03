@@ -1,5 +1,6 @@
 package com.swe4550.dropin;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -7,12 +8,19 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
 public class Discover extends AppCompatActivity {
 
+    //bonding variables
     User current_user;
     ArrayList<User> user_list;
     ArrayList<String> user_keys;
@@ -68,17 +76,47 @@ public class Discover extends AppCompatActivity {
 //        pokesBtn = findViewById(R.id.pokes_btn);
 //        profileBtn = findViewById(R.id.profile_btn);
         //get list of users in database by calling getUsers() and get the list of their keys by calling getUserKeys()
-        getUserKeys();
-        getCurrentUsers();
-        getCurrentUserData();
+        //getUserKeys();
+        getUsers();
+        //getCurrentUserData();
         ArrayList<Integer> scores = new ArrayList<Integer>();
         //Sort ArrayList to prepare for displaying on Discover page, with the currently logged in user as the reference for "best"
 
 
     }
-    public void getUserKeys(){}
+    //Get, in the order that they appear in the Database, all the users from the database stored as an array list.
+    public void getUsers(){
 
-    public void getCurrentUsers(){}
+        user_list = new ArrayList<>();
+        DatabaseReference mDatabase;
 
-    public void getCurrentUserData(){}
+        //Get reference for User Node
+        mDatabase = FirebaseDatabase.getInstance().getReference("Users");
+        //Attach valueEventListener to mDatabase object to read all the values
+        mDatabase.addListenerForSingleValueEvent(valueEventListener);
+
+    }
+
+    //Value Event Listener reads user from firebase database
+    ValueEventListener valueEventListener = new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            user_list.clear();
+            if(dataSnapshot.exists()){
+                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    User user = snapshot.getValue(User.class);
+                    user_list.add(user);
+                }
+            }
+        }
+
+        @Override
+        public void onCancelled(@NonNull DatabaseError error) {
+
+        }
+    };
+
+
 }
+//comment made by carlos at midnight
+//Test Comment
