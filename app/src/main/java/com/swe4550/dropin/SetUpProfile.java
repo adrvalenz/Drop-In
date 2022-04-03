@@ -150,29 +150,25 @@ public class SetUpProfile extends AppCompatActivity {
                     user_info.setGame4(" ");
                     Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game four spot.", Toast.LENGTH_LONG).show();
                 }else if (user_info.getGame1().equals(" ")){
-                    if (user_info.getGame2().equals("Elden Ring") || user_info.getGame3().equals("Elden Ring") || user_info.getGame4().equals("Elden Ring")){
-                        Toast.makeText(SetUpProfile.this,"This game is already in your games played list.", Toast.LENGTH_LONG).show();
-                    }else
-                    user_info.setGame1("Elden Ring");
-                    Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game one spot.", Toast.LENGTH_LONG).show();
+                    if (!user_info.getGame2().equals("Elden Ring") && !user_info.getGame3().equals("Elden Ring") && !user_info.getGame4().equals("Elden Ring")) {
+                        user_info.setGame1("Elden Ring");
+                        Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game one spot.", Toast.LENGTH_LONG).show();
+                    }
                 }else if (user_info.getGame2().equals(" ")){
-                    if (user_info.getGame1().equals("Elden Ring") || user_info.getGame3().equals("Elden Ring") || user_info.getGame4().equals("Elden Ring")){
-                        Toast.makeText(SetUpProfile.this,"This game is already in your games played list", Toast.LENGTH_LONG).show();
-                    }else
-                    user_info.setGame2("Elden Ring");
-                    Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game two spot.", Toast.LENGTH_LONG).show();
-                }else if (user_info.getGame3().equals(" ")){
-                    if (user_info.getGame1().equals("Elden Ring") || user_info.getGame2().equals("Elden Ring") || user_info.getGame4().equals("Elden Ring")){
-                        Toast.makeText(SetUpProfile.this,"This game is already in your games played list", Toast.LENGTH_LONG).show();
-                    }else
-                    user_info.setGame3("Elden Ring");
-                    Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game three spot.", Toast.LENGTH_LONG).show();
+                    if (!user_info.getGame1().equals("Elden Ring") && !user_info.getGame3().equals("Elden Ring") && !user_info.getGame4().equals("Elden Ring")) {
+                        user_info.setGame2("Elden Ring");
+                        Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game two spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame3().equals(" ")) {
+                    if (!user_info.getGame1().equals("Elden Ring") & !user_info.getGame2().equals("Elden Ring") && !user_info.getGame4().equals("Elden Ring")) {
+                        user_info.setGame3("Elden Ring");
+                        Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game three spot.", Toast.LENGTH_LONG).show();
+                    }
                 }else if (user_info.getGame4().equals(" ")){
-                    if (user_info.getGame1().equals("Elden Ring") || user_info.getGame2().equals("Elden Ring") || user_info.getGame3().equals("Elden Ring")){
-                        Toast.makeText(SetUpProfile.this,"This game is already in your games played list", Toast.LENGTH_LONG).show();
-                    }else
-                    user_info.setGame4("Elden Ring");
-                    Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game four spot.", Toast.LENGTH_LONG).show();
+                    if (!user_info.getGame1().equals("Elden Ring") && !user_info.getGame2().equals("Elden Ring") && !user_info.getGame3().equals("Elden Ring")) {
+                        user_info.setGame4("Elden Ring");
+                        Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game four spot.", Toast.LENGTH_LONG).show();
+                    }
                 }else{
                     Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
                 }
@@ -199,12 +195,12 @@ public class SetUpProfile extends AppCompatActivity {
                 if (user_info.getPfp().equals(" ")){
                     Toast.makeText(SetUpProfile.this, "You must Select a Profile Picture.", Toast.LENGTH_LONG).show();
                 }else if (user_info.getGame1().equals(" ") && user_info.getGame2().equals(" ") && user_info.getGame3().equals(" ") && user_info.getGame4().equals(" ")){
-                    Toast.makeText(SetUpProfile.this, "You must Select at least one game Picture.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SetUpProfile.this, "You must Select at least one game.", Toast.LENGTH_LONG).show();
                 }else if (user_info.getInterest1().equals(" ") && user_info.getInterest2().equals(" ") && user_info.getInterest3().equals(" ") && user_info.getInterest4().equals(" ")){
-                    Toast.makeText(SetUpProfile.this, "You must Select at least one game Picture.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SetUpProfile.this, "You must Select at least one interest.", Toast.LENGTH_LONG).show();
                 }else{
                     user_info.setBiography(bio.getText().toString().trim());
-                    editCurrentUser();
+                    editCurrentUser(user_info);
                 }
             }
         });
@@ -215,7 +211,7 @@ public class SetUpProfile extends AppCompatActivity {
 
     }
 
-    public void editCurrentUser(){
+    public void editCurrentUser(User user_lowercase){
 
     }
 }
