@@ -217,9 +217,259 @@ public class SetUpProfile extends AppCompatActivity {
             }
         });
 
+        game_three.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
+                if (user_info.getGame1().equals("Fortnite")) {
+                    user_info.setGame1(" ");
+                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame2().equals("Fortnite")){
+                    user_info.setGame2(" ");
+                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame3().equals("Fortnite")){
+                    user_info.setGame3(" ");
+                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame4().equals("Fortnite")){
+                    user_info.setGame4(" ");
+                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame1().equals(" ")){
+                    if (!user_info.getGame2().equals("Fortnite") && !user_info.getGame3().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
+                        user_info.setGame1("Fortnite");
+                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game one spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame2().equals(" ")){
+                    if (!user_info.getGame1().equals("Fortnite") && !user_info.getGame3().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
+                        user_info.setGame2("Fortnite");
+                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game two spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame3().equals(" ")) {
+                    if (!user_info.getGame1().equals("Fortnite") & !user_info.getGame2().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
+                        user_info.setGame3("Fortnite");
+                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game three spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame4().equals(" ")){
+                    if (!user_info.getGame1().equals("Fortnite") && !user_info.getGame2().equals("Fortnite") && !user_info.getGame3().equals("Fortnite")) {
+                        user_info.setGame4("Fortnite");
+                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game four spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
 
+        game_four.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
+                if (user_info.getGame1().equals("Fortnite")) {
+                    user_info.setGame1(" ");
+                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame2().equals("Fortnite")){
+                    user_info.setGame2(" ");
+                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame3().equals("Fortnite")){
+                    user_info.setGame3(" ");
+                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame4().equals("Fortnite")){
+                    user_info.setGame4(" ");
+                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame1().equals(" ")){
+                    if (!user_info.getGame2().equals("Fortnite") && !user_info.getGame3().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
+                        user_info.setGame1("Fortnite");
+                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game one spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame2().equals(" ")){
+                    if (!user_info.getGame1().equals("Fortnite") && !user_info.getGame3().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
+                        user_info.setGame2("Fortnite");
+                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game two spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame3().equals(" ")) {
+                    if (!user_info.getGame1().equals("Fortnite") & !user_info.getGame2().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
+                        user_info.setGame3("Fortnite");
+                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game three spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame4().equals(" ")){
+                    if (!user_info.getGame1().equals("Fortnite") && !user_info.getGame2().equals("Fortnite") && !user_info.getGame3().equals("Fortnite")) {
+                        user_info.setGame4("Fortnite");
+                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game four spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
+        game_five.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
+                if (user_info.getGame1().equals("Fortnite")) {
+                    user_info.setGame1(" ");
+                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame2().equals("Fortnite")){
+                    user_info.setGame2(" ");
+                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame3().equals("Fortnite")){
+                    user_info.setGame3(" ");
+                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame4().equals("Fortnite")){
+                    user_info.setGame4(" ");
+                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame1().equals(" ")){
+                    if (!user_info.getGame2().equals("Fortnite") && !user_info.getGame3().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
+                        user_info.setGame1("Fortnite");
+                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game one spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame2().equals(" ")){
+                    if (!user_info.getGame1().equals("Fortnite") && !user_info.getGame3().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
+                        user_info.setGame2("Fortnite");
+                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game two spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame3().equals(" ")) {
+                    if (!user_info.getGame1().equals("Fortnite") & !user_info.getGame2().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
+                        user_info.setGame3("Fortnite");
+                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game three spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame4().equals(" ")){
+                    if (!user_info.getGame1().equals("Fortnite") && !user_info.getGame2().equals("Fortnite") && !user_info.getGame3().equals("Fortnite")) {
+                        user_info.setGame4("Fortnite");
+                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game four spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
+        game_six.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
+                if (user_info.getGame1().equals("Minecraft")) {
+                    user_info.setGame1(" ");
+                    Toast.makeText(SetUpProfile.this,"Minecraft has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame2().equals("Minecraft")){
+                    user_info.setGame2(" ");
+                    Toast.makeText(SetUpProfile.this,"Minecraft has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame3().equals("Minecraft")){
+                    user_info.setGame3(" ");
+                    Toast.makeText(SetUpProfile.this,"Minecraft has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame4().equals("Minecraft")){
+                    user_info.setGame4(" ");
+                    Toast.makeText(SetUpProfile.this,"Minecraft has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame1().equals(" ")){
+                    if (!user_info.getGame2().equals("Minecraft") && !user_info.getGame3().equals("Minecraft") && !user_info.getGame4().equals("Minecraft")) {
+                        user_info.setGame1("Minecraft");
+                        Toast.makeText(SetUpProfile.this, "Minecraft has been added to game one spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame2().equals(" ")){
+                    if (!user_info.getGame1().equals("Minecraft") && !user_info.getGame3().equals("Minecraft") && !user_info.getGame4().equals("Minecraft")) {
+                        user_info.setGame2("Minecraft");
+                        Toast.makeText(SetUpProfile.this, "Minecraft has been added to game two spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame3().equals(" ")) {
+                    if (!user_info.getGame1().equals("Minecraft") & !user_info.getGame2().equals("Minecraft") && !user_info.getGame4().equals("Minecraft")) {
+                        user_info.setGame3("Minecraft");
+                        Toast.makeText(SetUpProfile.this, "Minecraft has been added to game three spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame4().equals(" ")){
+                    if (!user_info.getGame1().equals("Minecraft") && !user_info.getGame2().equals("Minecraft") && !user_info.getGame3().equals("Minecraft")) {
+                        user_info.setGame4("Minecraft");
+                        Toast.makeText(SetUpProfile.this, "Minecraft has been added to game four spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        game_seven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
+                if (user_info.getGame1().equals("Grand Theft Auto Online")) {
+                    user_info.setGame1(" ");
+                    Toast.makeText(SetUpProfile.this,"Grand Theft Auto Online has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame2().equals("Grand Theft Auto Online")){
+                    user_info.setGame2(" ");
+                    Toast.makeText(SetUpProfile.this,"Grand Theft Auto Online has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame3().equals("Grand Theft Auto Online")){
+                    user_info.setGame3(" ");
+                    Toast.makeText(SetUpProfile.this,"Grand Theft Auto Online has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame4().equals("Grand Theft Auto Online")){
+                    user_info.setGame4(" ");
+                    Toast.makeText(SetUpProfile.this,"Grand Theft Auto Online has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame1().equals(" ")){
+                    if (!user_info.getGame2().equals("Grand Theft Auto Online") && !user_info.getGame3().equals("Grand Theft Auto Online") && !user_info.getGame4().equals("Grand Theft Auto Online")) {
+                        user_info.setGame1("Grand Theft Auto Online");
+                        Toast.makeText(SetUpProfile.this, "Grand Theft Auto Online has been added to game one spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame2().equals(" ")){
+                    if (!user_info.getGame1().equals("Grand Theft Auto Online") && !user_info.getGame3().equals("Grand Theft Auto Online") && !user_info.getGame4().equals("Grand Theft Auto Online")) {
+                        user_info.setGame2("Grand Theft Auto Online");
+                        Toast.makeText(SetUpProfile.this, "Grand Theft Auto Online has been added to game two spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame3().equals(" ")) {
+                    if (!user_info.getGame1().equals("Grand Theft Auto Online") && !user_info.getGame2().equals("Grand Theft Auto Online") && !user_info.getGame4().equals("Grand Theft Auto Online")) {
+                        user_info.setGame3("Grand Theft Auto Online");
+                        Toast.makeText(SetUpProfile.this, "Grand Theft Auto Online has been added to game three spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame4().equals(" ")){
+                    if (!user_info.getGame1().equals("Grand Theft Auto Online") && !user_info.getGame2().equals("Grand Theft Auto Online") && !user_info.getGame3().equals("Grand Theft Auto Online")) {
+                        user_info.setGame4("Grand Theft Auto Online");
+                        Toast.makeText(SetUpProfile.this, "Grand Theft Auto Online has been added to game four spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        game_eight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
+                if (user_info.getGame1().equals("Fallout 76")) {
+                    user_info.setGame1(" ");
+                    Toast.makeText(SetUpProfile.this,"Fallout 76 has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame2().equals("Fallout 76")){
+                    user_info.setGame2(" ");
+                    Toast.makeText(SetUpProfile.this,"Fallout 76 has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame3().equals("Fallout 76")){
+                    user_info.setGame3(" ");
+                    Toast.makeText(SetUpProfile.this,"Fallout 76 has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame4().equals("Fallout 76")){
+                    user_info.setGame4(" ");
+                    Toast.makeText(SetUpProfile.this,"Fallout 76 has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame1().equals(" ")){
+                    if (!user_info.getGame2().equals("Fallout 76") && !user_info.getGame3().equals("Fallout 76") && !user_info.getGame4().equals("Fallout 76")) {
+                        user_info.setGame1("Fallout 76");
+                        Toast.makeText(SetUpProfile.this, "Fallout 76 has been added to game one spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame2().equals(" ")){
+                    if (!user_info.getGame1().equals("Fallout 76") && !user_info.getGame3().equals("Fallout 76") && !user_info.getGame4().equals("Fallout 76")) {
+                        user_info.setGame2("Fallout 76");
+                        Toast.makeText(SetUpProfile.this, "Fallout 76 has been added to game two spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame3().equals(" ")) {
+                    if (!user_info.getGame1().equals("Fallout 76") && !user_info.getGame2().equals("Fallout 76") && !user_info.getGame4().equals("Fallout 76")) {
+                        user_info.setGame3("Fallout 76");
+                        Toast.makeText(SetUpProfile.this, "Fallout 76 has been added to game three spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else if (user_info.getGame4().equals(" ")){
+                    if (!user_info.getGame1().equals("Fallout 76") && !user_info.getGame2().equals("Fallout 76") && !user_info.getGame3().equals("Fallout 76")) {
+                        user_info.setGame4("Fallout 76");
+                        Toast.makeText(SetUpProfile.this, "Fallout 76 has been added to game four spot.", Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
 
 
