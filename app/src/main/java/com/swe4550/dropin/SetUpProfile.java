@@ -681,41 +681,41 @@ public class SetUpProfile extends AppCompatActivity {
             }
         });
 
-        interest_one.setOnClickListener(new View.OnClickListener() {
+        interest_six.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //these if statements will check the interest slots 1-4 to see if the said interest is already in it and if it is it'll remove it.
-                if (user_info.getInterest1().equals("Sports")) {
+                if (user_info.getInterest1().equals("Anime")) {
                     user_info.setInterest1(" ");
-                    Toast.makeText(SetUpProfile.this,"Sports has been removed from interest One spot.", Toast.LENGTH_LONG).show();
-                }else if (user_info.getInterest2().equals("Sports")){
+                    Toast.makeText(SetUpProfile.this,"Anime has been removed from interest One spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getInterest2().equals("Anime")){
                     user_info.setInterest2(" ");
-                    Toast.makeText(SetUpProfile.this,"Sports has been removed from interest two spot.", Toast.LENGTH_LONG).show();
-                }else if (user_info.getInterest3().equals("Sports")){
+                    Toast.makeText(SetUpProfile.this,"Anime has been removed from interest two spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getInterest3().equals("Anime")){
                     user_info.setInterest3(" ");
-                    Toast.makeText(SetUpProfile.this,"Sports has been removed from interest three spot.", Toast.LENGTH_LONG).show();
-                }else if (user_info.getInterest4().equals("Sports")){
+                    Toast.makeText(SetUpProfile.this,"Anime has been removed from interest three spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getInterest4().equals("Anime")){
                     user_info.setInterest4(" ");
-                    Toast.makeText(SetUpProfile.this,"Sports has been removed from interest four spot.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SetUpProfile.this,"Anime has been removed from interest four spot.", Toast.LENGTH_LONG).show();
                 }else if (user_info.getInterest1().equals(" ")){
-                    if (!user_info.getInterest2().equals("Sports") && !user_info.getInterest3().equals("Sports") && !user_info.getInterest4().equals("Sports")) {
-                        user_info.setInterest1("Sports");
-                        Toast.makeText(SetUpProfile.this, "Sports has been added to interest one spot.", Toast.LENGTH_LONG).show();
+                    if (!user_info.getInterest2().equals("Anime") && !user_info.getInterest3().equals("Anime") && !user_info.getInterest4().equals("Anime")) {
+                        user_info.setInterest1("Anime");
+                        Toast.makeText(SetUpProfile.this, "Anime has been added to interest one spot.", Toast.LENGTH_LONG).show();
                     }
                 }else if (user_info.getInterest2().equals(" ")){
-                    if (!user_info.getInterest1().equals("Sports") && !user_info.getInterest3().equals("Sports") && !user_info.getInterest4().equals("Sports")) {
-                        user_info.setInterest2("Sports");
-                        Toast.makeText(SetUpProfile.this, "Sports has been added to interest two spot.", Toast.LENGTH_LONG).show();
+                    if (!user_info.getInterest1().equals("Anime") && !user_info.getInterest3().equals("Anime") && !user_info.getInterest4().equals("Anime")) {
+                        user_info.setInterest2("Anime");
+                        Toast.makeText(SetUpProfile.this, "Anime has been added to interest two spot.", Toast.LENGTH_LONG).show();
                     }
                 }else if (user_info.getInterest3().equals(" ")) {
-                    if (!user_info.getInterest1().equals("Sports") && !user_info.getInterest2().equals("Sports") && !user_info.getInterest4().equals("Sports")) {
-                        user_info.setInterest3("Sports");
-                        Toast.makeText(SetUpProfile.this, "Sports has been added to interest three spot.", Toast.LENGTH_LONG).show();
+                    if (!user_info.getInterest1().equals("Anime") && !user_info.getInterest2().equals("Anime") && !user_info.getInterest4().equals("Anime")) {
+                        user_info.setInterest3("Anime");
+                        Toast.makeText(SetUpProfile.this, "Anime has been added to interest three spot.", Toast.LENGTH_LONG).show();
                     }
                 }else if (user_info.getInterest4().equals(" ")){
-                    if (!user_info.getInterest1().equals("Sports") && !user_info.getInterest2().equals("Sports") && !user_info.getInterest3().equals("Sports")) {
-                        user_info.setInterest4("Sports");
-                        Toast.makeText(SetUpProfile.this, "Sports has been added to interest four spot.", Toast.LENGTH_LONG).show();
+                    if (!user_info.getInterest1().equals("Anime") && !user_info.getInterest2().equals("Anime") && !user_info.getInterest3().equals("Anime")) {
+                        user_info.setInterest4("Anime");
+                        Toast.makeText(SetUpProfile.this, "Anime has been added to interest four spot.", Toast.LENGTH_LONG).show();
                     }
                 }else{
                     Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_LONG).show();
