@@ -41,4 +41,9 @@
     <string name="cancel_btn">Cancel</string>
     <string name="submit_btn">Submit</string>
 
+    <!--set up profile page-->
+    <string name="rate_txt">Rate</string>
+    <string name="poke_txt">Poke</string>
+    <string name="logout_btn">Log-out</string>
+
 </resources>
