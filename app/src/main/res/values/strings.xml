@@ -22,7 +22,7 @@
     <!--set up profile page-->
     <string name="user_pfp">User Profile Picture</string>
     <string name="user_name">Username</string>
-    <string name="biography">insert bio</string>
+    <string name="biography">insert bio here</string>
 
     <string name="biography_text">Biography</string>
     <string name="profile_pic_text">Profile Pics</string>

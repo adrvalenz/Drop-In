@@ -20,10 +20,12 @@
             android:layout_height="76dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
+            android:contentDescription="@+id/user_pfp"
+            android:elevation="2dp"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/grey_background_circle"
-            android:contentDescription="@+id/user_pfp" />
+            app:srcCompat="@drawable/grey_background_circle"/>
 
         <TextView
             android:id="@+id/user_name"
@@ -89,6 +91,7 @@
             android:layout_marginStart="41dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
 
@@ -98,10 +101,10 @@
             android:layout_height="76dp"
             android:layout_marginStart="41dp"
             android:layout_marginTop="12dp"
+            android:contentDescription="@+id/xbox_icon_logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text"
-            app:srcCompat="@drawable/xbox_icon_logo"
-            android:contentDescription="@+id/xbox_icon_logo" />
+            app:srcCompat="@drawable/xbox_icon_logo" />
 
         <Button
             android:id="@+id/pfp_2"
@@ -110,6 +113,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
+            android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@id/pfp_1"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
 
@@ -131,6 +135,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
+            android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@+id/pfp_2"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
 
@@ -152,8 +157,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
+            android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@+id/pfp_3"
-            app:layout_constraintTop_toBottomOf="@+id/profile_pic_text"/>
+            app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
 
         <ImageView
             android:id="@+id/playstation_icon_logo"
@@ -185,6 +191,7 @@
             android:layout_marginStart="41dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
 
@@ -203,9 +210,10 @@
             android:id="@+id/game_2"
             android:layout_width="76dp"
             android:layout_height="76dp"
-            android:background="@drawable/curved"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
+            android:background="@drawable/curved"
+            android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@+id/game_1"
             app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
 
@@ -224,9 +232,10 @@
             android:id="@+id/game_3"
             android:layout_width="76dp"
             android:layout_height="76dp"
-            android:background="@drawable/curved"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
+            android:background="@drawable/curved"
+            android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@+id/game_2"
             app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
 
@@ -245,9 +254,10 @@
             android:id="@+id/game_4"
             android:layout_width="76dp"
             android:layout_height="76dp"
-            android:background="@drawable/curved"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
+            android:background="@drawable/curved"
+            android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@+id/game_3"
             app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
 
@@ -266,9 +276,10 @@
             android:id="@+id/game_5"
             android:layout_width="76dp"
             android:layout_height="76dp"
-            android:background="@drawable/curved"
             android:layout_marginStart="41dp"
             android:layout_marginTop="12dp"
+            android:background="@drawable/curved"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/game_1" />
 
@@ -287,9 +298,10 @@
             android:id="@+id/game_6"
             android:layout_width="76dp"
             android:layout_height="76dp"
-            android:background="@drawable/curved"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
+            android:background="@drawable/curved"
+            android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@+id/game_5"
             app:layout_constraintTop_toBottomOf="@+id/game_2" />
 
@@ -308,9 +320,10 @@
             android:id="@+id/game_7"
             android:layout_width="76dp"
             android:layout_height="76dp"
-            android:background="@drawable/curved"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
+            android:background="@drawable/curved"
+            android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@+id/game_6"
             app:layout_constraintTop_toBottomOf="@+id/game_3" />
 
@@ -329,9 +342,10 @@
             android:id="@+id/game_8"
             android:layout_width="76dp"
             android:layout_height="76dp"
-            android:background="@drawable/curved"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
+            android:background="@drawable/curved"
+            android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@+id/game_7"
             app:layout_constraintTop_toBottomOf="@+id/game_4" />
 
@@ -364,7 +378,7 @@
             android:layout_height="70dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:backgroundTint="@color/purple_500"
             android:text="@string/interest_1"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
@@ -378,7 +392,7 @@
             android:layout_marginTop="12dp"
             android:text="@string/interest_2"
             android:textColor="@color/white"
-            android:background="@drawable/curved"
+            android:backgroundTint="@color/purple_500"
             app:layout_constraintStart_toEndOf="@+id/interest_1"
             app:layout_constraintTop_toBottomOf="@+id/outside_interest_text" />
 
@@ -388,7 +402,7 @@
             android:layout_height="70dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:backgroundTint="@color/purple_500"
             android:text="@string/interest_3"
             android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/interest_2"
@@ -400,7 +414,7 @@
             android:layout_height="70dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:backgroundTint="@color/purple_500"
             android:text="@string/interest_4"
             android:textColor="@color/white"
             app:layout_constraintStart_toEndOf="@+id/interest_3"
@@ -414,7 +428,7 @@
             android:layout_marginTop="12dp"
             android:text="@string/interest_5"
             android:textColor="@color/white"
-            android:background="@drawable/curved"
+            android:backgroundTint="@color/purple_500"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/interest_1" />
 
@@ -426,7 +440,7 @@
             android:layout_marginTop="12dp"
             android:text="@string/interest_6"
             android:textColor="@color/white"
-            android:background="@drawable/curved"
+            android:backgroundTint="@color/purple_500"
             app:layout_constraintStart_toEndOf="@+id/interest_5"
             app:layout_constraintTop_toBottomOf="@+id/interest_2" />
 
@@ -438,7 +452,7 @@
             android:layout_marginTop="12dp"
             android:text="@string/interest_7"
             android:textColor="@color/white"
-            android:background="@drawable/curved"
+            android:backgroundTint="@color/purple_500"
             app:layout_constraintStart_toEndOf="@+id/interest_6"
             app:layout_constraintTop_toBottomOf="@+id/interest_3" />
 
@@ -450,7 +464,7 @@
             android:layout_marginTop="12dp"
             android:text="@string/interest_8"
             android:textColor="@color/white"
-            android:background="@drawable/curved"
+            android:backgroundTint="@color/purple_500"
             app:layout_constraintStart_toEndOf="@+id/interest_7"
             app:layout_constraintTop_toBottomOf="@+id/interest_4" />
 
@@ -461,7 +475,7 @@
             android:layout_marginStart="149dp"
             android:layout_marginTop="200dp"
             android:layout_marginEnd="149dp"
-            android:background="@color/purple_500"
+            android:backgroundTint="@color/purple_500"
             android:text="@string/cancel_btn"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -476,7 +490,7 @@
             android:layout_marginStart="149dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="149dp"
-            android:background="@color/purple_500"
+            android:backgroundTint="@color/purple_500"
             android:text="@string/submit_btn"
             android:textAlignment="center"
             android:textColor="@color/white"

@@ -153,6 +153,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user_new_password_confirm"
         tools:ignore="DuplicateSpeakableTextCheck"
-        android:background="@drawable/curved"/>
+        android:backgroundTint="@color/purple_500"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
