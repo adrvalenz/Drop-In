@@ -221,37 +221,37 @@ public class SetUpProfile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
-                if (user_info.getGame1().equals("Fortnite")) {
+                if (user_info.getGame1().equals("Apex Legends")) {
                     user_info.setGame1(" ");
-                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game One spot.", Toast.LENGTH_LONG).show();
-                }else if (user_info.getGame2().equals("Fortnite")){
+                    Toast.makeText(SetUpProfile.this,"Apex Legends has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame2().equals("Apex Legends")){
                     user_info.setGame2(" ");
-                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game two spot.", Toast.LENGTH_LONG).show();
-                }else if (user_info.getGame3().equals("Fortnite")){
+                    Toast.makeText(SetUpProfile.this,"Apex Legends has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame3().equals("Apex Legends")){
                     user_info.setGame3(" ");
-                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game three spot.", Toast.LENGTH_LONG).show();
-                }else if (user_info.getGame4().equals("Fortnite")){
+                    Toast.makeText(SetUpProfile.this,"Apex Legends has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                }else if (user_info.getGame4().equals("Apex Legends")){
                     user_info.setGame4(" ");
-                    Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SetUpProfile.this,"Apex Legends has been removed from game four spot.", Toast.LENGTH_LONG).show();
                 }else if (user_info.getGame1().equals(" ")){
-                    if (!user_info.getGame2().equals("Fortnite") && !user_info.getGame3().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
-                        user_info.setGame1("Fortnite");
-                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game one spot.", Toast.LENGTH_LONG).show();
+                    if (!user_info.getGame2().equals("Apex Legends") && !user_info.getGame3().equals("Apex Legends") && !user_info.getGame4().equals("Apex Legends")) {
+                        user_info.setGame1("Apex Legends");
+                        Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game one spot.", Toast.LENGTH_LONG).show();
                     }
                 }else if (user_info.getGame2().equals(" ")){
-                    if (!user_info.getGame1().equals("Fortnite") && !user_info.getGame3().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
-                        user_info.setGame2("Fortnite");
-                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game two spot.", Toast.LENGTH_LONG).show();
+                    if (!user_info.getGame1().equals("Apex Legends") && !user_info.getGame3().equals("Apex Legends") && !user_info.getGame4().equals("Apex Legends")) {
+                        user_info.setGame2("Apex Legends");
+                        Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game two spot.", Toast.LENGTH_LONG).show();
                     }
                 }else if (user_info.getGame3().equals(" ")) {
-                    if (!user_info.getGame1().equals("Fortnite") & !user_info.getGame2().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
-                        user_info.setGame3("Fortnite");
-                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game three spot.", Toast.LENGTH_LONG).show();
+                    if (!user_info.getGame1().equals("Apex Legends") & !user_info.getGame2().equals("Apex Legends") && !user_info.getGame4().equals("Apex Legends")) {
+                        user_info.setGame3("Apex Legends");
+                        Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game three spot.", Toast.LENGTH_LONG).show();
                     }
                 }else if (user_info.getGame4().equals(" ")){
-                    if (!user_info.getGame1().equals("Fortnite") && !user_info.getGame2().equals("Fortnite") && !user_info.getGame3().equals("Fortnite")) {
-                        user_info.setGame4("Fortnite");
-                        Toast.makeText(SetUpProfile.this, "Fortnite has been added to game four spot.", Toast.LENGTH_LONG).show();
+                    if (!user_info.getGame1().equals("Apex Legends") && !user_info.getGame2().equals("Apex Legends") && !user_info.getGame3().equals("Apex Legends")) {
+                        user_info.setGame4("Apex Legends");
+                        Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game four spot.", Toast.LENGTH_LONG).show();
                     }
                 }else{
                     Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
