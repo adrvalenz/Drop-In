@@ -31,6 +31,7 @@
             android:layout_height="76dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/curved"
+            android:text="@string/user_name"
             android:textAlignment="center"
             android:textColor="@color/purple_700"
             android:textSize="45sp"
@@ -66,7 +67,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/biography_text"
             android:inputType="text"
-            tools:ignore="Autofill,LabelFor" />
+            android:hint="@string/biography"
+            android:importantForAutofill="no" />
 
         <TextView
             android:id="@+id/profile_pic_text"
