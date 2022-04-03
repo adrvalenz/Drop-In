@@ -62,11 +62,11 @@
         android:layout_width="221dp"
         android:layout_height="56dp"
         android:layout_marginStart="95dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="95dp"
-        android:hint="@string/user_new_email"
         android:background="@drawable/curved"
         android:ems="10"
+        android:hint="@string/user_new_email"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -75,6 +75,27 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_text"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/user_new_name"
+        style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
+        android:layout_width="221dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="95dp"
+        android:background="@drawable/curved"
+        android:ems="10"
+        android:hint="@string/user_new_name"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_new_email"
         tools:ignore="Autofill" />
 
     <EditText
@@ -95,7 +116,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_new_email"
+        app:layout_constraintTop_toBottomOf="@+id/user_new_name"
         tools:ignore="Autofill" />
 
     <EditText
@@ -127,11 +148,12 @@
         android:layout_marginTop="13dp"
         android:layout_marginEnd="149dp"
         android:text="@string/signup_new_btn"
+        android:textColor="@color/purple_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user_new_password_confirm"
         tools:ignore="DuplicateSpeakableTextCheck"
-        android:background="@drawable/curved"/>
+        android:backgroundTint="@color/purple_500"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

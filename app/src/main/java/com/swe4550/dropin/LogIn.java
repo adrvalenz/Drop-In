@@ -31,6 +31,11 @@ public class LogIn extends AppCompatActivity {
         //Check if a user is logged in, send to discover activity if there is one on startup.
         if(FirebaseAuth.getInstance().getCurrentUser() != null)
         {
+            FirebaseAuth.getInstance().signOut();
+        }
+        FirebaseAuth.getInstance().signOut();
+        if(FirebaseAuth.getInstance().getCurrentUser() != null)
+        {
             startActivity(new Intent(LogIn.this, Discover.class));
         }
         userEmail = findViewById(R.id.user_email);
