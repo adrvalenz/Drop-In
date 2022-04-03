@@ -203,7 +203,8 @@ public class SetUpProfile extends AppCompatActivity {
                 }else if (user_info.getInterest1().equals(" ") && user_info.getInterest2().equals(" ") && user_info.getInterest3().equals(" ") && user_info.getInterest4().equals(" ")){
                     Toast.makeText(SetUpProfile.this, "You must Select at least one game Picture.", Toast.LENGTH_LONG).show();
                 }else{
-                    user_info.setBiography();
+                    user_info.setBiography(bio.getText().toString().trim());
+                    editCurrentUser();
                 }
             }
         });
