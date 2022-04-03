@@ -13,6 +13,7 @@
 
     <!--sign-up page-->
     <string name="sign_up_text">Sign-Up</string>
+    <string name="user_new_name">Username</string>
     <string name="user_new_email">Email</string>
     <string name="user_new_password">Password</string>
     <string name="user_new_password_confirm">Confirm Password</string>
