@@ -22,12 +22,12 @@
     <!--set up profile page-->
     <string name="user_pfp">User Profile Picture</string>
     <string name="user_name">Username</string>
-    <string name="biography">insert bio</string>
+    <string name="biography">insert bio here</string>
 
     <string name="biography_text">Biography</string>
-    <string name="profile_pic_text">Profile Pics</string>
+    <string name="profile_pic_text">Profile Pictures</string>
     <string name="video_games_played_text">Video Games Played</string>
-    <string name="outside_interest_text">Outside Interest</string>
+    <string name="outside_interest_text">Outside Interests</string>
 
     <string name="interest_1">Sports</string>
     <string name="interest_2">Art</string>
@@ -40,5 +40,10 @@
 
     <string name="cancel_btn">Cancel</string>
     <string name="submit_btn">Submit</string>
+
+    <!--set up profile page-->
+    <string name="rate_txt">Rate</string>
+    <string name="poke_txt">Poke</string>
+    <string name="logout_btn">Log-out</string>
 
 </resources>
