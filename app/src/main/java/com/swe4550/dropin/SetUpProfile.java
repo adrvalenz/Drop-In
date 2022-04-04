@@ -864,20 +864,21 @@ public class SetUpProfile extends AppCompatActivity {
         user = FirebaseAuth.getInstance().getCurrentUser();
         mDatabase = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
+//
+//        ConstraintLayout layout = findViewById(R.id.databaseusage);
 
-        ConstraintLayout layout = findViewById(R.id.databaseusage);
-
-        TextView textView1 = new TextView(SetUpProfile.this);
-        textView1.setId(View.generateViewId());
-        layout.addView(textView1,0);
-        textView1.setVisibility(View.INVISIBLE);
+//        TextView textView1 = new TextView(SetUpProfile.this);
+//        textView1.setId(View.generateViewId());
+//        layout.addView(textView1,0);
+//        textView1.setVisibility(View.INVISIBLE);
+          TextView databaseUsage = findViewById(R.id.database_usage);
 
         mDatabase.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 user_info = snapshot.getValue(User.class);
                 String temp = user_info.getUserName() + "@" + user_info.getPfp() + "@" + user_info.getBiography() + "@" + user_info.getInterest1() + "@" + user_info.getInterest2() + "@" + user_info.getInterest3() + "@" + user_info.getInterest4() + "@" + user_info.getGame1() + "@" + user_info.getGame2() + "@" + user_info.getGame3() + "@" + user_info.getGame4();
-                textView1.setText(temp);
+                databaseUsage.setText(temp);
 
             }
 
@@ -886,7 +887,7 @@ public class SetUpProfile extends AppCompatActivity {
                 //error toast
             }
         });
-        String[] arrOfStr = textView1.getText().toString().split("@", -1);
+        String[] arrOfStr = databaseUsage.getText().toString().split("@", -1);
 
         user_info = new User(arrOfStr[0], arrOfStr[1], arrOfStr[2], arrOfStr[3], arrOfStr[4], arrOfStr[5], arrOfStr[6], arrOfStr[7], arrOfStr[8], arrOfStr[9], arrOfStr[10]);
     }
