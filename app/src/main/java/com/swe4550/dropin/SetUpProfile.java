@@ -8,6 +8,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -60,6 +61,7 @@ public class SetUpProfile extends AppCompatActivity {
     Button interest_eight;
     Button submitBtn;
     Button cancelBtn;
+    TextView databaseUsage = findViewById(R.id.database_usage);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -857,6 +859,7 @@ public class SetUpProfile extends AppCompatActivity {
     }
 
     public void getCurrentUserData(){
+//        user_info = new User(" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ");
         FirebaseUser user;
         DatabaseReference mDatabase;
         String userID;
@@ -871,24 +874,25 @@ public class SetUpProfile extends AppCompatActivity {
 //        textView1.setId(View.generateViewId());
 //        layout.addView(textView1,0);
 //        textView1.setVisibility(View.INVISIBLE);
-          TextView databaseUsage = findViewById(R.id.database_usage);
 
         mDatabase.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                user_info = snapshot.getValue(User.class);
-                String temp = user_info.getUserName() + "@" + user_info.getPfp() + "@" + user_info.getBiography() + "@" + user_info.getInterest1() + "@" + user_info.getInterest2() + "@" + user_info.getInterest3() + "@" + user_info.getInterest4() + "@" + user_info.getGame1() + "@" + user_info.getGame2() + "@" + user_info.getGame3() + "@" + user_info.getGame4();
+                Log.d("Referenceblahblah", "BS Message");
+                User user = snapshot.getValue(User.class);
+                String temp = user.getUserName() + "@" + user.getPfp() + "@" + user.getBiography() + "@" + user.getInterest1() + "@" + user.getInterest2() + "@" + user.getInterest3() + "@" + user.getInterest4() + "@" + user.getGame1() + "@" + user.getGame2() + "@" + user.getGame3() + "@" + user.getGame4();
                 databaseUsage.setText(temp);
-
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                //error toast
+                Log.e("Errory", "Bruh");
             }
         });
         String[] arrOfStr = databaseUsage.getText().toString().split("@", -1);
-
+        Log.d("DataNext", databaseUsage.getText().toString());
+        Log.d("DataHere", arrOfStr[0]);
+//        user_info = new User(" "," "," "," "," "," "," "," "," "," "," ");
         user_info = new User(arrOfStr[0], arrOfStr[1], arrOfStr[2], arrOfStr[3], arrOfStr[4], arrOfStr[5], arrOfStr[6], arrOfStr[7], arrOfStr[8], arrOfStr[9], arrOfStr[10]);
     }
 
