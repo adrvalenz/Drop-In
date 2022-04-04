@@ -4,15 +4,273 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_200"
     tools:context=".Discover">
 
     <TextView
+        android:id="@+id/discover_text"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/curved"
+        android:text="@string/discover_text"
+        android:textAlignment="textStart"
+        android:textColor="@color/purple_700"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/drop_in_logo"
+        android:layout_width="153dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/drop_in_logo"
+        android:contentDescription="@+id/drop_in_logo" />
+
+    <Button
+        android:id="@+id/summary_1"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discover_text" />
+
+    <ImageView
+        android:id="@+id/pfp_1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discover_text"
+        app:srcCompat="@drawable/grey_background_circle"
+        android:contentDescription="@+id/pfp_1" />
+
+    <TextView
+        android:id="@+id/game_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="10dp"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/purple_700"
+        android:textSize="35sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_1"
+        app:layout_constraintTop_toBottomOf="@+id/discover_text" />
+
+    <TextView
+        android:id="@+id/interest_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/purple_700"
+        android:textSize="35sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_1"
+        app:layout_constraintTop_toBottomOf="@+id/game_1" />
+
+    <Button
+        android:id="@+id/summary_2"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summary_1" />
+
+    <ImageView
+        android:id="@+id/pfp_2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+        android:visibility="invisible"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pfp_1"
+        app:srcCompat="@drawable/grey_background_circle"
+        android:contentDescription="@+id/pfp_2" />
+
+    <TextView
+        android:id="@+id/game_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/purple_700"
+        android:textSize="35sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_2"
+        app:layout_constraintTop_toBottomOf="@+id/summary_1" />
+
+    <TextView
+        android:id="@+id/interest_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/purple_700"
+        android:textSize="35sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_2"
+        app:layout_constraintTop_toBottomOf="@+id/game_2" />
+
+    <Button
+        android:id="@+id/summary_3"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summary_2" />
+
+    <ImageView
+        android:id="@+id/pfp_3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+        android:visibility="invisible"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pfp_2"
+        app:srcCompat="@drawable/grey_background_circle"
+        android:contentDescription="@+id/pfp_3" />
+
+    <TextView
+        android:id="@+id/game_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/purple_700"
+        android:textSize="35sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_3"
+        app:layout_constraintTop_toBottomOf="@+id/summary_2" />
+
+    <TextView
+        android:id="@+id/interest_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/purple_700"
+        android:textSize="35sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_3"
+        app:layout_constraintTop_toBottomOf="@+id/game_3" />
+
+    <Button
+        android:id="@+id/summary_4"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summary_3" />
+
+    <ImageView
+        android:id="@+id/pfp_4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+        android:visibility="invisible"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pfp_3"
+        app:srcCompat="@drawable/grey_background_circle"
+        android:contentDescription="@+id/pfp_4" />
+
+    <TextView
+        android:id="@+id/game_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/purple_700"
+        android:textSize="35sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_4"
+        app:layout_constraintTop_toBottomOf="@+id/summary_3" />
+
+    <TextView
+        android:id="@+id/interest_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/purple_700"
+        android:textSize="35sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_4"
+        app:layout_constraintTop_toBottomOf="@+id/game_4" />
+
+    <Button
+        android:id="@+id/summary_5"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summary_4" />
+
+    <ImageView
+        android:id="@+id/pfp_5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+        android:visibility="invisible"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pfp_4"
+        app:srcCompat="@drawable/grey_background_circle"
+        android:contentDescription="@+id/pfp_5" />
+
+    <TextView
+        android:id="@+id/game_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/purple_700"
+        android:textSize="35sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_5"
+        app:layout_constraintTop_toBottomOf="@+id/summary_4" />
+
+    <TextView
+        android:id="@+id/interest_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/purple_700"
+        android:textSize="35sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_5"
+        app:layout_constraintTop_toBottomOf="@+id/game_5" />
+
+    <Button
+        android:id="@+id/pokes_btn"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/pokes_text"
+        android:textSize="32sp"
+        android:textColor="@color/purple_700"
+        app:layout_constraintEnd_toStartOf="@+id/profile_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summary_5" />
+
+    <Button
+        android:id="@+id/profile_btn"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/profile_btn"
+        android:textSize="32sp"
+        android:textColor="@color/purple_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pokes_btn"
+        app:layout_constraintTop_toBottomOf="@+id/summary_5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
