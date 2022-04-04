@@ -1,7 +1,10 @@
 package com.swe4550.dropin;
 
+import static android.graphics.drawable.Drawable.createFromPath;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,9 +14,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -21,6 +28,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class SetUpProfile extends AppCompatActivity {
 
@@ -51,7 +60,6 @@ public class SetUpProfile extends AppCompatActivity {
     Button interest_eight;
     Button submitBtn;
     Button cancelBtn;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -857,13 +865,20 @@ public class SetUpProfile extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
+        ConstraintLayout layout = findViewById(R.id.databaseusage);
+
+        TextView textView1 = new TextView(SetUpProfile.this);
+        textView1.setId(View.generateViewId());
+        layout.addView(textView1,0);
+        textView1.setVisibility(View.INVISIBLE);
 
         mDatabase.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User userProfile = snapshot.getValue(User.class);
+                user_info = snapshot.getValue(User.class);
+                String temp = user_info.getUserName() + "@" + user_info.getPfp() + "@" + user_info.getBiography() + "@" + user_info.getInterest1() + "@" + user_info.getInterest2() + "@" + user_info.getInterest3() + "@" + user_info.getInterest4() + "@" + user_info.getGame1() + "@" + user_info.getGame2() + "@" + user_info.getGame3() + "@" + user_info.getGame4();
+                textView1.setText(temp);
 
-                //code to display user information
             }
 
             @Override
@@ -871,6 +886,9 @@ public class SetUpProfile extends AppCompatActivity {
                 //error toast
             }
         });
+        String[] arrOfStr = textView1.getText().toString().split("@", -1);
+
+        user_info = new User(arrOfStr[0], arrOfStr[1], arrOfStr[2], arrOfStr[3], arrOfStr[4], arrOfStr[5], arrOfStr[6], arrOfStr[7], arrOfStr[8], arrOfStr[9], arrOfStr[10]);
     }
 
     public void editCurrentUser(User newProfile){

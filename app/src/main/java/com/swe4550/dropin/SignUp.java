@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -114,6 +115,7 @@ public class SignUp extends AppCompatActivity {
 
                             if (task.isSuccessful()) {
                                 //Sign up is successful
+                                Log.d("running_checkpoint", "checkpoint 1");
                                 startActivity(new Intent(SignUp.this, SetUpProfile.class));
                             } else {
                                 //If sign up fails on the database side then delete user from FirebaseAuth.
