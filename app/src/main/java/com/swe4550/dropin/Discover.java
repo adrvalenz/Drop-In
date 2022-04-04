@@ -14,10 +14,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -49,7 +51,6 @@ public class Discover extends AppCompatActivity {
     TextView interest_five;
     Button pokesBtn;
     Button profileBtn;
-
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -237,6 +238,38 @@ public class Discover extends AppCompatActivity {
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     User user = snapshot.getValue(User.class);
                     user_list.add(user);
+                }
+            }
+        }
+
+        @Override
+        public void onCancelled(@NonNull DatabaseError error) {
+
+        }
+    };
+
+
+    //Get users identification hash's for each user, in order of database, and store them in an array list.
+    public void getUserKeys(){
+
+        user_keys = new ArrayList<>();
+        DatabaseReference mDatabase;
+
+        //Get reference for User Node
+        mDatabase = FirebaseDatabase.getInstance().getReference("Users");
+        //Attach valueEventListener to mDatabase object to read all the values
+        mDatabase.addListenerForSingleValueEvent(valueEventListener2);
+
+    }
+    //Value Event Listener reads user from firebase database
+    ValueEventListener valueEventListener2 = new ValueEventListener() {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            user_keys.clear();
+            if(dataSnapshot.exists()){
+                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    User user = snapshot.getValue(User.class);
+                    user_keys.add(snapshot.getKey());
                 }
             }
         }
