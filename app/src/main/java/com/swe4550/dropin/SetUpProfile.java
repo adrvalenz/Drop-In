@@ -60,7 +60,7 @@ public class SetUpProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_up_profile);
         //set the variables to their UI counter parts
-        userPfp = findViewById(R.id.user_pfp);
+        userPfp = (ImageView)findViewById(R.id.user_pfp);
         userName = findViewById(R.id.user_name);
         bio = findViewById(R.id.biography);
         pfp_one = findViewById(R.id.pfp_1);
@@ -196,7 +196,7 @@ public class SetUpProfile extends AppCompatActivity {
                                 Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game two spot.", Toast.LENGTH_LONG).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
-                            if (!user_info.getGame1().equals("Elden Ring") & !user_info.getGame2().equals("Elden Ring") && !user_info.getGame4().equals("Elden Ring")) {
+                            if (!user_info.getGame1().equals("Elden Ring") && !user_info.getGame2().equals("Elden Ring") && !user_info.getGame4().equals("Elden Ring")) {
                                 user_info.setGame3("Elden Ring");
                                 Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game three spot.", Toast.LENGTH_LONG).show();
                             }
@@ -238,7 +238,7 @@ public class SetUpProfile extends AppCompatActivity {
                                 Toast.makeText(SetUpProfile.this, "Fortnite has been added to game two spot.", Toast.LENGTH_LONG).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
-                            if (!user_info.getGame1().equals("Fortnite") & !user_info.getGame2().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
+                            if (!user_info.getGame1().equals("Fortnite") && !user_info.getGame2().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
                                 user_info.setGame3("Fortnite");
                                 Toast.makeText(SetUpProfile.this, "Fortnite has been added to game three spot.", Toast.LENGTH_LONG).show();
                             }
@@ -280,7 +280,7 @@ public class SetUpProfile extends AppCompatActivity {
                                 Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game two spot.", Toast.LENGTH_LONG).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
-                            if (!user_info.getGame1().equals("Apex Legends") & !user_info.getGame2().equals("Apex Legends") && !user_info.getGame4().equals("Apex Legends")) {
+                            if (!user_info.getGame1().equals("Apex Legends") && !user_info.getGame2().equals("Apex Legends") && !user_info.getGame4().equals("Apex Legends")) {
                                 user_info.setGame3("Apex Legends");
                                 Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game three spot.", Toast.LENGTH_LONG).show();
                             }
@@ -323,7 +323,7 @@ public class SetUpProfile extends AppCompatActivity {
                                 Toast.makeText(SetUpProfile.this, "Call of Duty Warzone has been added to game two spot.", Toast.LENGTH_LONG).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
-                            if (!user_info.getGame1().equals("Call of Duty Warzone") & !user_info.getGame2().equals("Call of Duty Warzone") && !user_info.getGame4().equals("Call of Duty Warzone")) {
+                            if (!user_info.getGame1().equals("Call of Duty Warzone") && !user_info.getGame2().equals("Call of Duty Warzone") && !user_info.getGame4().equals("Call of Duty Warzone")) {
                                 user_info.setGame3("Call of Duty Warzone");
                                 Toast.makeText(SetUpProfile.this, "Call of Duty Warzone has been added to game three spot.", Toast.LENGTH_LONG).show();
                             }
@@ -365,7 +365,7 @@ public class SetUpProfile extends AppCompatActivity {
                                 Toast.makeText(SetUpProfile.this, "Rocket League has been added to game two spot.", Toast.LENGTH_LONG).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
-                            if (!user_info.getGame1().equals("Rocket League") & !user_info.getGame2().equals("Rocket League") && !user_info.getGame4().equals("Rocket League")) {
+                            if (!user_info.getGame1().equals("Rocket League") && !user_info.getGame2().equals("Rocket League") && !user_info.getGame4().equals("Rocket League")) {
                                 user_info.setGame3("Rocket League");
                                 Toast.makeText(SetUpProfile.this, "Rocket League has been added to game three spot.", Toast.LENGTH_LONG).show();
                             }
@@ -408,7 +408,7 @@ public class SetUpProfile extends AppCompatActivity {
                                 Toast.makeText(SetUpProfile.this, "Minecraft has been added to game two spot.", Toast.LENGTH_LONG).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
-                            if (!user_info.getGame1().equals("Minecraft") & !user_info.getGame2().equals("Minecraft") && !user_info.getGame4().equals("Minecraft")) {
+                            if (!user_info.getGame1().equals("Minecraft") && !user_info.getGame2().equals("Minecraft") && !user_info.getGame4().equals("Minecraft")) {
                                 user_info.setGame3("Minecraft");
                                 Toast.makeText(SetUpProfile.this, "Minecraft has been added to game three spot.", Toast.LENGTH_LONG).show();
                             }
