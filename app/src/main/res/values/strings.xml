@@ -45,5 +45,13 @@
     <string name="rate_txt">Rate</string>
     <string name="poke_txt">Poke</string>
     <string name="logout_btn">Log-out</string>
+    
+    <!--discover page-->
+    <string name="discover_text">Discover</string>
+    <string name="pokes_btn">Pokes</string>
+    <string name="profile_btn">Account</string>
+
+    <!--poke page-->
+    <string name="pokes_text">Pokes</string>
 
 </resources>

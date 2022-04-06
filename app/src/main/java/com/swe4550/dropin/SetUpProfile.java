@@ -104,6 +104,12 @@ public class SetUpProfile extends AppCompatActivity {
                 Log.d("Referenceblahblah", "BS Message");
                 user_info = snapshot.getValue(User.class);
 
+                //creating a function that will set the cancel button to invisible when the user is
+                //just creating their profile for the first time but everytime after it'll be visible.
+                if (user_info.getPfp().equals(" ")){
+                    cancelBtn.setVisibility(View.INVISIBLE);
+                }
+
                 /*a if-else-if function that will check if the current user has a
                 preselected profile picture and if it does it will display the picture and
                 if not itt will display a toast to tell them to choose one.
@@ -931,5 +937,3 @@ public class SetUpProfile extends AppCompatActivity {
         });
     }
 }
-
-
