@@ -85,8 +85,6 @@ public class SetUpProfile extends AppCompatActivity {
         interest_eight = findViewById(R.id.interest_8);
         submitBtn = findViewById(R.id.submit_btn);
         cancelBtn = findViewById(R.id.cancel_btn);
-        databaseUsage = findViewById(R.id.database_usage);
-        user_info = new User(" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ");
 
         //call the get current user data function
         //getCurrentUserData();
