@@ -58,7 +58,7 @@ public class Discover extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Bind views from UI
-        pfp_one = findViewById(R.id.pfp_1);
+        /*pfp_one = findViewById(R.id.pfp_1);
         pfp_two = findViewById(R.id.pfp_2);
         pfp_three = findViewById(R.id.pfp_3);
         pfp_four = findViewById(R.id.pfp_4);
@@ -193,7 +193,7 @@ public class Discover extends AppCompatActivity {
                 ViewProfileAct.putExtra("USER KEY", FirebaseAuth.getInstance().getCurrentUser().getUid());
                 startActivity(ViewProfileAct);
             }
-        });
+        });*/
     }
     //Function sets the correct image resource using the passed in string
     public int getImageInt(String key){

@@ -10,9 +10,20 @@
         android:background="@color/purple_200"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         tools:context=".SetUpProfile">
 
+
+        <EditText
+            android:id="@+id/database_usage"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="176dp"
+            android:text=" "
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.369"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/user_name" />
 
         <ImageView
             android:id="@+id/user_pfp"
