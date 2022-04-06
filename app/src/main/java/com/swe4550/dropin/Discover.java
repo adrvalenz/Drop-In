@@ -184,10 +184,10 @@ public class Discover extends AppCompatActivity {
                                             //interests.size() used, but games.size() would have yielded the exact same number, its effectively a constant
                                             for (int j = 0; j < interests.size(); j++) {
                                                 if (!interests.get(j).equals(" ")) {
-                                                    usable_interests.get(j).add(interests.get(j));
+                                                    usable_interests.get(i).add(interests.get(j));
                                                 }
                                                 if (!games.get(j).equals(" ")) {
-                                                    usable_games.get(j).add(games.get(j));
+                                                    usable_games.get(i).add(games.get(j));
                                                 }
                                             }
                                         }
