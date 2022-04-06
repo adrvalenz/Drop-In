@@ -28,6 +28,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class Discover extends AppCompatActivity {
 
@@ -85,7 +86,7 @@ public class Discover extends AppCompatActivity {
         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                user_keys.clear();
+                user_keys = new ArrayList<String>();
                 if(dataSnapshot.exists()){
                     for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
                         User user = snapshot.getValue(User.class);
@@ -99,12 +100,13 @@ public class Discover extends AppCompatActivity {
                     mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            user_list.clear();
-                            if(dataSnapshot.exists()){
-                                for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            user_list = new ArrayList<User>();
+                            if(dataSnapshot.exists()) {
+                                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                                     User user = snapshot.getValue(User.class);
                                     user_list.add(user);
                                 }
+                            }
                                 FirebaseUser user;
                                 DatabaseReference mDatabase;
                                 String userID;
@@ -116,7 +118,7 @@ public class Discover extends AppCompatActivity {
                                 mDatabase.child(userID).addValueEventListener(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        Log.d("Referenceblahblah", "BS Message");
+                                        current_user = new User();
                                         current_user = snapshot.getValue(User.class);
 
 
@@ -235,24 +237,22 @@ public class Discover extends AppCompatActivity {
                                                 startActivity(ViewProfileAct);
                                             }
                                         });
-                                        }
+                                        } // On data change for current_user
                                         @Override
                                         public void onCancelled(@NonNull DatabaseError error) {
                                             Log.e("Errory", "Bruh");
                                         }
-                                    });
-
-                            }
-                        }
+                                    }); //Value event listener for current user
+                        }//ondatachange for second, user_list
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
 
                         }
-                    });
+                    }); //Value event listener for user_keys
 
-                }
-            }
+                }//If data snapshot exists for first, user keys
+            }//First onDataChange Change
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
