@@ -60,7 +60,7 @@ public class SetUpProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_up_profile);
         //set the variables to their UI counter parts
-        userPfp = findViewById(R.id.user_pfp);
+        userPfp = (ImageView)findViewById(R.id.user_pfp);
         userName = findViewById(R.id.user_name);
         bio = findViewById(R.id.biography);
         pfp_one = findViewById(R.id.pfp_1);
