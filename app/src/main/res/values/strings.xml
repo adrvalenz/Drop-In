@@ -53,5 +53,7 @@
 
     <!--poke page-->
     <string name="pokes_text">Pokes</string>
+    <string name="discover_btn">Discover</string>
+    <string name="wants_to_play_text">Wants to play!</string>
 
 </resources>
