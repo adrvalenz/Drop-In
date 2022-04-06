@@ -116,7 +116,7 @@ public class SetUpProfile extends AppCompatActivity {
                 */
 
                 if (user_info.getPfp().equals(" ")) {
-                    Toast.makeText(SetUpProfile.this, "Please choose your profile picture.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SetUpProfile.this, "Please choose your profile picture.", Toast.LENGTH_SHORT).show();
                 } else if (user_info.getPfp().equals("Xbox")) {
                     userPfp.setImageResource(R.drawable.xbox_icon_logo);
                 } else if (user_info.getPfp().equals("Computer")) {
@@ -175,38 +175,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
                         if (user_info.getGame1().equals("Elden Ring")) {
                             user_info.setGame1(" ");
-                            Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame2().equals("Elden Ring")){
                             user_info.setGame2(" ");
-                            Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame3().equals("Elden Ring")){
                             user_info.setGame3(" ");
-                            Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame4().equals("Elden Ring")){
                             user_info.setGame4(" ");
-                            Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Elden Ring has been removed from game four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame1().equals(" ")){
                             if (!user_info.getGame2().equals("Elden Ring") && !user_info.getGame3().equals("Elden Ring") && !user_info.getGame4().equals("Elden Ring")) {
                                 user_info.setGame1("Elden Ring");
-                                Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame2().equals(" ")){
                             if (!user_info.getGame1().equals("Elden Ring") && !user_info.getGame3().equals("Elden Ring") && !user_info.getGame4().equals("Elden Ring")) {
                                 user_info.setGame2("Elden Ring");
-                                Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
                             if (!user_info.getGame1().equals("Elden Ring") && !user_info.getGame2().equals("Elden Ring") && !user_info.getGame4().equals("Elden Ring")) {
                                 user_info.setGame3("Elden Ring");
-                                Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame4().equals(" ")){
                             if (!user_info.getGame1().equals("Elden Ring") && !user_info.getGame2().equals("Elden Ring") && !user_info.getGame3().equals("Elden Ring")) {
                                 user_info.setGame4("Elden Ring");
-                                Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Elden Ring has been added to game four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -217,38 +217,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
                         if (user_info.getGame1().equals("Fortnite")) {
                             user_info.setGame1(" ");
-                            Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame2().equals("Fortnite")){
                             user_info.setGame2(" ");
-                            Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame3().equals("Fortnite")){
                             user_info.setGame3(" ");
-                            Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame4().equals("Fortnite")){
                             user_info.setGame4(" ");
-                            Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Fortnite has been removed from game four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame1().equals(" ")){
                             if (!user_info.getGame2().equals("Fortnite") && !user_info.getGame3().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
                                 user_info.setGame1("Fortnite");
-                                Toast.makeText(SetUpProfile.this, "Fortnite has been added to game one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Fortnite has been added to game one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame2().equals(" ")){
                             if (!user_info.getGame1().equals("Fortnite") && !user_info.getGame3().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
                                 user_info.setGame2("Fortnite");
-                                Toast.makeText(SetUpProfile.this, "Fortnite has been added to game two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Fortnite has been added to game two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
                             if (!user_info.getGame1().equals("Fortnite") && !user_info.getGame2().equals("Fortnite") && !user_info.getGame4().equals("Fortnite")) {
                                 user_info.setGame3("Fortnite");
-                                Toast.makeText(SetUpProfile.this, "Fortnite has been added to game three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Fortnite has been added to game three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame4().equals(" ")){
                             if (!user_info.getGame1().equals("Fortnite") && !user_info.getGame2().equals("Fortnite") && !user_info.getGame3().equals("Fortnite")) {
                                 user_info.setGame4("Fortnite");
-                                Toast.makeText(SetUpProfile.this, "Fortnite has been added to game four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Fortnite has been added to game four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -259,38 +259,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
                         if (user_info.getGame1().equals("Apex Legends")) {
                             user_info.setGame1(" ");
-                            Toast.makeText(SetUpProfile.this,"Apex Legends has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Apex Legends has been removed from game One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame2().equals("Apex Legends")){
                             user_info.setGame2(" ");
-                            Toast.makeText(SetUpProfile.this,"Apex Legends has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Apex Legends has been removed from game two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame3().equals("Apex Legends")){
                             user_info.setGame3(" ");
-                            Toast.makeText(SetUpProfile.this,"Apex Legends has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Apex Legends has been removed from game three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame4().equals("Apex Legends")){
                             user_info.setGame4(" ");
-                            Toast.makeText(SetUpProfile.this,"Apex Legends has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Apex Legends has been removed from game four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame1().equals(" ")){
                             if (!user_info.getGame2().equals("Apex Legends") && !user_info.getGame3().equals("Apex Legends") && !user_info.getGame4().equals("Apex Legends")) {
                                 user_info.setGame1("Apex Legends");
-                                Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame2().equals(" ")){
                             if (!user_info.getGame1().equals("Apex Legends") && !user_info.getGame3().equals("Apex Legends") && !user_info.getGame4().equals("Apex Legends")) {
                                 user_info.setGame2("Apex Legends");
-                                Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
                             if (!user_info.getGame1().equals("Apex Legends") && !user_info.getGame2().equals("Apex Legends") && !user_info.getGame4().equals("Apex Legends")) {
                                 user_info.setGame3("Apex Legends");
-                                Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame4().equals(" ")){
                             if (!user_info.getGame1().equals("Apex Legends") && !user_info.getGame2().equals("Apex Legends") && !user_info.getGame3().equals("Apex Legends")) {
                                 user_info.setGame4("Apex Legends");
-                                Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Apex Legends has been added to game four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -302,38 +302,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
                         if (user_info.getGame1().equals("Call of Duty Warzone")) {
                             user_info.setGame1(" ");
-                            Toast.makeText(SetUpProfile.this,"Call of Duty Warzone has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Call of Duty Warzone has been removed from game One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame2().equals("Call of Duty Warzone")){
                             user_info.setGame2(" ");
-                            Toast.makeText(SetUpProfile.this,"Call of Duty Warzone has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Call of Duty Warzone has been removed from game two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame3().equals("Call of Duty Warzone")){
                             user_info.setGame3(" ");
-                            Toast.makeText(SetUpProfile.this,"Call of Duty Warzone has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Call of Duty Warzone has been removed from game three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame4().equals("Call of Duty Warzone")){
                             user_info.setGame4(" ");
-                            Toast.makeText(SetUpProfile.this,"Call of Duty Warzone has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Call of Duty Warzone has been removed from game four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame1().equals(" ")){
                             if (!user_info.getGame2().equals("Call of Duty Warzone") && !user_info.getGame3().equals("Call of Duty Warzone") && !user_info.getGame4().equals("Call of Duty Warzone")) {
                                 user_info.setGame1("Call of Duty Warzone");
-                                Toast.makeText(SetUpProfile.this, "Call of Duty Warzone has been added to game one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Call of Duty Warzone has been added to game one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame2().equals(" ")){
                             if (!user_info.getGame1().equals("Call of Duty Warzone") && !user_info.getGame3().equals("Call of Duty Warzone") && !user_info.getGame4().equals("Call of Duty Warzone")) {
                                 user_info.setGame2("Call of Duty Warzone");
-                                Toast.makeText(SetUpProfile.this, "Call of Duty Warzone has been added to game two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Call of Duty Warzone has been added to game two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
                             if (!user_info.getGame1().equals("Call of Duty Warzone") && !user_info.getGame2().equals("Call of Duty Warzone") && !user_info.getGame4().equals("Call of Duty Warzone")) {
                                 user_info.setGame3("Call of Duty Warzone");
-                                Toast.makeText(SetUpProfile.this, "Call of Duty Warzone has been added to game three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Call of Duty Warzone has been added to game three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame4().equals(" ")){
                             if (!user_info.getGame1().equals("Call of Duty Warzone") && !user_info.getGame2().equals("Call of Duty Warzone") && !user_info.getGame3().equals("Call of Duty Warzone")) {
                                 user_info.setGame4("Call of Duty Warzone");
-                                Toast.makeText(SetUpProfile.this, "Call of Duty Warzone has been added to game four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Call of Duty Warzone has been added to game four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -344,38 +344,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
                         if (user_info.getGame1().equals("Rocket League")) {
                             user_info.setGame1(" ");
-                            Toast.makeText(SetUpProfile.this,"Rocket League has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Rocket League has been removed from game One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame2().equals("Rocket League")){
                             user_info.setGame2(" ");
-                            Toast.makeText(SetUpProfile.this,"Rocket League has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Rocket League has been removed from game two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame3().equals("Rocket League")){
                             user_info.setGame3(" ");
-                            Toast.makeText(SetUpProfile.this,"Rocket League has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Rocket League has been removed from game three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame4().equals("Rocket League")){
                             user_info.setGame4(" ");
-                            Toast.makeText(SetUpProfile.this,"Rocket League has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Rocket League has been removed from game four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame1().equals(" ")){
                             if (!user_info.getGame2().equals("Rocket League") && !user_info.getGame3().equals("Rocket League") && !user_info.getGame4().equals("Rocket League")) {
                                 user_info.setGame1("Rocket League");
-                                Toast.makeText(SetUpProfile.this, "Rocket League has been added to game one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Rocket League has been added to game one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame2().equals(" ")){
                             if (!user_info.getGame1().equals("Rocket League") && !user_info.getGame3().equals("Rocket League") && !user_info.getGame4().equals("Rocket League")) {
                                 user_info.setGame2("Rocket League");
-                                Toast.makeText(SetUpProfile.this, "Rocket League has been added to game two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Rocket League has been added to game two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
                             if (!user_info.getGame1().equals("Rocket League") && !user_info.getGame2().equals("Rocket League") && !user_info.getGame4().equals("Rocket League")) {
                                 user_info.setGame3("Rocket League");
-                                Toast.makeText(SetUpProfile.this, "Rocket League has been added to game three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Rocket League has been added to game three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame4().equals(" ")){
                             if (!user_info.getGame1().equals("Rocket League") && !user_info.getGame2().equals("Rocket League") && !user_info.getGame3().equals("Rocket League")) {
                                 user_info.setGame4("Rocket League");
-                                Toast.makeText(SetUpProfile.this, "Rocket League has been added to game four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Rocket League has been added to game four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -387,38 +387,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
                         if (user_info.getGame1().equals("Minecraft")) {
                             user_info.setGame1(" ");
-                            Toast.makeText(SetUpProfile.this,"Minecraft has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Minecraft has been removed from game One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame2().equals("Minecraft")){
                             user_info.setGame2(" ");
-                            Toast.makeText(SetUpProfile.this,"Minecraft has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Minecraft has been removed from game two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame3().equals("Minecraft")){
                             user_info.setGame3(" ");
-                            Toast.makeText(SetUpProfile.this,"Minecraft has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Minecraft has been removed from game three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame4().equals("Minecraft")){
                             user_info.setGame4(" ");
-                            Toast.makeText(SetUpProfile.this,"Minecraft has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Minecraft has been removed from game four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame1().equals(" ")){
                             if (!user_info.getGame2().equals("Minecraft") && !user_info.getGame3().equals("Minecraft") && !user_info.getGame4().equals("Minecraft")) {
                                 user_info.setGame1("Minecraft");
-                                Toast.makeText(SetUpProfile.this, "Minecraft has been added to game one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Minecraft has been added to game one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame2().equals(" ")){
                             if (!user_info.getGame1().equals("Minecraft") && !user_info.getGame3().equals("Minecraft") && !user_info.getGame4().equals("Minecraft")) {
                                 user_info.setGame2("Minecraft");
-                                Toast.makeText(SetUpProfile.this, "Minecraft has been added to game two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Minecraft has been added to game two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
                             if (!user_info.getGame1().equals("Minecraft") && !user_info.getGame2().equals("Minecraft") && !user_info.getGame4().equals("Minecraft")) {
                                 user_info.setGame3("Minecraft");
-                                Toast.makeText(SetUpProfile.this, "Minecraft has been added to game three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Minecraft has been added to game three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame4().equals(" ")){
                             if (!user_info.getGame1().equals("Minecraft") && !user_info.getGame2().equals("Minecraft") && !user_info.getGame3().equals("Minecraft")) {
                                 user_info.setGame4("Minecraft");
-                                Toast.makeText(SetUpProfile.this, "Minecraft has been added to game four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Minecraft has been added to game four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -429,38 +429,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
                         if (user_info.getGame1().equals("Grand Theft Auto Online")) {
                             user_info.setGame1(" ");
-                            Toast.makeText(SetUpProfile.this,"Grand Theft Auto Online has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Grand Theft Auto Online has been removed from game One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame2().equals("Grand Theft Auto Online")){
                             user_info.setGame2(" ");
-                            Toast.makeText(SetUpProfile.this,"Grand Theft Auto Online has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Grand Theft Auto Online has been removed from game two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame3().equals("Grand Theft Auto Online")){
                             user_info.setGame3(" ");
-                            Toast.makeText(SetUpProfile.this,"Grand Theft Auto Online has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Grand Theft Auto Online has been removed from game three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame4().equals("Grand Theft Auto Online")){
                             user_info.setGame4(" ");
-                            Toast.makeText(SetUpProfile.this,"Grand Theft Auto Online has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Grand Theft Auto Online has been removed from game four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame1().equals(" ")){
                             if (!user_info.getGame2().equals("Grand Theft Auto Online") && !user_info.getGame3().equals("Grand Theft Auto Online") && !user_info.getGame4().equals("Grand Theft Auto Online")) {
                                 user_info.setGame1("Grand Theft Auto Online");
-                                Toast.makeText(SetUpProfile.this, "Grand Theft Auto Online has been added to game one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Grand Theft Auto Online has been added to game one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame2().equals(" ")){
                             if (!user_info.getGame1().equals("Grand Theft Auto Online") && !user_info.getGame3().equals("Grand Theft Auto Online") && !user_info.getGame4().equals("Grand Theft Auto Online")) {
                                 user_info.setGame2("Grand Theft Auto Online");
-                                Toast.makeText(SetUpProfile.this, "Grand Theft Auto Online has been added to game two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Grand Theft Auto Online has been added to game two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
                             if (!user_info.getGame1().equals("Grand Theft Auto Online") && !user_info.getGame2().equals("Grand Theft Auto Online") && !user_info.getGame4().equals("Grand Theft Auto Online")) {
                                 user_info.setGame3("Grand Theft Auto Online");
-                                Toast.makeText(SetUpProfile.this, "Grand Theft Auto Online has been added to game three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Grand Theft Auto Online has been added to game three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame4().equals(" ")){
                             if (!user_info.getGame1().equals("Grand Theft Auto Online") && !user_info.getGame2().equals("Grand Theft Auto Online") && !user_info.getGame3().equals("Grand Theft Auto Online")) {
                                 user_info.setGame4("Grand Theft Auto Online");
-                                Toast.makeText(SetUpProfile.this, "Grand Theft Auto Online has been added to game four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Grand Theft Auto Online has been added to game four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -471,38 +471,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the game slots 1-4 to see if the said game is already in it and if it is it'll remove it.
                         if (user_info.getGame1().equals("Fallout 76")) {
                             user_info.setGame1(" ");
-                            Toast.makeText(SetUpProfile.this,"Fallout 76 has been removed from game One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Fallout 76 has been removed from game One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame2().equals("Fallout 76")){
                             user_info.setGame2(" ");
-                            Toast.makeText(SetUpProfile.this,"Fallout 76 has been removed from game two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Fallout 76 has been removed from game two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame3().equals("Fallout 76")){
                             user_info.setGame3(" ");
-                            Toast.makeText(SetUpProfile.this,"Fallout 76 has been removed from game three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Fallout 76 has been removed from game three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame4().equals("Fallout 76")){
                             user_info.setGame4(" ");
-                            Toast.makeText(SetUpProfile.this,"Fallout 76 has been removed from game four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Fallout 76 has been removed from game four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame1().equals(" ")){
                             if (!user_info.getGame2().equals("Fallout 76") && !user_info.getGame3().equals("Fallout 76") && !user_info.getGame4().equals("Fallout 76")) {
                                 user_info.setGame1("Fallout 76");
-                                Toast.makeText(SetUpProfile.this, "Fallout 76 has been added to game one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Fallout 76 has been added to game one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame2().equals(" ")){
                             if (!user_info.getGame1().equals("Fallout 76") && !user_info.getGame3().equals("Fallout 76") && !user_info.getGame4().equals("Fallout 76")) {
                                 user_info.setGame2("Fallout 76");
-                                Toast.makeText(SetUpProfile.this, "Fallout 76 has been added to game two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Fallout 76 has been added to game two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame3().equals(" ")) {
                             if (!user_info.getGame1().equals("Fallout 76") && !user_info.getGame2().equals("Fallout 76") && !user_info.getGame4().equals("Fallout 76")) {
                                 user_info.setGame3("Fallout 76");
-                                Toast.makeText(SetUpProfile.this, "Fallout 76 has been added to game three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Fallout 76 has been added to game three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getGame4().equals(" ")){
                             if (!user_info.getGame1().equals("Fallout 76") && !user_info.getGame2().equals("Fallout 76") && !user_info.getGame3().equals("Fallout 76")) {
                                 user_info.setGame4("Fallout 76");
-                                Toast.makeText(SetUpProfile.this, "Fallout 76 has been added to game four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Fallout 76 has been added to game four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another game to add this game.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -513,38 +513,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the interest slots 1-4 to see if the said interest is already in it and if it is it'll remove it.
                         if (user_info.getInterest1().equals("Sports")) {
                             user_info.setInterest1(" ");
-                            Toast.makeText(SetUpProfile.this,"Sports has been removed from interest One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Sports has been removed from interest One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest2().equals("Sports")){
                             user_info.setInterest2(" ");
-                            Toast.makeText(SetUpProfile.this,"Sports has been removed from interest two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Sports has been removed from interest two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest3().equals("Sports")){
                             user_info.setInterest3(" ");
-                            Toast.makeText(SetUpProfile.this,"Sports has been removed from interest three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Sports has been removed from interest three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest4().equals("Sports")){
                             user_info.setInterest4(" ");
-                            Toast.makeText(SetUpProfile.this,"Sports has been removed from interest four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Sports has been removed from interest four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest1().equals(" ")){
                             if (!user_info.getInterest2().equals("Sports") && !user_info.getInterest3().equals("Sports") && !user_info.getInterest4().equals("Sports")) {
                                 user_info.setInterest1("Sports");
-                                Toast.makeText(SetUpProfile.this, "Sports has been added to interest one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Sports has been added to interest one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest2().equals(" ")){
                             if (!user_info.getInterest1().equals("Sports") && !user_info.getInterest3().equals("Sports") && !user_info.getInterest4().equals("Sports")) {
                                 user_info.setInterest2("Sports");
-                                Toast.makeText(SetUpProfile.this, "Sports has been added to interest two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Sports has been added to interest two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest3().equals(" ")) {
                             if (!user_info.getInterest1().equals("Sports") && !user_info.getInterest2().equals("Sports") && !user_info.getInterest4().equals("Sports")) {
                                 user_info.setInterest3("Sports");
-                                Toast.makeText(SetUpProfile.this, "Sports has been added to interest three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Sports has been added to interest three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest4().equals(" ")){
                             if (!user_info.getInterest1().equals("Sports") && !user_info.getInterest2().equals("Sports") && !user_info.getInterest3().equals("Sports")) {
                                 user_info.setInterest4("Sports");
-                                Toast.makeText(SetUpProfile.this, "Sports has been added to interest four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Sports has been added to interest four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -555,38 +555,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the interest slots 1-4 to see if the said interest is already in it and if it is it'll remove it.
                         if (user_info.getInterest1().equals("Art")) {
                             user_info.setInterest1(" ");
-                            Toast.makeText(SetUpProfile.this,"Art has been removed from interest One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Art has been removed from interest One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest2().equals("Art")){
                             user_info.setInterest2(" ");
-                            Toast.makeText(SetUpProfile.this,"Art has been removed from interest two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Art has been removed from interest two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest3().equals("Art")){
                             user_info.setInterest3(" ");
-                            Toast.makeText(SetUpProfile.this,"Art has been removed from interest three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Art has been removed from interest three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest4().equals("Art")){
                             user_info.setInterest4(" ");
-                            Toast.makeText(SetUpProfile.this,"Art has been removed from interest four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Art has been removed from interest four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest1().equals(" ")){
                             if (!user_info.getInterest2().equals("Art") && !user_info.getInterest3().equals("Art") && !user_info.getInterest4().equals("Art")) {
                                 user_info.setInterest1("Art");
-                                Toast.makeText(SetUpProfile.this, "Art has been added to interest one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Art has been added to interest one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest2().equals(" ")){
                             if (!user_info.getInterest1().equals("Art") && !user_info.getInterest3().equals("Art") && !user_info.getInterest4().equals("Art")) {
                                 user_info.setInterest2("Art");
-                                Toast.makeText(SetUpProfile.this, "Art has been added to interest two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Art has been added to interest two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest3().equals(" ")) {
                             if (!user_info.getInterest1().equals("Art") && !user_info.getInterest2().equals("Art") && !user_info.getInterest4().equals("Art")) {
                                 user_info.setInterest3("Art");
-                                Toast.makeText(SetUpProfile.this, "Art has been added to interest three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Art has been added to interest three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest4().equals(" ")){
                             if (!user_info.getInterest1().equals("Art") && !user_info.getInterest2().equals("Art") && !user_info.getInterest3().equals("Art")) {
                                 user_info.setInterest4("Art");
-                                Toast.makeText(SetUpProfile.this, "Art has been added to interest four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Art has been added to interest four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -597,38 +597,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the interest slots 1-4 to see if the said interest is already in it and if it is it'll remove it.
                         if (user_info.getInterest1().equals("Cars")) {
                             user_info.setInterest1(" ");
-                            Toast.makeText(SetUpProfile.this,"Cars has been removed from interest One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Cars has been removed from interest One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest2().equals("Cars")){
                             user_info.setInterest2(" ");
-                            Toast.makeText(SetUpProfile.this,"Cars has been removed from interest two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Cars has been removed from interest two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest3().equals("Cars")){
                             user_info.setInterest3(" ");
-                            Toast.makeText(SetUpProfile.this,"Cars has been removed from interest three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Cars has been removed from interest three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest4().equals("Cars")){
                             user_info.setInterest4(" ");
-                            Toast.makeText(SetUpProfile.this,"Cars has been removed from interest four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Cars has been removed from interest four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest1().equals(" ")){
                             if (!user_info.getInterest2().equals("Cars") && !user_info.getInterest3().equals("Cars") && !user_info.getInterest4().equals("Cars")) {
                                 user_info.setInterest1("Cars");
-                                Toast.makeText(SetUpProfile.this, "Cars has been added to interest one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Cars has been added to interest one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest2().equals(" ")){
                             if (!user_info.getInterest1().equals("Cars") && !user_info.getInterest3().equals("Cars") && !user_info.getInterest4().equals("Cars")) {
                                 user_info.setInterest2("Cars");
-                                Toast.makeText(SetUpProfile.this, "Cars has been added to interest two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Cars has been added to interest two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest3().equals(" ")) {
                             if (!user_info.getInterest1().equals("Cars") && !user_info.getInterest2().equals("Cars") && !user_info.getInterest4().equals("Cars")) {
                                 user_info.setInterest3("Cars");
-                                Toast.makeText(SetUpProfile.this, "Cars has been added to interest three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Cars has been added to interest three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest4().equals(" ")){
                             if (!user_info.getInterest1().equals("Cars") && !user_info.getInterest2().equals("Cars") && !user_info.getInterest3().equals("Cars")) {
                                 user_info.setInterest4("Cars");
-                                Toast.makeText(SetUpProfile.this, "Cars has been added to interest four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Cars has been added to interest four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -639,38 +639,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the interest slots 1-4 to see if the said interest is already in it and if it is it'll remove it.
                         if (user_info.getInterest1().equals("Music")) {
                             user_info.setInterest1(" ");
-                            Toast.makeText(SetUpProfile.this,"Music has been removed from interest One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Music has been removed from interest One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest2().equals("Music")){
                             user_info.setInterest2(" ");
-                            Toast.makeText(SetUpProfile.this,"Music has been removed from interest two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Music has been removed from interest two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest3().equals("Music")){
                             user_info.setInterest3(" ");
-                            Toast.makeText(SetUpProfile.this,"Music has been removed from interest three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Music has been removed from interest three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest4().equals("Music")){
                             user_info.setInterest4(" ");
-                            Toast.makeText(SetUpProfile.this,"Music has been removed from interest four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Music has been removed from interest four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest1().equals(" ")){
                             if (!user_info.getInterest2().equals("Music") && !user_info.getInterest3().equals("Music") && !user_info.getInterest4().equals("Music")) {
                                 user_info.setInterest1("Music");
-                                Toast.makeText(SetUpProfile.this, "Music has been added to interest one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Music has been added to interest one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest2().equals(" ")){
                             if (!user_info.getInterest1().equals("Music") && !user_info.getInterest3().equals("Music") && !user_info.getInterest4().equals("Music")) {
                                 user_info.setInterest2("Music");
-                                Toast.makeText(SetUpProfile.this, "Music has been added to interest two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Music has been added to interest two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest3().equals(" ")) {
                             if (!user_info.getInterest1().equals("Music") && !user_info.getInterest2().equals("Music") && !user_info.getInterest4().equals("Music")) {
                                 user_info.setInterest3("Music");
-                                Toast.makeText(SetUpProfile.this, "Music has been added to interest three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Music has been added to interest three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest4().equals(" ")){
                             if (!user_info.getInterest1().equals("Music") && !user_info.getInterest2().equals("Music") && !user_info.getInterest3().equals("Music")) {
                                 user_info.setInterest4("Music");
-                                Toast.makeText(SetUpProfile.this, "Music has been added to interest four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Music has been added to interest four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -681,38 +681,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the interest slots 1-4 to see if the said interest is already in it and if it is it'll remove it.
                         if (user_info.getInterest1().equals("Cooking")) {
                             user_info.setInterest1(" ");
-                            Toast.makeText(SetUpProfile.this,"Cooking has been removed from interest One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Cooking has been removed from interest One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest2().equals("Cooking")){
                             user_info.setInterest2(" ");
-                            Toast.makeText(SetUpProfile.this,"Cooking has been removed from interest two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Cooking has been removed from interest two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest3().equals("Cooking")){
                             user_info.setInterest3(" ");
-                            Toast.makeText(SetUpProfile.this,"Cooking has been removed from interest three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Cooking has been removed from interest three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest4().equals("Cooking")){
                             user_info.setInterest4(" ");
-                            Toast.makeText(SetUpProfile.this,"Cooking has been removed from interest four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Cooking has been removed from interest four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest1().equals(" ")){
                             if (!user_info.getInterest2().equals("Cooking") && !user_info.getInterest3().equals("Cooking") && !user_info.getInterest4().equals("Cooking")) {
                                 user_info.setInterest1("Cooking");
-                                Toast.makeText(SetUpProfile.this, "Cooking has been added to interest one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Cooking has been added to interest one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest2().equals(" ")){
                             if (!user_info.getInterest1().equals("Cooking") && !user_info.getInterest3().equals("Cooking") && !user_info.getInterest4().equals("Cooking")) {
                                 user_info.setInterest2("Cooking");
-                                Toast.makeText(SetUpProfile.this, "Cooking has been added to interest two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Cooking has been added to interest two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest3().equals(" ")) {
                             if (!user_info.getInterest1().equals("Cooking") && !user_info.getInterest2().equals("Cooking") && !user_info.getInterest4().equals("Cooking")) {
                                 user_info.setInterest3("Cooking");
-                                Toast.makeText(SetUpProfile.this, "Cooking has been added to interest three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Cooking has been added to interest three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest4().equals(" ")){
                             if (!user_info.getInterest1().equals("Cooking") && !user_info.getInterest2().equals("Cooking") && !user_info.getInterest3().equals("Cooking")) {
                                 user_info.setInterest4("Cooking");
-                                Toast.makeText(SetUpProfile.this, "Cooking has been added to interest four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Cooking has been added to interest four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -723,38 +723,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the interest slots 1-4 to see if the said interest is already in it and if it is it'll remove it.
                         if (user_info.getInterest1().equals("Anime")) {
                             user_info.setInterest1(" ");
-                            Toast.makeText(SetUpProfile.this,"Anime has been removed from interest One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Anime has been removed from interest One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest2().equals("Anime")){
                             user_info.setInterest2(" ");
-                            Toast.makeText(SetUpProfile.this,"Anime has been removed from interest two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Anime has been removed from interest two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest3().equals("Anime")){
                             user_info.setInterest3(" ");
-                            Toast.makeText(SetUpProfile.this,"Anime has been removed from interest three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Anime has been removed from interest three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest4().equals("Anime")){
                             user_info.setInterest4(" ");
-                            Toast.makeText(SetUpProfile.this,"Anime has been removed from interest four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Anime has been removed from interest four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest1().equals(" ")){
                             if (!user_info.getInterest2().equals("Anime") && !user_info.getInterest3().equals("Anime") && !user_info.getInterest4().equals("Anime")) {
                                 user_info.setInterest1("Anime");
-                                Toast.makeText(SetUpProfile.this, "Anime has been added to interest one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Anime has been added to interest one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest2().equals(" ")){
                             if (!user_info.getInterest1().equals("Anime") && !user_info.getInterest3().equals("Anime") && !user_info.getInterest4().equals("Anime")) {
                                 user_info.setInterest2("Anime");
-                                Toast.makeText(SetUpProfile.this, "Anime has been added to interest two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Anime has been added to interest two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest3().equals(" ")) {
                             if (!user_info.getInterest1().equals("Anime") && !user_info.getInterest2().equals("Anime") && !user_info.getInterest4().equals("Anime")) {
                                 user_info.setInterest3("Anime");
-                                Toast.makeText(SetUpProfile.this, "Anime has been added to interest three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Anime has been added to interest three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest4().equals(" ")){
                             if (!user_info.getInterest1().equals("Anime") && !user_info.getInterest2().equals("Anime") && !user_info.getInterest3().equals("Anime")) {
                                 user_info.setInterest4("Anime");
-                                Toast.makeText(SetUpProfile.this, "Anime has been added to interest four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Anime has been added to interest four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -765,38 +765,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the interest slots 1-4 to see if the said interest is already in it and if it is it'll remove it.
                         if (user_info.getInterest1().equals("Reading")) {
                             user_info.setInterest1(" ");
-                            Toast.makeText(SetUpProfile.this,"Reading has been removed from interest One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Reading has been removed from interest One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest2().equals("Reading")){
                             user_info.setInterest2(" ");
-                            Toast.makeText(SetUpProfile.this,"Reading has been removed from interest two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Reading has been removed from interest two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest3().equals("Reading")){
                             user_info.setInterest3(" ");
-                            Toast.makeText(SetUpProfile.this,"Reading has been removed from interest three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Reading has been removed from interest three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest4().equals("Reading")){
                             user_info.setInterest4(" ");
-                            Toast.makeText(SetUpProfile.this,"Reading has been removed from interest four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Reading has been removed from interest four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest1().equals(" ")){
                             if (!user_info.getInterest2().equals("Reading") && !user_info.getInterest3().equals("Reading") && !user_info.getInterest4().equals("Reading")) {
                                 user_info.setInterest1("Reading");
-                                Toast.makeText(SetUpProfile.this, "Reading has been added to interest one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Reading has been added to interest one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest2().equals(" ")){
                             if (!user_info.getInterest1().equals("Reading") && !user_info.getInterest3().equals("Reading") && !user_info.getInterest4().equals("Reading")) {
                                 user_info.setInterest2("Reading");
-                                Toast.makeText(SetUpProfile.this, "Reading has been added to interest two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Reading has been added to interest two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest3().equals(" ")) {
                             if (!user_info.getInterest1().equals("Reading") && !user_info.getInterest2().equals("Reading") && !user_info.getInterest4().equals("Reading")) {
                                 user_info.setInterest3("Reading");
-                                Toast.makeText(SetUpProfile.this, "Reading has been added to interest three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Reading has been added to interest three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest4().equals(" ")){
                             if (!user_info.getInterest1().equals("Reading") && !user_info.getInterest2().equals("Reading") && !user_info.getInterest3().equals("Reading")) {
                                 user_info.setInterest4("Reading");
-                                Toast.makeText(SetUpProfile.this, "Reading has been added to interest four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Reading has been added to interest four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -807,38 +807,38 @@ public class SetUpProfile extends AppCompatActivity {
                         //these if statements will check the interest slots 1-4 to see if the said interest is already in it and if it is it'll remove it.
                         if (user_info.getInterest1().equals("Martial Arts")) {
                             user_info.setInterest1(" ");
-                            Toast.makeText(SetUpProfile.this,"Martial Arts has been removed from interest One spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Martial Arts has been removed from interest One spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest2().equals("Martial Arts")){
                             user_info.setInterest2(" ");
-                            Toast.makeText(SetUpProfile.this,"Martial Arts has been removed from interest two spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Martial Arts has been removed from interest two spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest3().equals("Martial Arts")){
                             user_info.setInterest3(" ");
-                            Toast.makeText(SetUpProfile.this,"Martial Arts has been removed from interest three spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Martial Arts has been removed from interest three spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest4().equals("Martial Arts")){
                             user_info.setInterest4(" ");
-                            Toast.makeText(SetUpProfile.this,"Martial Arts has been removed from interest four spot.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"Martial Arts has been removed from interest four spot.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest1().equals(" ")){
                             if (!user_info.getInterest2().equals("Martial Arts") && !user_info.getInterest3().equals("Martial Arts") && !user_info.getInterest4().equals("Martial Arts")) {
                                 user_info.setInterest1("Martial Arts");
-                                Toast.makeText(SetUpProfile.this, "Martial Arts has been added to interest one spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Martial Arts has been added to interest one spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest2().equals(" ")){
                             if (!user_info.getInterest1().equals("Martial Arts") && !user_info.getInterest3().equals("Martial Arts") && !user_info.getInterest4().equals("Martial Arts")) {
                                 user_info.setInterest2("Martial Arts");
-                                Toast.makeText(SetUpProfile.this, "Martial Arts has been added to interest two spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Martial Arts has been added to interest two spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest3().equals(" ")) {
                             if (!user_info.getInterest1().equals("Martial Arts") && !user_info.getInterest2().equals("Martial Arts") && !user_info.getInterest4().equals("Martial Arts")) {
                                 user_info.setInterest3("Martial Arts");
-                                Toast.makeText(SetUpProfile.this, "Martial Arts has been added to interest three spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Martial Arts has been added to interest three spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else if (user_info.getInterest4().equals(" ")){
                             if (!user_info.getInterest1().equals("Martial Arts") && !user_info.getInterest2().equals("Martial Arts") && !user_info.getInterest3().equals("Martial Arts")) {
                                 user_info.setInterest4("Martial Arts");
-                                Toast.makeText(SetUpProfile.this, "Martial Arts has been added to interest four spot.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SetUpProfile.this, "Martial Arts has been added to interest four spot.", Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this,"All slots are filled, please uncheck another interest to add this interest.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -859,11 +859,11 @@ public class SetUpProfile extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         if (user_info.getPfp().equals(" ")){
-                            Toast.makeText(SetUpProfile.this, "You must Select a Profile Picture.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this, "You must Select a Profile Picture.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getGame1().equals(" ") && user_info.getGame2().equals(" ") && user_info.getGame3().equals(" ") && user_info.getGame4().equals(" ")){
-                            Toast.makeText(SetUpProfile.this, "You must Select at least one game.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this, "You must Select at least one game.", Toast.LENGTH_SHORT).show();
                         }else if (user_info.getInterest1().equals(" ") && user_info.getInterest2().equals(" ") && user_info.getInterest3().equals(" ") && user_info.getInterest4().equals(" ")){
-                            Toast.makeText(SetUpProfile.this, "You must Select at least one interest.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SetUpProfile.this, "You must Select at least one interest.", Toast.LENGTH_SHORT).show();
                         }else{
                             user_info.setBiography(bio.getText().toString().trim());
                             editCurrentUser(user_info);
@@ -931,7 +931,7 @@ public class SetUpProfile extends AppCompatActivity {
             public void onFailure(@NonNull Exception e) {
                 //code for Failure
                 Toast.makeText(SetUpProfile.this, "Error editing profile.",
-                        Toast.LENGTH_LONG).show();
+                        Toast.LENGTH_SHORT).show();
 
             }
         });
