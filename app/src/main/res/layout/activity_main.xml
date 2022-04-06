@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
+    android:background="@color/background"
     tools:context=".Discover">
 
     <TextView
@@ -15,7 +15,7 @@
         android:background="@drawable/curved"
         android:text="@string/discover_text"
         android:textAlignment="textStart"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text"
         android:textSize="70sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +36,7 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_marginTop="10dp"
+        android:backgroundTint="@color/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/discover_text" />
@@ -59,7 +60,7 @@
         android:layout_marginTop="10dp"
         android:elevation="2dp"
         android:text=" "
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text"
         android:textSize="35sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_1"
         app:layout_constraintTop_toBottomOf="@+id/discover_text" />
@@ -70,7 +71,7 @@
         android:layout_height="wrap_content"
         android:elevation="2dp"
         android:text=" "
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text"
         android:textSize="35sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_1"
         app:layout_constraintTop_toBottomOf="@+id/game_1" />
@@ -79,6 +80,7 @@
         android:id="@+id/summary_2"
         android:layout_width="0dp"
         android:layout_height="100dp"
+        android:backgroundTint="@color/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/summary_1" />
@@ -102,7 +104,7 @@
         android:layout_marginTop="10dp"
         android:elevation="2dp"
         android:text=" "
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text"
         android:textSize="35sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_2"
         app:layout_constraintTop_toBottomOf="@+id/summary_1" />
@@ -113,7 +115,7 @@
         android:layout_height="wrap_content"
         android:elevation="2dp"
         android:text=" "
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text"
         android:textSize="35sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_2"
         app:layout_constraintTop_toBottomOf="@+id/game_2" />
@@ -122,6 +124,7 @@
         android:id="@+id/summary_3"
         android:layout_width="0dp"
         android:layout_height="100dp"
+        android:backgroundTint="@color/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/summary_2" />
@@ -145,7 +148,7 @@
         android:layout_marginTop="10dp"
         android:elevation="2dp"
         android:text=" "
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text"
         android:textSize="35sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_3"
         app:layout_constraintTop_toBottomOf="@+id/summary_2" />
@@ -156,7 +159,7 @@
         android:layout_height="wrap_content"
         android:elevation="2dp"
         android:text=" "
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text"
         android:textSize="35sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_3"
         app:layout_constraintTop_toBottomOf="@+id/game_3" />
@@ -165,6 +168,7 @@
         android:id="@+id/summary_4"
         android:layout_width="0dp"
         android:layout_height="100dp"
+        android:backgroundTint="@color/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/summary_3" />
@@ -188,7 +192,7 @@
         android:layout_marginTop="10dp"
         android:elevation="2dp"
         android:text=" "
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text"
         android:textSize="35sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_4"
         app:layout_constraintTop_toBottomOf="@+id/summary_3" />
@@ -199,7 +203,7 @@
         android:layout_height="wrap_content"
         android:elevation="2dp"
         android:text=" "
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text"
         android:textSize="35sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_4"
         app:layout_constraintTop_toBottomOf="@+id/game_4" />
@@ -208,6 +212,7 @@
         android:id="@+id/summary_5"
         android:layout_width="0dp"
         android:layout_height="100dp"
+        android:backgroundTint="@color/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/summary_4" />
@@ -231,7 +236,7 @@
         android:layout_marginTop="10dp"
         android:elevation="2dp"
         android:text=" "
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text"
         android:textSize="35sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_5"
         app:layout_constraintTop_toBottomOf="@+id/summary_4" />
@@ -242,7 +247,7 @@
         android:layout_height="wrap_content"
         android:elevation="2dp"
         android:text=" "
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text"
         android:textSize="35sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_5"
         app:layout_constraintTop_toBottomOf="@+id/game_5" />
@@ -255,7 +260,8 @@
         android:layout_marginEnd="5dp"
         android:text="@string/pokes_text"
         android:textSize="31sp"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text"
+        android:backgroundTint="@color/button"
         app:layout_constraintEnd_toStartOf="@+id/profile_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/summary_5" />
@@ -268,7 +274,8 @@
         android:layout_marginTop="5dp"
         android:text="@string/profile_btn"
         android:textSize="31sp"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text"
+        android:backgroundTint="@color/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/pokes_btn"
         app:layout_constraintTop_toBottomOf="@+id/summary_5" />
