@@ -103,7 +103,7 @@
             android:layout_marginStart="41dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
 
@@ -114,6 +114,7 @@
             android:layout_marginStart="41dp"
             android:layout_marginTop="12dp"
             android:contentDescription="@+id/xbox_icon_logo"
+            android:elevation="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text"
             app:srcCompat="@drawable/xbox_icon_logo" />
@@ -125,7 +126,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toEndOf="@id/pfp_1"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
 
@@ -135,6 +136,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
+            android:elevation="2dp"
             app:layout_constraintStart_toEndOf="@+id/pfp_1"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text"
             app:srcCompat="@drawable/personal_computer_icon_logo"
@@ -147,7 +149,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/pfp_2"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
 
@@ -157,6 +159,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
+            android:elevation="2dp"
             app:layout_constraintStart_toEndOf="@+id/pfp_2"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text"
             app:srcCompat="@drawable/nintendo_switch_icon_logo"
@@ -169,7 +172,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/pfp_3"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
 
@@ -179,6 +182,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
+            android:elevation="2dp"
             app:layout_constraintStart_toEndOf="@+id/pfp_3"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text"
             app:srcCompat="@drawable/playstation_icon_logo"
@@ -203,7 +207,7 @@
             android:layout_marginStart="41dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
 
@@ -213,6 +217,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="41dp"
             android:layout_marginTop="12dp"
+            android:elevation="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/video_games_played_text"
             app:srcCompat="@drawable/elden_ring_game_image"
@@ -225,7 +230,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/game_1"
             app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
 
@@ -234,6 +239,7 @@
             android:layout_width="76dp"
             android:layout_height="76dp"
             app:srcCompat="@drawable/fortnite_game_image"
+            android:elevation="2dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             app:layout_constraintStart_toEndOf="@+id/game_1"
@@ -247,7 +253,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/game_2"
             app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
 
@@ -256,6 +262,7 @@
             android:layout_width="76dp"
             android:layout_height="76dp"
             app:srcCompat="@drawable/apex_legends_game_image"
+            android:elevation="2dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             app:layout_constraintStart_toEndOf="@+id/game_2"
@@ -269,7 +276,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/game_3"
             app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
 
@@ -277,6 +284,7 @@
             android:id="@+id/callofduty_warzone"
             android:layout_width="76dp"
             android:layout_height="76dp"
+            android:elevation="2dp"
             app:srcCompat="@drawable/callofduty_warzone_game_image"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
@@ -291,7 +299,7 @@
             android:layout_marginStart="41dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/game_1" />
 
@@ -301,6 +309,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="41dp"
             android:layout_marginTop="12dp"
+            android:elevation="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/game_1"
             app:srcCompat="@drawable/rocket_league_game_image"
@@ -313,7 +322,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/game_5"
             app:layout_constraintTop_toBottomOf="@+id/game_2" />
 
@@ -322,6 +331,7 @@
             android:layout_width="76dp"
             android:layout_height="76dp"
             app:srcCompat="@drawable/minecraft_game_image"
+            android:elevation="2dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             app:layout_constraintStart_toEndOf="@+id/game_5"
@@ -335,7 +345,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/game_6"
             app:layout_constraintTop_toBottomOf="@+id/game_3" />
 
@@ -343,6 +353,7 @@
             android:id="@+id/grand_theft_auto"
             android:layout_width="76dp"
             android:layout_height="76dp"
+            android:elevation="2dp"
             app:srcCompat="@drawable/grand_theft_auto_game_image"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
@@ -357,7 +368,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/curved"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/game_7"
             app:layout_constraintTop_toBottomOf="@+id/game_4" />
 
@@ -367,6 +378,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
+            android:elevation="2dp"
             app:layout_constraintStart_toEndOf="@+id/game_7"
             app:layout_constraintTop_toBottomOf="@+id/game_4"
             app:srcCompat="@drawable/fallout_76_game_image"
