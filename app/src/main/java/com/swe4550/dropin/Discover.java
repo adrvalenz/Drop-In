@@ -117,7 +117,7 @@ public class Discover extends AppCompatActivity {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                                         Log.d("Referenceblahblah", "BS Message");
-                                        user_info = snapshot.getValue(User.class);
+                                        current_user = snapshot.getValue(User.class);
 
 
                                         //Sort ArrayList to prepare for displaying on Discover page, with the currently logged in user as the reference for "best"
