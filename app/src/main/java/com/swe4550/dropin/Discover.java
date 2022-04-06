@@ -1,10 +1,12 @@
 package com.swe4550.dropin;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,6 +30,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class Discover extends AppCompatActivity {
 
@@ -85,10 +88,10 @@ public class Discover extends AppCompatActivity {
         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                user_keys.clear();
+                user_keys = new ArrayList<String>();
                 if(dataSnapshot.exists()){
                     for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        User user = snapshot.getValue(User.class);
+//                        User user = snapshot.getValue(User.class);
                         user_keys.add(snapshot.getKey());
                     }
                     DatabaseReference mDatabase;
@@ -99,26 +102,26 @@ public class Discover extends AppCompatActivity {
                     mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            user_list.clear();
-                            if(dataSnapshot.exists()){
-                                for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                                    User user = snapshot.getValue(User.class);
-                                    user_list.add(user);
+                            user_list = new ArrayList<User>();
+                            User temp_user;
+                            if(dataSnapshot.exists()) {
+                                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                    temp_user = snapshot.getValue(User.class);
+                                    user_list.add(temp_user);
                                 }
-                                FirebaseUser user;
+                            }
+                                FirebaseUser fire_user;
                                 DatabaseReference mDatabase;
                                 String userID;
 
-                                user = FirebaseAuth.getInstance().getCurrentUser();
+                                fire_user = FirebaseAuth.getInstance().getCurrentUser();
                                 mDatabase = FirebaseDatabase.getInstance().getReference("Users");
-                                userID = user.getUid();
+                                userID = fire_user.getUid();
 
                                 mDatabase.child(userID).addValueEventListener(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        Log.d("Referenceblahblah", "BS Message");
                                         current_user = snapshot.getValue(User.class);
-
 
                                         //Sort ArrayList to prepare for displaying on Discover page, with the currently logged in user as the reference for "best"
                                         ArrayList<Integer> scores = new ArrayList<Integer>();
@@ -166,8 +169,8 @@ public class Discover extends AppCompatActivity {
                                         }
                                         //Cut down the size of the user_list and user_keys to 5 if there are more than 5 users
                                         if (user_list.size() > 5) {
-                                            user_list = new ArrayList<User>(user_list.subList(6, user_list.size()));
-                                            user_keys = new ArrayList<String>(user_keys.subList(6, user_keys.size()));
+                                            user_list = new ArrayList<User>(user_list.subList(0, 6));
+                                            user_keys = new ArrayList<String>(user_keys.subList(0, 6));
                                         }
                                         //Create list of games and interests that actually contain something for each user, to display on the discover page a valid game rather than a potential empty space
                                         ArrayList<ArrayList<String>> usable_games = new ArrayList<ArrayList<String>>();
@@ -183,10 +186,10 @@ public class Discover extends AppCompatActivity {
                                             //interests.size() used, but games.size() would have yielded the exact same number, its effectively a constant
                                             for (int j = 0; j < interests.size(); j++) {
                                                 if (!interests.get(j).equals(" ")) {
-                                                    usable_interests.get(j).add(interests.get(j));
+                                                    usable_interests.get(i).add(interests.get(j));
                                                 }
                                                 if (!games.get(j).equals(" ")) {
-                                                    usable_games.get(j).add(games.get(j));
+                                                    usable_games.get(i).add(games.get(j));
                                                 }
                                             }
                                         }
@@ -195,29 +198,29 @@ public class Discover extends AppCompatActivity {
                                         switch (user_list.size()) {
                                             case 5:
                                                 pfp_five.setVisibility(View.VISIBLE);
-                                                pfp_five.setImageResource(getImageInt(user_list.get(4).getPfp()));
+                                                pfp_five.setImageResource(getImageDrawable(user_list.get(4).getPfp()));
                                                 game_five.setText(usable_games.get(4).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(4).size() + 1)));
-                                                interest_five.setText(usable_interests.get(4).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(4).size() + 1)));
+                                                interest_five.setText(usable_interests.get(4).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(4).size())));
                                             case 4:
                                                 pfp_four.setVisibility(View.VISIBLE);
-                                                pfp_four.setImageResource(getImageInt(user_list.get(3).getPfp()));
+                                                pfp_four.setImageResource(getImageDrawable(user_list.get(3).getPfp()));
                                                 game_four.setText(usable_games.get(3).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(3).size() + 1)));
-                                                interest_four.setText(usable_interests.get(3).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(3).size() + 1)));
+                                                interest_four.setText(usable_interests.get(3).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(3).size())));
                                             case 3:
                                                 pfp_three.setVisibility(View.VISIBLE);
-                                                pfp_three.setImageResource(getImageInt(user_list.get(2).getPfp()));
+                                                pfp_three.setImageResource(getImageDrawable(user_list.get(2).getPfp()));
                                                 game_three.setText(usable_games.get(2).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(2).size() + 1)));
-                                                interest_three.setText(usable_interests.get(2).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(2).size() + 1)));
+                                                interest_three.setText(usable_interests.get(2).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(2).size())));
                                             case 2:
                                                 pfp_two.setVisibility(View.VISIBLE);
-                                                pfp_two.setImageResource(getImageInt(user_list.get(1).getPfp()));
+                                                pfp_two.setImageResource(getImageDrawable(user_list.get(1).getPfp()));
                                                 game_two.setText(usable_games.get(1).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(1).size() + 1)));
-                                                interest_two.setText(usable_interests.get(1).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(1).size() + 1)));
+                                                interest_two.setText(usable_interests.get(1).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(1).size())));
                                             case 1:
                                                 pfp_one.setVisibility(View.VISIBLE);
-                                                pfp_one.setImageResource(getImageInt(user_list.get(0).getPfp()));
+                                                pfp_one.setImageResource(getImageDrawable(user_list.get(0).getPfp()));
                                                 game_one.setText(usable_games.get(0).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(0).size() + 1)));
-                                                interest_one.setText(usable_interests.get(0).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(0).size() + 1)));
+                                                interest_one.setText(usable_interests.get(0).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(0).size())));
                                         }
                                         //Sends the user to the PokeView Activity
                                         pokesBtn.setOnClickListener(new View.OnClickListener() {
@@ -235,24 +238,22 @@ public class Discover extends AppCompatActivity {
                                                 startActivity(ViewProfileAct);
                                             }
                                         });
-                                        }
+                                        } // On data change for current_user
                                         @Override
                                         public void onCancelled(@NonNull DatabaseError error) {
                                             Log.e("Errory", "Bruh");
                                         }
-                                    });
-
-                            }
-                        }
+                                    }); //Value event listener for current user
+                        }//ondatachange for second, user_list
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
 
                         }
-                    });
+                    }); //Value event listener for user_keys
 
-                }
-            }
+                }//If data snapshot exists for first, user keys
+            }//First onDataChange Change
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -261,20 +262,21 @@ public class Discover extends AppCompatActivity {
         });
     }
     //Function sets the correct image resource using the passed in string
-    public int getImageInt(String key){
+    public int getImageDrawable(String key){
         int imageInt;
         switch(key){
             case "Xbox":
-                imageInt = R.id.xbox_icon_logo;
+                imageInt = R.drawable.xbox_icon_logo;
                 break;
             case "Computer":
-                imageInt = R.id.personal_computer_icon_logo;
+                imageInt = R.drawable.personal_computer_icon_logo;
                 break;
             case "Nintendo":
-                imageInt = R.id.nintendo_switch_icon_logo;
+                imageInt = R.drawable.nintendo_switch_icon_logo;
                 break;
             case "Playstation":
-                imageInt = R.id.playstation_icon_logo;
+                imageInt = R.drawable.playstation_icon_logo;
+                break;
             default:
                 imageInt = R.drawable.grey_background_circle;
         }
