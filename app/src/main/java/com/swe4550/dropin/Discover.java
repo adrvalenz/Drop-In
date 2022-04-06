@@ -89,7 +89,7 @@ public class Discover extends AppCompatActivity {
                 user_keys = new ArrayList<String>();
                 if(dataSnapshot.exists()){
                     for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        User user = snapshot.getValue(User.class);
+//                        User user = snapshot.getValue(User.class);
                         user_keys.add(snapshot.getKey());
                     }
                     DatabaseReference mDatabase;
@@ -101,26 +101,25 @@ public class Discover extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             user_list = new ArrayList<User>();
+                            User temp_user;
                             if(dataSnapshot.exists()) {
                                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                                    User user = snapshot.getValue(User.class);
-                                    user_list.add(user);
+                                    temp_user = snapshot.getValue(User.class);
+                                    user_list.add(temp_user);
                                 }
                             }
-                                FirebaseUser user;
+                                FirebaseUser fire_user;
                                 DatabaseReference mDatabase;
                                 String userID;
 
-                                user = FirebaseAuth.getInstance().getCurrentUser();
+                                fire_user = FirebaseAuth.getInstance().getCurrentUser();
                                 mDatabase = FirebaseDatabase.getInstance().getReference("Users");
-                                userID = user.getUid();
+                                userID = fire_user.getUid();
 
                                 mDatabase.child(userID).addValueEventListener(new ValueEventListener() {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        current_user = new User();
                                         current_user = snapshot.getValue(User.class);
-
 
                                         //Sort ArrayList to prepare for displaying on Discover page, with the currently logged in user as the reference for "best"
                                         ArrayList<Integer> scores = new ArrayList<Integer>();

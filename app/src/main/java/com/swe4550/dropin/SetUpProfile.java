@@ -916,7 +916,7 @@ public class SetUpProfile extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
-        mDatabase.child("Users").child(userID).setValue(newProfile).addOnSuccessListener(new OnSuccessListener<Void>() {
+        mDatabase.child(userID).setValue(newProfile).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
                 //code for Success
