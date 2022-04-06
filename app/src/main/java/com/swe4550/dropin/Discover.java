@@ -167,8 +167,8 @@ public class Discover extends AppCompatActivity {
                                         }
                                         //Cut down the size of the user_list and user_keys to 5 if there are more than 5 users
                                         if (user_list.size() > 5) {
-                                            user_list = new ArrayList<User>(user_list.subList(6, user_list.size()));
-                                            user_keys = new ArrayList<String>(user_keys.subList(6, user_keys.size()));
+                                            user_list = new ArrayList<User>(user_list.subList(0, 6));
+                                            user_keys = new ArrayList<String>(user_keys.subList(0, 6));
                                         }
                                         //Create list of games and interests that actually contain something for each user, to display on the discover page a valid game rather than a potential empty space
                                         ArrayList<ArrayList<String>> usable_games = new ArrayList<ArrayList<String>>();
@@ -183,11 +183,11 @@ public class Discover extends AppCompatActivity {
                                             ArrayList<String> games = new ArrayList<String>(Arrays.asList(user_list.get(i).getGame1(), user_list.get(i).getGame2(), user_list.get(i).getGame3(), user_list.get(i).getGame4()));
                                             //interests.size() used, but games.size() would have yielded the exact same number, its effectively a constant
                                             for (int j = 0; j < interests.size(); j++) {
-                                                if (!interests.get(j).equals(" ")) {
-                                                    usable_interests.get(j).add(interests.get(j));
+                                                if (!interests.get(i).equals(" ")) {
+                                                    usable_interests.get(j).add(interests.get(i));
                                                 }
-                                                if (!games.get(j).equals(" ")) {
-                                                    usable_games.get(j).add(games.get(j));
+                                                if (!games.get(i).equals(" ")) {
+                                                    usable_games.get(j).add(games.get(i));
                                                 }
                                             }
                                         }
