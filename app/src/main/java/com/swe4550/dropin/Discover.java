@@ -199,27 +199,27 @@ public class Discover extends AppCompatActivity {
                                             case 5:
                                                 pfp_five.setVisibility(View.VISIBLE);
                                                 pfp_five.setImageResource(getImageDrawable(user_list.get(4).getPfp()));
-                                                game_five.setText(usable_games.get(4).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(4).size() + 1)));
+                                                game_five.setText(usable_games.get(4).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(4).size())));
                                                 interest_five.setText(usable_interests.get(4).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(4).size())));
                                             case 4:
                                                 pfp_four.setVisibility(View.VISIBLE);
                                                 pfp_four.setImageResource(getImageDrawable(user_list.get(3).getPfp()));
-                                                game_four.setText(usable_games.get(3).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(3).size() + 1)));
+                                                game_four.setText(usable_games.get(3).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(3).size())));
                                                 interest_four.setText(usable_interests.get(3).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(3).size())));
                                             case 3:
                                                 pfp_three.setVisibility(View.VISIBLE);
                                                 pfp_three.setImageResource(getImageDrawable(user_list.get(2).getPfp()));
-                                                game_three.setText(usable_games.get(2).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(2).size() + 1)));
+                                                game_three.setText(usable_games.get(2).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(2).size())));
                                                 interest_three.setText(usable_interests.get(2).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(2).size())));
                                             case 2:
                                                 pfp_two.setVisibility(View.VISIBLE);
                                                 pfp_two.setImageResource(getImageDrawable(user_list.get(1).getPfp()));
-                                                game_two.setText(usable_games.get(1).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(1).size() + 1)));
+                                                game_two.setText(usable_games.get(1).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(1).size())));
                                                 interest_two.setText(usable_interests.get(1).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(1).size())));
                                             case 1:
                                                 pfp_one.setVisibility(View.VISIBLE);
                                                 pfp_one.setImageResource(getImageDrawable(user_list.get(0).getPfp()));
-                                                game_one.setText(usable_games.get(0).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(0).size() + 1)));
+                                                game_one.setText(usable_games.get(0).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(0).size())));
                                                 interest_one.setText(usable_interests.get(0).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(0).size())));
                                         }
                                         //Sends the user to the PokeView Activity
