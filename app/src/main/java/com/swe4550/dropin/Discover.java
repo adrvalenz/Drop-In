@@ -147,7 +147,7 @@ public class Discover extends AppCompatActivity {
                                         for (it = 0; it < n - 1; it++) {
                                             swapped = false;
                                             for (jit = 0; jit < n - it - 1; jit++) {
-                                                if (scores.get(jit) > scores.get(jit + 1)) {
+                                                if (scores.get(jit) < scores.get(jit + 1)) {
                                                     //Swap ranking positions
                                                     temp_int = scores.get(jit);
                                                     scores.set(jit, scores.get(jit + 1));
@@ -169,8 +169,8 @@ public class Discover extends AppCompatActivity {
                                         }
                                         //Cut down the size of the user_list and user_keys to 5 if there are more than 5 users
                                         if (user_list.size() > 5) {
-                                            user_list = new ArrayList<User>(user_list.subList(0, 6));
-                                            user_keys = new ArrayList<String>(user_keys.subList(0, 6));
+                                            user_list = new ArrayList<User>(Arrays.asList(user_list.get(0), user_list.get(1), user_list.get(2), user_list.get(3), user_list.get(4)));
+                                            user_keys = new ArrayList<String>(Arrays.asList(user_keys.get(0), user_keys.get(1), user_keys.get(2), user_keys.get(3), user_keys.get(4)));
                                         }
                                         //Create list of games and interests that actually contain something for each user, to display on the discover page a valid game rather than a potential empty space
                                         ArrayList<ArrayList<String>> usable_games = new ArrayList<ArrayList<String>>();
