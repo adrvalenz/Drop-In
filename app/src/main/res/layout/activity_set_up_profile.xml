@@ -480,26 +480,11 @@
             app:layout_constraintTop_toBottomOf="@+id/interest_4" />
 
         <Button
-            android:id="@+id/cancel_btn"
-            android:layout_width="113dp"
-            android:layout_height="56dp"
-            android:layout_marginStart="149dp"
-            android:layout_marginTop="200dp"
-            android:layout_marginEnd="149dp"
-            android:backgroundTint="@color/purple_500"
-            android:text="@string/cancel_btn"
-            android:textAlignment="center"
-            android:textColor="@color/purple_700"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/outside_interest_text" />
-
-        <Button
             android:id="@+id/submit_btn"
             android:layout_width="113dp"
             android:layout_height="56dp"
             android:layout_marginStart="149dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="200dp"
             android:layout_marginEnd="149dp"
             android:backgroundTint="@color/purple_500"
             android:text="@string/submit_btn"
@@ -507,7 +492,22 @@
             android:textColor="@color/purple_700"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cancel_btn" />
+            app:layout_constraintTop_toBottomOf="@+id/outside_interest_text" />
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="113dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="149dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="149dp"
+            android:backgroundTint="@color/purple_500"
+            android:text="@string/cancel_btn"
+            android:textAlignment="center"
+            android:textColor="@color/purple_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/submit_btn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
