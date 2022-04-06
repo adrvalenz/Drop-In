@@ -167,8 +167,8 @@ public class Discover extends AppCompatActivity {
                                         }
                                         //Cut down the size of the user_list and user_keys to 5 if there are more than 5 users
                                         if (user_list.size() > 5) {
-                                            user_list = new ArrayList<User>(user_list.subList(6, user_list.size()));
-                                            user_keys = new ArrayList<String>(user_keys.subList(6, user_keys.size()));
+                                            user_list = new ArrayList<User>(user_list.subList(0, 6));
+                                            user_keys = new ArrayList<String>(user_keys.subList(0, 6));
                                         }
                                         //Create list of games and interests that actually contain something for each user, to display on the discover page a valid game rather than a potential empty space
                                         ArrayList<ArrayList<String>> usable_games = new ArrayList<ArrayList<String>>();
