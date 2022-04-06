@@ -863,7 +863,12 @@ public class SetUpProfile extends AppCompatActivity {
                         }else if (user_info.getInterest1().equals(" ") && user_info.getInterest2().equals(" ") && user_info.getInterest3().equals(" ") && user_info.getInterest4().equals(" ")){
                             Toast.makeText(SetUpProfile.this, "You must Select at least one interest.", Toast.LENGTH_SHORT).show();
                         }else{
-                            user_info.setBiography(bio.getText().toString().trim());
+                            if(bio.getText().toString().equals("")){
+                                user_info.setBiography(" ");
+                            }
+                            else {
+                                user_info.setBiography(bio.getText().toString().trim());
+                            }
                             editCurrentUser(user_info);
                         }
                     }

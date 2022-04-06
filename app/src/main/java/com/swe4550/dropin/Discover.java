@@ -1,10 +1,12 @@
 package com.swe4550.dropin;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -196,29 +198,29 @@ public class Discover extends AppCompatActivity {
                                         switch (user_list.size()) {
                                             case 5:
                                                 pfp_five.setVisibility(View.VISIBLE);
-                                                pfp_five.setImageResource(getImageInt(user_list.get(4).getPfp()));
+                                                pfp_five.setImageResource(getImageDrawable(user_list.get(4).getPfp()));
                                                 game_five.setText(usable_games.get(4).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(4).size() + 1)));
-                                                interest_five.setText(usable_interests.get(4).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(4).size() + 1)));
+                                                interest_five.setText(usable_interests.get(4).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(4).size())));
                                             case 4:
                                                 pfp_four.setVisibility(View.VISIBLE);
-                                                pfp_four.setImageResource(getImageInt(user_list.get(3).getPfp()));
+                                                pfp_four.setImageResource(getImageDrawable(user_list.get(3).getPfp()));
                                                 game_four.setText(usable_games.get(3).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(3).size() + 1)));
-                                                interest_four.setText(usable_interests.get(3).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(3).size() + 1)));
+                                                interest_four.setText(usable_interests.get(3).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(3).size())));
                                             case 3:
                                                 pfp_three.setVisibility(View.VISIBLE);
-                                                pfp_three.setImageResource(getImageInt(user_list.get(2).getPfp()));
+                                                pfp_three.setImageResource(getImageDrawable(user_list.get(2).getPfp()));
                                                 game_three.setText(usable_games.get(2).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(2).size() + 1)));
-                                                interest_three.setText(usable_interests.get(2).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(2).size() + 1)));
+                                                interest_three.setText(usable_interests.get(2).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(2).size())));
                                             case 2:
                                                 pfp_two.setVisibility(View.VISIBLE);
-                                                pfp_two.setImageResource(getImageInt(user_list.get(1).getPfp()));
+                                                pfp_two.setImageResource(getImageDrawable(user_list.get(1).getPfp()));
                                                 game_two.setText(usable_games.get(1).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(1).size() + 1)));
-                                                interest_two.setText(usable_interests.get(1).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(1).size() + 1)));
+                                                interest_two.setText(usable_interests.get(1).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(1).size())));
                                             case 1:
                                                 pfp_one.setVisibility(View.VISIBLE);
-                                                pfp_one.setImageResource(getImageInt(user_list.get(0).getPfp()));
+                                                pfp_one.setImageResource(getImageDrawable(user_list.get(0).getPfp()));
                                                 game_one.setText(usable_games.get(0).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(0).size() + 1)));
-                                                interest_one.setText(usable_interests.get(0).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(0).size() + 1)));
+                                                interest_one.setText(usable_interests.get(0).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(0).size())));
                                         }
                                         //Sends the user to the PokeView Activity
                                         pokesBtn.setOnClickListener(new View.OnClickListener() {
@@ -260,20 +262,21 @@ public class Discover extends AppCompatActivity {
         });
     }
     //Function sets the correct image resource using the passed in string
-    public int getImageInt(String key){
+    public int getImageDrawable(String key){
         int imageInt;
         switch(key){
             case "Xbox":
-                imageInt = R.id.xbox_icon_logo;
+                imageInt = R.drawable.xbox_icon_logo;
                 break;
             case "Computer":
-                imageInt = R.id.personal_computer_icon_logo;
+                imageInt = R.drawable.personal_computer_icon_logo;
                 break;
             case "Nintendo":
-                imageInt = R.id.nintendo_switch_icon_logo;
+                imageInt = R.drawable.nintendo_switch_icon_logo;
                 break;
             case "Playstation":
-                imageInt = R.id.playstation_icon_logo;
+                imageInt = R.drawable.playstation_icon_logo;
+                break;
             default:
                 imageInt = R.drawable.grey_background_circle;
         }
