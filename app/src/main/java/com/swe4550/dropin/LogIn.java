@@ -47,10 +47,12 @@ public class LogIn extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(userEmail.getText().toString().trim().length() == 0 || userPassword.getText().toString().trim().length() < 6){
-                    Toast.makeText(LogIn.this, "Email and Password must be filled and Password longer than six characters", Toast.LENGTH_LONG).show();
+                if(userEmail.getText().toString().trim().length() == 0){
+                    Toast.makeText(LogIn.this, "Email and Password must be filled", Toast.LENGTH_SHORT).show();
                 }
-                else{
+                else if(userPassword.getText().toString().trim().length() < 6) {
+                    Toast.makeText(LogIn.this, "Password must be longer than six characters", Toast.LENGTH_SHORT).show();
+                }else{
                     userLogIn(userEmail.getText().toString().trim(), userPassword.getText().toString().trim());
                 }
             }
