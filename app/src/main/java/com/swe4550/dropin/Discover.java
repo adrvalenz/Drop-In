@@ -92,7 +92,9 @@ public class Discover extends AppCompatActivity {
                 if(dataSnapshot.exists()){
                     for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
 //                        User user = snapshot.getValue(User.class);
-                        user_keys.add(snapshot.getKey());
+                        if(!snapshot.getKey().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
+                            user_keys.add(snapshot.getKey());
+                        }
                     }
                     DatabaseReference mDatabase;
 
@@ -106,8 +108,10 @@ public class Discover extends AppCompatActivity {
                             User temp_user;
                             if(dataSnapshot.exists()) {
                                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                                    temp_user = snapshot.getValue(User.class);
-                                    user_list.add(temp_user);
+                                    if(!snapshot.getKey().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
+                                        temp_user = snapshot.getValue(User.class);
+                                        user_list.add(temp_user);
+                                    }
                                 }
                             }
                                 FirebaseUser fire_user;
