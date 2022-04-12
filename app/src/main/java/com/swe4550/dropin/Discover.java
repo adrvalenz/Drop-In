@@ -34,7 +34,6 @@ import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class Discover extends AppCompatActivity {
 
-    //bonding variables
     User current_user;
     ArrayList<User> user_list;
     ArrayList<String> user_keys;
@@ -298,23 +297,18 @@ public class Discover extends AppCompatActivity {
                                                 startActivity(ViewProfileAct);
                                             }
                                         });
-
-                                        } // On data change for current_user
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError error) {
-                                            Log.e("Errory", "Bruh");
                                         }
-                                    }); //Value event listener for current user
-                        }//ondatachange for second, user_list
-
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {}
+                                    });
+                        }
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
 
                         }
-                    }); //Value event listener for user_keys
-
-                }//If data snapshot exists for first, user keys
-            }//First onDataChange Change
+                    });
+                }
+            }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -322,7 +316,7 @@ public class Discover extends AppCompatActivity {
             }
         });
     }
-    //Function sets the correct image resource using the passed in string
+    //Method sets the correct image resource using the passed in string
     public int getImageDrawable(String key){
         int imageInt;
         switch(key){
@@ -343,72 +337,4 @@ public class Discover extends AppCompatActivity {
         }
         return imageInt;
     }
-
-//    //Get, in the order that they appear in the Database, all the users from the database stored as an array list.
-//    public void getUsers(){
-//
-//        user_list = new ArrayList<>();
-//        DatabaseReference mDatabase;
-//
-//        //Get reference for User Node
-//        mDatabase = FirebaseDatabase.getInstance().getReference("Users");
-//        //Attach valueEventListener to mDatabase object to read all the values
-//        mDatabase.addListenerForSingleValueEvent(valueEventListener);
-//
-//    }
-//
-//    //Value Event Listener reads user from firebase database
-//    ValueEventListener valueEventListener = new ValueEventListener() {
-//        @Override
-//        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//            user_list.clear();
-//            if(dataSnapshot.exists()){
-//                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
-//                    User user = snapshot.getValue(User.class);
-//                    user_list.add(user);
-//                }
-//            }
-//        }
-//
-//        @Override
-//        public void onCancelled(@NonNull DatabaseError error) {
-//
-//        }
-//    };
-//
-
-    //Get users identification hash's for each user, in order of database, and store them in an array list.
-//    public void getUserKeys(){
-//
-//        user_keys = new ArrayList<>();
-//        DatabaseReference mDatabase;
-//
-//        //Get reference for User Node
-//        mDatabase = FirebaseDatabase.getInstance().getReference("Users");
-//        //Attach valueEventListener to mDatabase object to read all the values
-//        mDatabase.addListenerForSingleValueEvent(valueEventListener2);
-//
-//    }
-//    //Value Event Listener reads user from firebase database
-//    ValueEventListener valueEventListener2 = new ValueEventListener() {
-//        @Override
-//        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//            user_keys.clear();
-//            if(dataSnapshot.exists()){
-//                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
-//                    User user = snapshot.getValue(User.class);
-//                    user_keys.add(snapshot.getKey());
-//                }
-//            }
-//        }
-//
-//        @Override
-//        public void onCancelled(@NonNull DatabaseError error) {
-//
-//        }
-//    };
-
-
 }
-//comment made by carlos at midnight
-//Test Comment
