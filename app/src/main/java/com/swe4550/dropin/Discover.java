@@ -34,10 +34,14 @@ import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class Discover extends AppCompatActivity {
 
-    //bonding variables
     User current_user;
     ArrayList<User> user_list;
     ArrayList<String> user_keys;
+    Button summary_one;
+    Button summary_two;
+    Button summary_three;
+    Button summary_four;
+    Button summary_five;
     ImageView pfp_one;
     ImageView pfp_two;
     ImageView pfp_three;
@@ -62,6 +66,11 @@ public class Discover extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Bind views from UI
+        summary_one = findViewById(R.id.summary_1);
+        summary_two = findViewById(R.id.summary_2);
+        summary_three = findViewById(R.id.summary_3);
+        summary_four = findViewById(R.id.summary_4);
+        summary_five = findViewById(R.id.summary_5);
         pfp_one = findViewById(R.id.pfp_1);
         pfp_two = findViewById(R.id.pfp_2);
         pfp_three = findViewById(R.id.pfp_3);
@@ -201,26 +210,31 @@ public class Discover extends AppCompatActivity {
                                         //Make ImageViews for users visible according to amount of users there are to display, and out of the available interests and games, display one of each randomly.
                                         switch (user_list.size()) {
                                             case 5:
+                                                summary_five.setVisibility(View.VISIBLE);
                                                 pfp_five.setVisibility(View.VISIBLE);
                                                 pfp_five.setImageResource(getImageDrawable(user_list.get(4).getPfp()));
                                                 game_five.setText(usable_games.get(4).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(4).size())));
                                                 interest_five.setText(usable_interests.get(4).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(4).size())));
                                             case 4:
+                                                summary_four.setVisibility(View.VISIBLE);
                                                 pfp_four.setVisibility(View.VISIBLE);
                                                 pfp_four.setImageResource(getImageDrawable(user_list.get(3).getPfp()));
                                                 game_four.setText(usable_games.get(3).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(3).size())));
                                                 interest_four.setText(usable_interests.get(3).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(3).size())));
                                             case 3:
+                                                summary_three.setVisibility(View.VISIBLE);
                                                 pfp_three.setVisibility(View.VISIBLE);
                                                 pfp_three.setImageResource(getImageDrawable(user_list.get(2).getPfp()));
                                                 game_three.setText(usable_games.get(2).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(2).size())));
                                                 interest_three.setText(usable_interests.get(2).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(2).size())));
                                             case 2:
+                                                summary_two.setVisibility(View.VISIBLE);
                                                 pfp_two.setVisibility(View.VISIBLE);
                                                 pfp_two.setImageResource(getImageDrawable(user_list.get(1).getPfp()));
                                                 game_two.setText(usable_games.get(1).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(1).size())));
                                                 interest_two.setText(usable_interests.get(1).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(1).size())));
                                             case 1:
+                                                summary_one.setVisibility(View.VISIBLE);
                                                 pfp_one.setVisibility(View.VISIBLE);
                                                 pfp_one.setImageResource(getImageDrawable(user_list.get(0).getPfp()));
                                                 game_one.setText(usable_games.get(0).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(0).size())));
@@ -242,22 +256,59 @@ public class Discover extends AppCompatActivity {
                                                 startActivity(ViewProfileAct);
                                             }
                                         });
-                                        } // On data change for current_user
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError error) {
-                                            Log.e("Errory", "Bruh");
+                                        //Buttons of each user to view their profile
+                                        summary_one.setOnClickListener(new View.OnClickListener(){
+                                            @Override
+                                            public void onClick(View v) {
+                                                Intent ViewProfileAct = new Intent(Discover.this, ViewProfile.class);
+                                                ViewProfileAct.putExtra("USER KEY", user_keys.get(0));
+                                                startActivity(ViewProfileAct);
+                                            }
+                                        });
+                                        summary_two.setOnClickListener(new View.OnClickListener(){
+                                            @Override
+                                            public void onClick(View v) {
+                                                Intent ViewProfileAct = new Intent(Discover.this, ViewProfile.class);
+                                                ViewProfileAct.putExtra("USER KEY", user_keys.get(1));
+                                                startActivity(ViewProfileAct);
+                                            }
+                                        });
+                                        summary_three.setOnClickListener(new View.OnClickListener(){
+                                            @Override
+                                            public void onClick(View v) {
+                                                Intent ViewProfileAct = new Intent(Discover.this, ViewProfile.class);
+                                                ViewProfileAct.putExtra("USER KEY", user_keys.get(2));
+                                                startActivity(ViewProfileAct);
+                                            }
+                                        });
+                                        summary_four.setOnClickListener(new View.OnClickListener(){
+                                            @Override
+                                            public void onClick(View v) {
+                                                Intent ViewProfileAct = new Intent(Discover.this, ViewProfile.class);
+                                                ViewProfileAct.putExtra("USER KEY", user_keys.get(3));
+                                                startActivity(ViewProfileAct);
+                                            }
+                                        });
+                                        summary_five.setOnClickListener(new View.OnClickListener(){
+                                            @Override
+                                            public void onClick(View v) {
+                                                Intent ViewProfileAct = new Intent(Discover.this, ViewProfile.class);
+                                                ViewProfileAct.putExtra("USER KEY", user_keys.get(4));
+                                                startActivity(ViewProfileAct);
+                                            }
+                                        });
                                         }
-                                    }); //Value event listener for current user
-                        }//ondatachange for second, user_list
-
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {}
+                                    });
+                        }
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
 
                         }
-                    }); //Value event listener for user_keys
-
-                }//If data snapshot exists for first, user keys
-            }//First onDataChange Change
+                    });
+                }
+            }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -265,7 +316,7 @@ public class Discover extends AppCompatActivity {
             }
         });
     }
-    //Function sets the correct image resource using the passed in string
+    //Method sets the correct image resource using the passed in string
     public int getImageDrawable(String key){
         int imageInt;
         switch(key){
@@ -286,72 +337,4 @@ public class Discover extends AppCompatActivity {
         }
         return imageInt;
     }
-
-//    //Get, in the order that they appear in the Database, all the users from the database stored as an array list.
-//    public void getUsers(){
-//
-//        user_list = new ArrayList<>();
-//        DatabaseReference mDatabase;
-//
-//        //Get reference for User Node
-//        mDatabase = FirebaseDatabase.getInstance().getReference("Users");
-//        //Attach valueEventListener to mDatabase object to read all the values
-//        mDatabase.addListenerForSingleValueEvent(valueEventListener);
-//
-//    }
-//
-//    //Value Event Listener reads user from firebase database
-//    ValueEventListener valueEventListener = new ValueEventListener() {
-//        @Override
-//        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//            user_list.clear();
-//            if(dataSnapshot.exists()){
-//                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
-//                    User user = snapshot.getValue(User.class);
-//                    user_list.add(user);
-//                }
-//            }
-//        }
-//
-//        @Override
-//        public void onCancelled(@NonNull DatabaseError error) {
-//
-//        }
-//    };
-//
-
-    //Get users identification hash's for each user, in order of database, and store them in an array list.
-//    public void getUserKeys(){
-//
-//        user_keys = new ArrayList<>();
-//        DatabaseReference mDatabase;
-//
-//        //Get reference for User Node
-//        mDatabase = FirebaseDatabase.getInstance().getReference("Users");
-//        //Attach valueEventListener to mDatabase object to read all the values
-//        mDatabase.addListenerForSingleValueEvent(valueEventListener2);
-//
-//    }
-//    //Value Event Listener reads user from firebase database
-//    ValueEventListener valueEventListener2 = new ValueEventListener() {
-//        @Override
-//        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//            user_keys.clear();
-//            if(dataSnapshot.exists()){
-//                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
-//                    User user = snapshot.getValue(User.class);
-//                    user_keys.add(snapshot.getKey());
-//                }
-//            }
-//        }
-//
-//        @Override
-//        public void onCancelled(@NonNull DatabaseError error) {
-//
-//        }
-//    };
-
-
 }
-//comment made by carlos at midnight
-//Test Comment
