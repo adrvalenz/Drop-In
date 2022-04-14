@@ -42,6 +42,11 @@ public class Discover extends AppCompatActivity {
     Button summary_three;
     Button summary_four;
     Button summary_five;
+    TextView user_one;
+    TextView user_two;
+    TextView user_three;
+    TextView user_four;
+    TextView user_five;
     ImageView pfp_one;
     ImageView pfp_two;
     ImageView pfp_three;
@@ -71,6 +76,11 @@ public class Discover extends AppCompatActivity {
         summary_three = findViewById(R.id.summary_3);
         summary_four = findViewById(R.id.summary_4);
         summary_five = findViewById(R.id.summary_5);
+        user_one = findViewById(R.id.user_1);
+        user_two = findViewById(R.id.user_2);
+        user_three = findViewById(R.id.user_3);
+        user_four = findViewById(R.id.user_4);
+        user_five = findViewById(R.id.user_5);
         pfp_one = findViewById(R.id.pfp_1);
         pfp_two = findViewById(R.id.pfp_2);
         pfp_three = findViewById(R.id.pfp_3);
@@ -211,30 +221,35 @@ public class Discover extends AppCompatActivity {
                                         switch (user_list.size()) {
                                             case 5:
                                                 summary_five.setVisibility(View.VISIBLE);
+                                                user_five.setText(user_list.get(4).getUserName());
                                                 pfp_five.setVisibility(View.VISIBLE);
                                                 pfp_five.setImageResource(getImageDrawable(user_list.get(4).getPfp()));
                                                 game_five.setText(usable_games.get(4).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(4).size())));
                                                 interest_five.setText(usable_interests.get(4).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(4).size())));
                                             case 4:
                                                 summary_four.setVisibility(View.VISIBLE);
+                                                user_four.setText(user_list.get(3).getUserName());
                                                 pfp_four.setVisibility(View.VISIBLE);
                                                 pfp_four.setImageResource(getImageDrawable(user_list.get(3).getPfp()));
                                                 game_four.setText(usable_games.get(3).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(3).size())));
                                                 interest_four.setText(usable_interests.get(3).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(3).size())));
                                             case 3:
                                                 summary_three.setVisibility(View.VISIBLE);
+                                                user_three.setText(user_list.get(2).getUserName());
                                                 pfp_three.setVisibility(View.VISIBLE);
                                                 pfp_three.setImageResource(getImageDrawable(user_list.get(2).getPfp()));
                                                 game_three.setText(usable_games.get(2).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(2).size())));
                                                 interest_three.setText(usable_interests.get(2).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(2).size())));
                                             case 2:
                                                 summary_two.setVisibility(View.VISIBLE);
+                                                user_two.setText(user_list.get(1).getUserName());
                                                 pfp_two.setVisibility(View.VISIBLE);
                                                 pfp_two.setImageResource(getImageDrawable(user_list.get(1).getPfp()));
                                                 game_two.setText(usable_games.get(1).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(1).size())));
                                                 interest_two.setText(usable_interests.get(1).get(ThreadLocalRandom.current().nextInt(0, usable_interests.get(1).size())));
                                             case 1:
                                                 summary_one.setVisibility(View.VISIBLE);
+                                                user_one.setText(user_list.get(0).getUserName());
                                                 pfp_one.setVisibility(View.VISIBLE);
                                                 pfp_one.setImageResource(getImageDrawable(user_list.get(0).getPfp()));
                                                 game_one.setText(usable_games.get(0).get(ThreadLocalRandom.current().nextInt(0, usable_games.get(0).size())));
