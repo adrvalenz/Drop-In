@@ -54,16 +54,27 @@
         android:contentDescription="@+id/pfp_1" />
 
     <TextView
-        android:id="@+id/poker_1"
+        android:id="@+id/user_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:elevation="2dp"
         android:text=" "
         android:textColor="@color/text"
-        android:textSize="35sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_1"
         app:layout_constraintTop_toBottomOf="@+id/pokes_text" />
+
+    <TextView
+        android:id="@+id/poker_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_1"
+        app:layout_constraintTop_toBottomOf="@+id/user_1" />
 
     <TextView
         android:id="@+id/wants_to_play_1"
@@ -72,7 +83,7 @@
         android:elevation="2dp"
         android:text="@string/wants_to_play_text"
         android:textColor="@color/text"
-        android:textSize="35sp"
+        android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/pfp_1"
         app:layout_constraintTop_toBottomOf="@+id/poker_1" />
@@ -99,16 +110,26 @@
         android:contentDescription="@+id/pfp_2" />
 
     <TextView
-        android:id="@+id/poker_2"
+        android:id="@+id/user_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:elevation="2dp"
         android:text=" "
         android:textColor="@color/text"
-        android:textSize="35sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_2"
         app:layout_constraintTop_toBottomOf="@+id/poke_1" />
+
+    <TextView
+        android:id="@+id/poker_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_2"
+        app:layout_constraintTop_toBottomOf="@+id/user_2" />
 
     <TextView
         android:id="@+id/wants_to_play_2"
@@ -117,7 +138,7 @@
         android:elevation="2dp"
         android:text="@string/wants_to_play_text"
         android:textColor="@color/text"
-        android:textSize="35sp"
+        android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/pfp_2"
         app:layout_constraintTop_toBottomOf="@+id/poker_2" />
@@ -144,15 +165,26 @@
         android:contentDescription="@+id/pfp_3" />
 
     <TextView
+        android:id="@+id/user_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_3"
+        app:layout_constraintTop_toBottomOf="@+id/poke_2" />
+
+    <TextView
         android:id="@+id/poker_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="2dp"
         android:text=" "
         android:textColor="@color/text"
-        android:textSize="35sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_3"
-        app:layout_constraintTop_toBottomOf="@+id/wants_to_play_2" />
+        app:layout_constraintTop_toBottomOf="@+id/user_3" />
 
     <TextView
         android:id="@+id/wants_to_play_3"
@@ -161,7 +193,7 @@
         android:elevation="2dp"
         android:text="@string/wants_to_play_text"
         android:textColor="@color/text"
-        android:textSize="35sp"
+        android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/pfp_3"
         app:layout_constraintTop_toBottomOf="@+id/poker_3" />
@@ -188,16 +220,26 @@
         android:contentDescription="@+id/pfp_4" />
 
     <TextView
-        android:id="@+id/poker_4"
+        android:id="@+id/user_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:elevation="2dp"
         android:text=" "
         android:textColor="@color/text"
-        android:textSize="35sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_4"
         app:layout_constraintTop_toBottomOf="@+id/poke_3" />
+
+    <TextView
+        android:id="@+id/poker_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_4"
+        app:layout_constraintTop_toBottomOf="@+id/user_4" />
 
     <TextView
         android:id="@+id/wants_to_play_4"
@@ -206,7 +248,7 @@
         android:elevation="2dp"
         android:text="@string/wants_to_play_text"
         android:textColor="@color/text"
-        android:textSize="35sp"
+        android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/pfp_4"
         app:layout_constraintTop_toBottomOf="@+id/poker_4" />
@@ -233,16 +275,26 @@
         android:contentDescription="@+id/pfp_5" />
 
     <TextView
-        android:id="@+id/poker_5"
+        android:id="@+id/user_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:elevation="2dp"
         android:text=" "
         android:textColor="@color/text"
-        android:textSize="35sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/pfp_5"
         app:layout_constraintTop_toBottomOf="@+id/poke_4" />
+
+    <TextView
+        android:id="@+id/poker_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text=" "
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/pfp_5"
+        app:layout_constraintTop_toBottomOf="@+id/user_5" />
 
     <TextView
         android:id="@+id/wants_to_play_5"
@@ -251,7 +303,7 @@
         android:elevation="2dp"
         android:text="@string/wants_to_play_text"
         android:textColor="@color/text"
-        android:textSize="35sp"
+        android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/pfp_5"
         app:layout_constraintTop_toBottomOf="@+id/poker_5" />
