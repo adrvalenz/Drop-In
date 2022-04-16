@@ -88,7 +88,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="41dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:background="@android:color/transparent"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
@@ -111,7 +111,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:background="@android:color/transparent"
             android:visibility="visible"
             app:layout_constraintStart_toEndOf="@id/pfp_1"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
@@ -134,7 +134,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:background="@android:color/transparent"
             android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/pfp_2"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
@@ -157,7 +157,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:background="@android:color/transparent"
             android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/pfp_3"
             app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
@@ -192,7 +192,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="41dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:background="@android:color/transparent"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
@@ -215,7 +215,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:background="@android:color/transparent"
             android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/game_1"
             app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
@@ -238,7 +238,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:background="@android:color/transparent"
             android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/game_2"
             app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
@@ -261,7 +261,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:background="@android:color/transparent"
             android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/game_3"
             app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
@@ -284,7 +284,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="41dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:background="@android:color/transparent"
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/game_1" />
@@ -307,7 +307,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:background="@android:color/transparent"
             android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/game_5"
             app:layout_constraintTop_toBottomOf="@+id/game_2" />
@@ -330,7 +330,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:background="@android:color/transparent"
             android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/game_6"
             app:layout_constraintTop_toBottomOf="@+id/game_3" />
@@ -353,7 +353,7 @@
             android:layout_height="76dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
-            android:background="@drawable/curved"
+            android:background="@android:color/transparent"
             android:visibility="visible"
             app:layout_constraintStart_toEndOf="@+id/game_7"
             app:layout_constraintTop_toBottomOf="@+id/game_4" />
