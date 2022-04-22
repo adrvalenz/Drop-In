@@ -205,5 +205,34 @@ public class ViewProfile extends AppCompatActivity {
             game_four.setImageResource(R.drawable.fallout_76_game_image);
         }
 
+
+        //code for the interest boxes.
+        if (user_info.getInterest1().equals("Sports")) {
+            interest_one.setVisibility(View.VISIBLE);
+            interest_one.setText("Sports");
+        }else if (user_info.getInterest1().equals("Art")){
+            interest_one.setVisibility(View.VISIBLE);
+            interest_one.setText("Art");
+        }else if (user_info.getInterest1().equals("Cars")){
+            interest_one.setVisibility(View.VISIBLE);
+            interest_one.setText("Cars");
+        }else if (user_info.getInterest1().equals("Music")){
+            interest_one.setVisibility(View.VISIBLE);
+            interest_one.setText("Music");
+        }else if (user_info.getInterest1().equals("Cooking")){
+            interest_one.setVisibility(View.VISIBLE);
+            interest_one.setText("Cooking");
+        }else if (user_info.getInterest1().equals("Anime")){
+            interest_one.setVisibility(View.VISIBLE);
+            interest_one.setText("Anime");
+        }else if (user_info.getInterest1().equals("Reading")){
+            interest_one.setVisibility(View.VISIBLE);
+            interest_one.setText("Reading");
+        }else if (user_info.getInterest1().equals("Martial Arts")){
+            interest_one.setVisibility(View.VISIBLE);
+            interest_one.setText("Martial Arts");
+        }
+
+
     }
 }
