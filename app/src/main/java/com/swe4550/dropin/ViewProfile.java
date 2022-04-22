@@ -91,5 +91,10 @@ public class ViewProfile extends AppCompatActivity {
 
         //setting the users user name.
         userName.setText(user_info.getUserName());
+
+        // setting the users Bio
+        bio.setText(user_info.getBiography());
+
+
     }
 }
