@@ -11,4 +11,5 @@
     <color name="background">#C594D6</color>
     <color name="button">#8F3AAE</color>
     <color name="text">#55186B</color>
+    <color name="transparent">#000000</color>
 </resources>
