@@ -3,6 +3,7 @@ package com.swe4550.dropin;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -94,6 +95,33 @@ public class ViewProfile extends AppCompatActivity {
 
         // setting the users Bio
         bio.setText(user_info.getBiography());
+
+        //displaying the games and interests.
+        if (user_info.getGame1().equals("Elden Ring")) {
+            game_one.setVisibility(View.VISIBLE);
+            game_one.setImageResource(R.drawable.elden_ring_game_image);
+        }else if (user_info.getGame1().equals("Fortnite")){
+            game_one.setVisibility(View.VISIBLE);
+            game_one.setImageResource(R.drawable.fortnite_game_image);
+        }else if (user_info.getGame1().equals("Apex Legends")){
+            game_one.setVisibility(View.VISIBLE);
+            game_one.setImageResource(R.drawable.apex_legends_game_image);
+        }else if (user_info.getGame1().equals("Call of Duty Warzone")){
+            game_one.setVisibility(View.VISIBLE);
+            game_one.setImageResource(R.drawable.callofduty_warzone_game_image);
+        }else if (user_info.getGame1().equals("Rocket League")){
+            game_one.setVisibility(View.VISIBLE);
+            game_one.setImageResource(R.drawable.rocket_league_game_image);
+        }else if (user_info.getGame1().equals("Minecraft")){
+            game_one.setVisibility(View.VISIBLE);
+            game_one.setImageResource(R.drawable.minecraft_game_image);
+        }else if (user_info.getGame1().equals("Grand Theft Auto Online")){
+            game_one.setVisibility(View.VISIBLE);
+            game_one.setImageResource(R.drawable.grand_theft_auto_game_image);
+        }else if (user_info.getGame1().equals("Fallout 76")){
+            game_one.setVisibility(View.VISIBLE);
+            game_one.setImageResource(R.drawable.fallout_76_game_image);
+        }
 
 
     }
