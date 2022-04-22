@@ -124,5 +124,86 @@ public class ViewProfile extends AppCompatActivity {
         }
 
 
+        if (user_info.getGame2().equals("Elden Ring")) {
+            game_two.setVisibility(View.VISIBLE);
+            game_two.setImageResource(R.drawable.elden_ring_game_image);
+        }else if (user_info.getGame2().equals("Fortnite")){
+            game_two.setVisibility(View.VISIBLE);
+            game_two.setImageResource(R.drawable.fortnite_game_image);
+        }else if (user_info.getGame2().equals("Apex Legends")){
+            game_two.setVisibility(View.VISIBLE);
+            game_two.setImageResource(R.drawable.apex_legends_game_image);
+        }else if (user_info.getGame2().equals("Call of Duty Warzone")){
+            game_two.setVisibility(View.VISIBLE);
+            game_two.setImageResource(R.drawable.callofduty_warzone_game_image);
+        }else if (user_info.getGame2().equals("Rocket League")){
+            game_two.setVisibility(View.VISIBLE);
+            game_two.setImageResource(R.drawable.rocket_league_game_image);
+        }else if (user_info.getGame2().equals("Minecraft")){
+            game_two.setVisibility(View.VISIBLE);
+            game_two.setImageResource(R.drawable.minecraft_game_image);
+        }else if (user_info.getGame2().equals("Grand Theft Auto Online")){
+            game_two.setVisibility(View.VISIBLE);
+            game_two.setImageResource(R.drawable.grand_theft_auto_game_image);
+        }else if (user_info.getGame2().equals("Fallout 76")){
+            game_two.setVisibility(View.VISIBLE);
+            game_two.setImageResource(R.drawable.fallout_76_game_image);
+        }
+
+
+        if (user_info.getGame3().equals("Elden Ring")) {
+            game_three.setVisibility(View.VISIBLE);
+            game_three.setImageResource(R.drawable.elden_ring_game_image);
+        }else if (user_info.getGame3().equals("Fortnite")){
+            game_three.setVisibility(View.VISIBLE);
+            game_three.setImageResource(R.drawable.fortnite_game_image);
+        }else if (user_info.getGame3().equals("Apex Legends")){
+            game_three.setVisibility(View.VISIBLE);
+            game_three.setImageResource(R.drawable.apex_legends_game_image);
+        }else if (user_info.getGame3().equals("Call of Duty Warzone")){
+            game_three.setVisibility(View.VISIBLE);
+            game_three.setImageResource(R.drawable.callofduty_warzone_game_image);
+        }else if (user_info.getGame3().equals("Rocket League")){
+            game_three.setVisibility(View.VISIBLE);
+            game_three.setImageResource(R.drawable.rocket_league_game_image);
+        }else if (user_info.getGame3().equals("Minecraft")){
+            game_three.setVisibility(View.VISIBLE);
+            game_three.setImageResource(R.drawable.minecraft_game_image);
+        }else if (user_info.getGame3().equals("Grand Theft Auto Online")){
+            game_three.setVisibility(View.VISIBLE);
+            game_three.setImageResource(R.drawable.grand_theft_auto_game_image);
+        }else if (user_info.getGame3().equals("Fallout 76")){
+            game_three.setVisibility(View.VISIBLE);
+            game_three.setImageResource(R.drawable.fallout_76_game_image);
+        }
+
+
+
+        if (user_info.getGame4().equals("Elden Ring")) {
+            game_four.setVisibility(View.VISIBLE);
+            game_four.setImageResource(R.drawable.elden_ring_game_image);
+        }else if (user_info.getGame4().equals("Fortnite")){
+            game_four.setVisibility(View.VISIBLE);
+            game_four.setImageResource(R.drawable.fortnite_game_image);
+        }else if (user_info.getGame4().equals("Apex Legends")){
+            game_four.setVisibility(View.VISIBLE);
+            game_four.setImageResource(R.drawable.apex_legends_game_image);
+        }else if (user_info.getGame4().equals("Call of Duty Warzone")){
+            game_four.setVisibility(View.VISIBLE);
+            game_four.setImageResource(R.drawable.callofduty_warzone_game_image);
+        }else if (user_info.getGame4().equals("Rocket League")){
+            game_four.setVisibility(View.VISIBLE);
+            game_four.setImageResource(R.drawable.rocket_league_game_image);
+        }else if (user_info.getGame4().equals("Minecraft")){
+            game_four.setVisibility(View.VISIBLE);
+            game_four.setImageResource(R.drawable.minecraft_game_image);
+        }else if (user_info.getGame4().equals("Grand Theft Auto Online")){
+            game_four.setVisibility(View.VISIBLE);
+            game_four.setImageResource(R.drawable.grand_theft_auto_game_image);
+        }else if (user_info.getGame4().equals("Fallout 76")){
+            game_four.setVisibility(View.VISIBLE);
+            game_four.setImageResource(R.drawable.fallout_76_game_image);
+        }
+
     }
 }
