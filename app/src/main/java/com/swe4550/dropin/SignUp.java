@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -98,7 +99,7 @@ public class SignUp extends AppCompatActivity {
     public void addNewUser(String name, String email, String password) {
         //initialize variable
         DatabaseReference mDatabase;
-        mDatabase = FirebaseDatabase.getInstance().getReference("Users");
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
         //Sign up and check if task completed correctly or not
@@ -108,8 +109,22 @@ public class SignUp extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     User user = new User(name," "," "," "," "," "," "," "," "," "," ");
 
+                    mDatabase.child("pokes").child(FirebaseAuth.getInstance().getUid()).setValue(" ").addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(SignUp.this, "Error Registering User",
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    });
+                    mDatabase.child("starratings").child(FirebaseAuth.getInstance().getUid()).setValue(" ").addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(SignUp.this, "Error Registering User",
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    });
                     // This will return the ID for the user
-                    mDatabase.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    mDatabase.child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
 
