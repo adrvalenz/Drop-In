@@ -234,5 +234,86 @@ public class ViewProfile extends AppCompatActivity {
         }
 
 
+        if (user_info.getInterest2().equals("Sports")) {
+            interest_two.setVisibility(View.VISIBLE);
+            interest_two.setText("Sports");
+        }else if (user_info.getInterest2().equals("Art")){
+            interest_two.setVisibility(View.VISIBLE);
+            interest_two.setText("Art");
+        }else if (user_info.getInterest2().equals("Cars")){
+            interest_two.setVisibility(View.VISIBLE);
+            interest_two.setText("Cars");
+        }else if (user_info.getInterest2().equals("Music")){
+            interest_two.setVisibility(View.VISIBLE);
+            interest_two.setText("Music");
+        }else if (user_info.getInterest2().equals("Cooking")){
+            interest_two.setVisibility(View.VISIBLE);
+            interest_two.setText("Cooking");
+        }else if (user_info.getInterest2().equals("Anime")){
+            interest_two.setVisibility(View.VISIBLE);
+            interest_two.setText("Anime");
+        }else if (user_info.getInterest2().equals("Reading")){
+            interest_two.setVisibility(View.VISIBLE);
+            interest_two.setText("Reading");
+        }else if (user_info.getInterest2().equals("Martial Arts")){
+            interest_two.setVisibility(View.VISIBLE);
+            interest_two.setText("Martial Arts");
+        }
+
+
+        if (user_info.getInterest3().equals("Sports")) {
+            interest_three.setVisibility(View.VISIBLE);
+            interest_three.setText("Sports");
+        }else if (user_info.getInterest3().equals("Art")){
+            interest_three.setVisibility(View.VISIBLE);
+            interest_three.setText("Art");
+        }else if (user_info.getInterest3().equals("Cars")){
+            interest_three.setVisibility(View.VISIBLE);
+            interest_three.setText("Cars");
+        }else if (user_info.getInterest3().equals("Music")){
+            interest_three.setVisibility(View.VISIBLE);
+            interest_three.setText("Music");
+        }else if (user_info.getInterest3().equals("Cooking")){
+            interest_three.setVisibility(View.VISIBLE);
+            interest_three.setText("Cooking");
+        }else if (user_info.getInterest3().equals("Anime")){
+            interest_three.setVisibility(View.VISIBLE);
+            interest_three.setText("Anime");
+        }else if (user_info.getInterest3().equals("Reading")){
+            interest_three.setVisibility(View.VISIBLE);
+            interest_three.setText("Reading");
+        }else if (user_info.getInterest3().equals("Martial Arts")){
+            interest_three.setVisibility(View.VISIBLE);
+            interest_three.setText("Martial Arts");
+        }
+
+        if (user_info.getInterest4().equals("Sports")) {
+            interest_four.setVisibility(View.VISIBLE);
+            interest_four.setText("Sports");
+        }else if (user_info.getInterest4().equals("Art")){
+            interest_four.setVisibility(View.VISIBLE);
+            interest_four.setText("Art");
+        }else if (user_info.getInterest4().equals("Cars")){
+            interest_four.setVisibility(View.VISIBLE);
+            interest_four.setText("Cars");
+        }else if (user_info.getInterest4().equals("Music")){
+            interest_four.setVisibility(View.VISIBLE);
+            interest_four.setText("Music");
+        }else if (user_info.getInterest4().equals("Cooking")){
+            interest_four.setVisibility(View.VISIBLE);
+            interest_four.setText("Cooking");
+        }else if (user_info.getInterest4().equals("Anime")){
+            interest_four.setVisibility(View.VISIBLE);
+            interest_four.setText("Anime");
+        }else if (user_info.getInterest4().equals("Reading")){
+            interest_four.setVisibility(View.VISIBLE);
+            interest_four.setText("Reading");
+        }else if (user_info.getInterest4().equals("Martial Arts")){
+            interest_four.setVisibility(View.VISIBLE);
+            interest_four.setText("Martial Arts");
+        }
+
+
+
     }
 }
