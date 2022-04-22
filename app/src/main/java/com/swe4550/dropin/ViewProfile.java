@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ViewProfile extends AppCompatActivity {
 
@@ -74,5 +75,21 @@ public class ViewProfile extends AppCompatActivity {
         pokeText = findViewById(R.id.poke_txt);
         rateText = findViewById(R.id.rate_txt);
 
+
+
+        //setting the profile picture to the one that they chose before.
+        if (user_info.getPfp().equals("Xbox")) {
+            userPfp.setImageResource(R.drawable.xbox_icon_logo);
+        } else if (user_info.getPfp().equals("Computer")) {
+            userPfp.setImageResource(R.drawable.personal_computer_icon_logo);
+        } else if (user_info.getPfp().equals("Nintendo")) {
+            userPfp.setImageResource(R.drawable.nintendo_switch_icon_logo);
+        } else if (user_info.getPfp().equals("Playstation")) {
+            userPfp.setImageResource(R.drawable.playstation_icon_logo);
+        }
+
+
+        //setting the users user name.
+        userName.setText(user_info.getUserName());
     }
 }
