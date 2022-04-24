@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
-
-    android:id="@+id/coordinatorLayout"
     android:background="@color/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,120 +11,93 @@
 
     <ImageView
         android:id="@+id/drop_in_logo"
+        android:layout_centerHorizontal="true"
         android:layout_width="349dp"
         android:layout_height="228dp"
-        android:layout_marginStart="31dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="31dp"
         android:contentDescription="@string/drop_in_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/drop_in_logo"
-        tools:ignore="ImageContrastCheck" />
+        app:srcCompat="@drawable/drop_in_logo" />
 
     <TextView
         android:id="@+id/app_name"
         android:layout_width="227dp"
         android:layout_height="156dp"
-        android:layout_marginStart="31dp"
+        android:layout_alignStart="@id/drop_in_logo"
+        android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif-medium"
-        android:rotation="-30"
+        android:rotation="-37"
         android:text="@string/app_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/text"
-        android:textSize="48sp"
-        app:layout_constraintEnd_toStartOf="@+id/drop_in_logo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
+        android:textSize="48sp" />
 
     <TextView
         android:id="@+id/log_in_text"
-        android:layout_width="181dp"
+        android:layout_width="215dp"
         android:layout_height="81dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginEnd="115dp"
+        android:layout_below="@id/drop_in_logo"
+        android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif-medium"
+        android:gravity="center"
         android:text="@string/log_in_text"
         android:textColor="@color/text"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/drop_in_logo" />
+        android:textSize="60sp" />
 
     <EditText
         android:id="@+id/user_email"
         style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
         android:layout_width="221dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="95dp"
-        android:hint="@string/email"
+        android:layout_height="56dp"
+        android:layout_below="@id/log_in_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
         android:background="@drawable/curved"
         android:ems="10"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        android:textColor="@color/text"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/log_in_text"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:textSize="24sp"
         tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/user_password"
         style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
         android:layout_width="221dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="95dp"
-        android:hint="@string/user_password"
+        android:layout_height="56dp"
+        android:layout_below="@id/user_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
         android:background="@drawable/curved"
         android:ems="10"
+        android:hint="@string/user_password"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textColor="@color/text"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_email"
+        android:textSize="24sp"
         tools:ignore="Autofill" />
 
     <Button
         android:id="@+id/login_btn"
         android:layout_width="113dp"
         android:layout_height="56dp"
-        android:layout_marginStart="149dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="149dp"
+        android:layout_above="@id/signup_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
         android:backgroundTint="@color/button"
-        android:textColor="@color/text"
         android:text="@string/login_btn"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_password"/>
+        android:textColor="@color/text" />
 
     <Button
         android:id="@+id/signup_btn"
-        android:layout_width="101dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="155dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="113dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="50dp"
         android:backgroundTint="@color/button"
-        android:textColor="@color/text"
         android:text="@string/signup_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_btn" />
+        android:textColor="@color/text" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
