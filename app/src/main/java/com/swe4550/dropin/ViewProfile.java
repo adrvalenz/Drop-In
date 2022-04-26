@@ -2,6 +2,7 @@ package com.swe4550.dropin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,9 +45,9 @@ public class ViewProfile extends AppCompatActivity {
     Button setupProfile;
     Button logoutBtn;
     Button pokeBtn;
-    TextView pokeText;
-    TextView rateText;
-
+    TextView poke_text;
+    TextView rate_text;
+    ImageView setupProfileImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,11 +79,72 @@ public class ViewProfile extends AppCompatActivity {
         setupProfile = findViewById(R.id.setup_profile);
         logoutBtn = findViewById(R.id.login_btn);
         pokeBtn = findViewById(R.id.poke_btn);
-        pokeText = findViewById(R.id.poke_txt);
-        rateText = findViewById(R.id.rate_txt);
+        poke_text = findViewById(R.id.poke_txt);
+        rate_text = findViewById(R.id.rate_txt);
+        setupProfileImg = findViewById(R.id.setup_profile_img);
+
+
+        //if yes
+        //Set log-out and edit profile buttons to visible
+        //set each star, rate text, Poke text, and the Poke button to invisible
+        //Set the logout button, and the edit profile button that takes the user to "SetupProfile" Activity
+        // to VISIBLE
+        String viewed_user_key = getIntent().getStringExtra("USER KEY");
+        if (viewed_user_key.equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
+
+            logoutBtn.setVisibility(View.VISIBLE);
+            setupProfile.setVisibility(View.VISIBLE);
+            setupProfileImg.setVisibility(View.VISIBLE);
+
+            star_btn_one.setVisibility(View.INVISIBLE);
+            star_btn_two.setVisibility(View.INVISIBLE);
+            star_btn_three.setVisibility(View.INVISIBLE);
+            star_btn_four.setVisibility(View.INVISIBLE);
+            star_btn_five.setVisibility(View.INVISIBLE);
+            star_image_one.setVisibility(View.INVISIBLE);
+            star_image_two.setVisibility(View.INVISIBLE);
+            star_image_three.setVisibility(View.INVISIBLE);
+            star_image_four.setVisibility(View.INVISIBLE);
+            star_image_five.setVisibility(View.INVISIBLE);
+
+
+            rate_text.setVisibility(View.INVISIBLE);
+            poke_text.setVisibility(View.INVISIBLE);
+            pokeBtn.setVisibility(View.INVISIBLE);
+        }
+//event listeners
+
+        //Get user key sent from previous activity stored with key: "USER KEY"
+        setupProfile.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                Intent ViewProfileAct = new Intent(ViewProfile.this, SetUpProfile.class);
+
+                startActivity(ViewProfileAct);
+            }
+        });
+// End of Get user key sent from previous activity
+        //Check if the profile being viewed is the person who is logged in
+
+        //getIntent().putExtra("USER KEY", FirebaseAuth.getInstance().getCurrentUser().getUid());
+        // if (setupProfile.getText().toString().equals(logoutBtn.FirebaseAuth.getInstance().getCurrentUser().getUid))
+
+
+        // End of Check (now for the yes or no)
+        // end of yes
+        //if no
+        //Database code here: download the user information.....
 
 
 
+
+
+
+
+
+
+        //End of Database code
+
+        //(start of matthew's code)
         //setting the profile picture to the one that they chose before.
         if (user_info.getPfp().equals("Xbox")) {
             userPfp.setImageResource(R.drawable.xbox_icon_logo);
@@ -281,6 +345,25 @@ public class ViewProfile extends AppCompatActivity {
         }
 
 
+        //On Other User's Profile
+        // Star Clicked: Control taken by Database Team.
+        // Point out the key of the user being viewed and the variable holding the rating that was given to them
+        int User;
+        char getRating;
+        getratingExists();
+
+
+
+
+
+        // Database Code here: Set the star rating of the user who's profile ...
+
+
+        //end of Database code
+
 
 }
+
+    private void getratingExists() {
+    }
 }
