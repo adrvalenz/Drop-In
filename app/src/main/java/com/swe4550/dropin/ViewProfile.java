@@ -10,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class ViewProfile extends AppCompatActivity {
 
     //bonded the variables
@@ -97,223 +100,104 @@ public class ViewProfile extends AppCompatActivity {
         bio.setText(user_info.getBiography());
 
         //displaying the games and interests.
-        if (user_info.getGame1().equals("Elden Ring")) {
-            game_one.setVisibility(View.VISIBLE);
-            game_one.setImageResource(R.drawable.elden_ring_game_image);
-        }else if (user_info.getGame1().equals("Fortnite")){
-            game_one.setVisibility(View.VISIBLE);
-            game_one.setImageResource(R.drawable.fortnite_game_image);
-        }else if (user_info.getGame1().equals("Apex Legends")){
-            game_one.setVisibility(View.VISIBLE);
-            game_one.setImageResource(R.drawable.apex_legends_game_image);
-        }else if (user_info.getGame1().equals("Call of Duty Warzone")){
-            game_one.setVisibility(View.VISIBLE);
-            game_one.setImageResource(R.drawable.callofduty_warzone_game_image);
-        }else if (user_info.getGame1().equals("Rocket League")){
-            game_one.setVisibility(View.VISIBLE);
-            game_one.setImageResource(R.drawable.rocket_league_game_image);
-        }else if (user_info.getGame1().equals("Minecraft")){
-            game_one.setVisibility(View.VISIBLE);
-            game_one.setImageResource(R.drawable.minecraft_game_image);
-        }else if (user_info.getGame1().equals("Grand Theft Auto Online")){
-            game_one.setVisibility(View.VISIBLE);
-            game_one.setImageResource(R.drawable.grand_theft_auto_game_image);
-        }else if (user_info.getGame1().equals("Fallout 76")){
-            game_one.setVisibility(View.VISIBLE);
-            game_one.setImageResource(R.drawable.fallout_76_game_image);
+        ArrayList<String> given_games = new ArrayList<>();
+        ArrayList<String> given_interests = new ArrayList<>();
+        ArrayList<String> games = new ArrayList<>(Arrays.asList(user_info.getGame1(),user_info.getGame2(),user_info.getGame3(),user_info.getGame4()));
+        ArrayList<String> interests = new ArrayList<>(Arrays.asList(user_info.getInterest1(),user_info.getInterest2(),user_info.getInterest3(),user_info.getInterest4()));
+        for(int U = 0; U < interests.size(); U++) {
+            if(!interests.get(U).equals(" ")){
+                given_interests.add(interests.get(U));
+            }
+            if(!games.get(U).equals(" ")){
+                given_games.add(games.get(U));
+            }
         }
 
+        switch (given_games.size()){
+            case 4:
+                game_four.setVisibility(View.VISIBLE);
 
-        if (user_info.getGame2().equals("Elden Ring")) {
-            game_two.setVisibility(View.VISIBLE);
-            game_two.setImageResource(R.drawable.elden_ring_game_image);
-        }else if (user_info.getGame2().equals("Fortnite")){
-            game_two.setVisibility(View.VISIBLE);
-            game_two.setImageResource(R.drawable.fortnite_game_image);
-        }else if (user_info.getGame2().equals("Apex Legends")){
-            game_two.setVisibility(View.VISIBLE);
-            game_two.setImageResource(R.drawable.apex_legends_game_image);
-        }else if (user_info.getGame2().equals("Call of Duty Warzone")){
-            game_two.setVisibility(View.VISIBLE);
-            game_two.setImageResource(R.drawable.callofduty_warzone_game_image);
-        }else if (user_info.getGame2().equals("Rocket League")){
-            game_two.setVisibility(View.VISIBLE);
-            game_two.setImageResource(R.drawable.rocket_league_game_image);
-        }else if (user_info.getGame2().equals("Minecraft")){
-            game_two.setVisibility(View.VISIBLE);
-            game_two.setImageResource(R.drawable.minecraft_game_image);
-        }else if (user_info.getGame2().equals("Grand Theft Auto Online")){
-            game_two.setVisibility(View.VISIBLE);
-            game_two.setImageResource(R.drawable.grand_theft_auto_game_image);
-        }else if (user_info.getGame2().equals("Fallout 76")){
-            game_two.setVisibility(View.VISIBLE);
-            game_two.setImageResource(R.drawable.fallout_76_game_image);
-        }
+                if (user_info.getGame4().equals("Elden Ring")) {
+                game_four.setImageResource(R.drawable.elden_ring_game_image);
+                }else if (user_info.getGame4().equals("Fortnite")){
+                game_four.setImageResource(R.drawable.fortnite_game_image);
+                }else if (user_info.getGame4().equals("Apex Legends")){
+                game_four.setImageResource(R.drawable.apex_legends_game_image);
+                }else if (user_info.getGame4().equals("Call of Duty Warzone")){
+                game_four.setImageResource(R.drawable.callofduty_warzone_game_image);
+                }else if (user_info.getGame4().equals("Rocket League")){
+                game_four.setImageResource(R.drawable.rocket_league_game_image);
+                }else if (user_info.getGame4().equals("Minecraft")){
+                game_four.setImageResource(R.drawable.minecraft_game_image);
+                }else if (user_info.getGame4().equals("Grand Theft Auto Online")){
+                game_four.setImageResource(R.drawable.grand_theft_auto_game_image);
+                }else if (user_info.getGame4().equals("Fallout 76")){
+                game_four.setImageResource(R.drawable.fallout_76_game_image);
+                }
+            case 3:
+                game_three.setVisibility(View.VISIBLE);
 
+                if (user_info.getGame3().equals("Elden Ring")) {
+                    game_three.setImageResource(R.drawable.elden_ring_game_image);
+                }else if (user_info.getGame3().equals("Fortnite")){
+                    game_three.setImageResource(R.drawable.fortnite_game_image);
+                }else if (user_info.getGame3().equals("Apex Legends")){
+                    game_three.setImageResource(R.drawable.apex_legends_game_image);
+                }else if (user_info.getGame3().equals("Call of Duty Warzone")){
+                    game_three.setImageResource(R.drawable.callofduty_warzone_game_image);
+                }else if (user_info.getGame3().equals("Rocket League")){
+                    game_three.setImageResource(R.drawable.rocket_league_game_image);
+                }else if (user_info.getGame3().equals("Minecraft")){
+                    game_three.setImageResource(R.drawable.minecraft_game_image);
+                }else if (user_info.getGame3().equals("Grand Theft Auto Online")){
+                    game_three.setImageResource(R.drawable.grand_theft_auto_game_image);
+                }else if (user_info.getGame3().equals("Fallout 76")){
+                    game_three.setImageResource(R.drawable.fallout_76_game_image);
+                }
+            case 2:
+                game_two.setVisibility(View.VISIBLE);
 
-        if (user_info.getGame3().equals("Elden Ring")) {
-            game_three.setVisibility(View.VISIBLE);
-            game_three.setImageResource(R.drawable.elden_ring_game_image);
-        }else if (user_info.getGame3().equals("Fortnite")){
-            game_three.setVisibility(View.VISIBLE);
-            game_three.setImageResource(R.drawable.fortnite_game_image);
-        }else if (user_info.getGame3().equals("Apex Legends")){
-            game_three.setVisibility(View.VISIBLE);
-            game_three.setImageResource(R.drawable.apex_legends_game_image);
-        }else if (user_info.getGame3().equals("Call of Duty Warzone")){
-            game_three.setVisibility(View.VISIBLE);
-            game_three.setImageResource(R.drawable.callofduty_warzone_game_image);
-        }else if (user_info.getGame3().equals("Rocket League")){
-            game_three.setVisibility(View.VISIBLE);
-            game_three.setImageResource(R.drawable.rocket_league_game_image);
-        }else if (user_info.getGame3().equals("Minecraft")){
-            game_three.setVisibility(View.VISIBLE);
-            game_three.setImageResource(R.drawable.minecraft_game_image);
-        }else if (user_info.getGame3().equals("Grand Theft Auto Online")){
-            game_three.setVisibility(View.VISIBLE);
-            game_three.setImageResource(R.drawable.grand_theft_auto_game_image);
-        }else if (user_info.getGame3().equals("Fallout 76")){
-            game_three.setVisibility(View.VISIBLE);
-            game_three.setImageResource(R.drawable.fallout_76_game_image);
-        }
+                if (user_info.getGame2().equals("Elden Ring")) {
+                    game_two.setImageResource(R.drawable.elden_ring_game_image);
+                }else if (user_info.getGame2().equals("Fortnite")){
+                    game_two.setImageResource(R.drawable.fortnite_game_image);
+                }else if (user_info.getGame2().equals("Apex Legends")){
+                    game_two.setImageResource(R.drawable.apex_legends_game_image);
+                }else if (user_info.getGame2().equals("Call of Duty Warzone")){
+                    game_two.setImageResource(R.drawable.callofduty_warzone_game_image);
+                }else if (user_info.getGame2().equals("Rocket League")){
+                    game_two.setImageResource(R.drawable.rocket_league_game_image);
+                }else if (user_info.getGame2().equals("Minecraft")){
+                    game_two.setImageResource(R.drawable.minecraft_game_image);
+                }else if (user_info.getGame2().equals("Grand Theft Auto Online")){
+                    game_two.setImageResource(R.drawable.grand_theft_auto_game_image);
+                }else if (user_info.getGame2().equals("Fallout 76")){
+                    game_two.setImageResource(R.drawable.fallout_76_game_image);
+                }
+            case 1:
+                game_one.setVisibility(View.VISIBLE);
 
+                if (user_info.getGame1().equals("Elden Ring")) {
+                    game_one.setImageResource(R.drawable.elden_ring_game_image);
+                }else if (user_info.getGame1().equals("Fortnite")){
+                    game_one.setImageResource(R.drawable.fortnite_game_image);
+                }else if (user_info.getGame1().equals("Apex Legends")){
+                    game_one.setImageResource(R.drawable.apex_legends_game_image);
+                }else if (user_info.getGame1().equals("Call of Duty Warzone")){
+                    game_one.setImageResource(R.drawable.callofduty_warzone_game_image);
+                }else if (user_info.getGame1().equals("Rocket League")){
+                    game_one.setImageResource(R.drawable.rocket_league_game_image);
+                }else if (user_info.getGame1().equals("Minecraft")){
+                    game_one.setImageResource(R.drawable.minecraft_game_image);
+                }else if (user_info.getGame1().equals("Grand Theft Auto Online")){
+                    game_one.setImageResource(R.drawable.grand_theft_auto_game_image);
+                }else if (user_info.getGame1().equals("Fallout 76")){
+                    game_one.setImageResource(R.drawable.fallout_76_game_image);
+                }
 
-
-        if (user_info.getGame4().equals("Elden Ring")) {
-            game_four.setVisibility(View.VISIBLE);
-            game_four.setImageResource(R.drawable.elden_ring_game_image);
-        }else if (user_info.getGame4().equals("Fortnite")){
-            game_four.setVisibility(View.VISIBLE);
-            game_four.setImageResource(R.drawable.fortnite_game_image);
-        }else if (user_info.getGame4().equals("Apex Legends")){
-            game_four.setVisibility(View.VISIBLE);
-            game_four.setImageResource(R.drawable.apex_legends_game_image);
-        }else if (user_info.getGame4().equals("Call of Duty Warzone")){
-            game_four.setVisibility(View.VISIBLE);
-            game_four.setImageResource(R.drawable.callofduty_warzone_game_image);
-        }else if (user_info.getGame4().equals("Rocket League")){
-            game_four.setVisibility(View.VISIBLE);
-            game_four.setImageResource(R.drawable.rocket_league_game_image);
-        }else if (user_info.getGame4().equals("Minecraft")){
-            game_four.setVisibility(View.VISIBLE);
-            game_four.setImageResource(R.drawable.minecraft_game_image);
-        }else if (user_info.getGame4().equals("Grand Theft Auto Online")){
-            game_four.setVisibility(View.VISIBLE);
-            game_four.setImageResource(R.drawable.grand_theft_auto_game_image);
-        }else if (user_info.getGame4().equals("Fallout 76")){
-            game_four.setVisibility(View.VISIBLE);
-            game_four.setImageResource(R.drawable.fallout_76_game_image);
-        }
-
-
-        //code for the interest boxes.
-        if (user_info.getInterest1().equals("Sports")) {
-            interest_one.setVisibility(View.VISIBLE);
-            interest_one.setText("Sports");
-        }else if (user_info.getInterest1().equals("Art")){
-            interest_one.setVisibility(View.VISIBLE);
-            interest_one.setText("Art");
-        }else if (user_info.getInterest1().equals("Cars")){
-            interest_one.setVisibility(View.VISIBLE);
-            interest_one.setText("Cars");
-        }else if (user_info.getInterest1().equals("Music")){
-            interest_one.setVisibility(View.VISIBLE);
-            interest_one.setText("Music");
-        }else if (user_info.getInterest1().equals("Cooking")){
-            interest_one.setVisibility(View.VISIBLE);
-            interest_one.setText("Cooking");
-        }else if (user_info.getInterest1().equals("Anime")){
-            interest_one.setVisibility(View.VISIBLE);
-            interest_one.setText("Anime");
-        }else if (user_info.getInterest1().equals("Reading")){
-            interest_one.setVisibility(View.VISIBLE);
-            interest_one.setText("Reading");
-        }else if (user_info.getInterest1().equals("Martial Arts")){
-            interest_one.setVisibility(View.VISIBLE);
-            interest_one.setText("Martial Arts");
-        }
-
-
-        if (user_info.getInterest2().equals("Sports")) {
-            interest_two.setVisibility(View.VISIBLE);
-            interest_two.setText("Sports");
-        }else if (user_info.getInterest2().equals("Art")){
-            interest_two.setVisibility(View.VISIBLE);
-            interest_two.setText("Art");
-        }else if (user_info.getInterest2().equals("Cars")){
-            interest_two.setVisibility(View.VISIBLE);
-            interest_two.setText("Cars");
-        }else if (user_info.getInterest2().equals("Music")){
-            interest_two.setVisibility(View.VISIBLE);
-            interest_two.setText("Music");
-        }else if (user_info.getInterest2().equals("Cooking")){
-            interest_two.setVisibility(View.VISIBLE);
-            interest_two.setText("Cooking");
-        }else if (user_info.getInterest2().equals("Anime")){
-            interest_two.setVisibility(View.VISIBLE);
-            interest_two.setText("Anime");
-        }else if (user_info.getInterest2().equals("Reading")){
-            interest_two.setVisibility(View.VISIBLE);
-            interest_two.setText("Reading");
-        }else if (user_info.getInterest2().equals("Martial Arts")){
-            interest_two.setVisibility(View.VISIBLE);
-            interest_two.setText("Martial Arts");
-        }
-
-
-        if (user_info.getInterest3().equals("Sports")) {
-            interest_three.setVisibility(View.VISIBLE);
-            interest_three.setText("Sports");
-        }else if (user_info.getInterest3().equals("Art")){
-            interest_three.setVisibility(View.VISIBLE);
-            interest_three.setText("Art");
-        }else if (user_info.getInterest3().equals("Cars")){
-            interest_three.setVisibility(View.VISIBLE);
-            interest_three.setText("Cars");
-        }else if (user_info.getInterest3().equals("Music")){
-            interest_three.setVisibility(View.VISIBLE);
-            interest_three.setText("Music");
-        }else if (user_info.getInterest3().equals("Cooking")){
-            interest_three.setVisibility(View.VISIBLE);
-            interest_three.setText("Cooking");
-        }else if (user_info.getInterest3().equals("Anime")){
-            interest_three.setVisibility(View.VISIBLE);
-            interest_three.setText("Anime");
-        }else if (user_info.getInterest3().equals("Reading")){
-            interest_three.setVisibility(View.VISIBLE);
-            interest_three.setText("Reading");
-        }else if (user_info.getInterest3().equals("Martial Arts")){
-            interest_three.setVisibility(View.VISIBLE);
-            interest_three.setText("Martial Arts");
-        }
-
-        if (user_info.getInterest4().equals("Sports")) {
-            interest_four.setVisibility(View.VISIBLE);
-            interest_four.setText("Sports");
-        }else if (user_info.getInterest4().equals("Art")){
-            interest_four.setVisibility(View.VISIBLE);
-            interest_four.setText("Art");
-        }else if (user_info.getInterest4().equals("Cars")){
-            interest_four.setVisibility(View.VISIBLE);
-            interest_four.setText("Cars");
-        }else if (user_info.getInterest4().equals("Music")){
-            interest_four.setVisibility(View.VISIBLE);
-            interest_four.setText("Music");
-        }else if (user_info.getInterest4().equals("Cooking")){
-            interest_four.setVisibility(View.VISIBLE);
-            interest_four.setText("Cooking");
-        }else if (user_info.getInterest4().equals("Anime")){
-            interest_four.setVisibility(View.VISIBLE);
-            interest_four.setText("Anime");
-        }else if (user_info.getInterest4().equals("Reading")){
-            interest_four.setVisibility(View.VISIBLE);
-            interest_four.setText("Reading");
-        }else if (user_info.getInterest4().equals("Martial Arts")){
-            interest_four.setVisibility(View.VISIBLE);
-            interest_four.setText("Martial Arts");
         }
 
 
 
-    }
+}
 }
