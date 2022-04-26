@@ -199,13 +199,85 @@ public class ViewProfile extends AppCompatActivity {
         //switch statement for interests.
         switch (given_interests.size()){
             case 4:
+                interest_four.setVisibility(View.VISIBLE);
 
+                if (user_info.getInterest4().equals("Sports")) {
+                    interest_four.setText("Sports");
+                }else if (user_info.getInterest4().equals("Art")){
+                    interest_four.setText("Art");
+                }else if (user_info.getInterest4().equals("Cars")){
+                    interest_four.setText("Cars");
+                }else if (user_info.getInterest4().equals("Music")){
+                    interest_four.setText("Music");
+                }else if (user_info.getInterest4().equals("Cooking")){
+                    interest_four.setText("Cooking");
+                }else if (user_info.getInterest4().equals("Anime")){
+                    interest_four.setText("Anime");
+                }else if (user_info.getInterest4().equals("Reading")){
+                    interest_four.setText("Reading");
+                }else if (user_info.getInterest4().equals("Martial Arts")){
+                    interest_four.setText("Martial Arts");
+                }
             case 3:
+                interest_three.setVisibility(View.VISIBLE);
 
+                if (user_info.getInterest3().equals("Sports")) {
+                    interest_three.setText("Sports");
+                }else if (user_info.getInterest3().equals("Art")){
+                    interest_three.setText("Art");
+                }else if (user_info.getInterest3().equals("Cars")){
+                    interest_three.setText("Cars");
+                }else if (user_info.getInterest3().equals("Music")){
+                    interest_three.setText("Music");
+                }else if (user_info.getInterest3().equals("Cooking")){
+                    interest_three.setText("Cooking");
+                }else if (user_info.getInterest3().equals("Anime")){
+                    interest_three.setText("Anime");
+                }else if (user_info.getInterest3().equals("Reading")){
+                    interest_three.setText("Reading");
+                }else if (user_info.getInterest3().equals("Martial Arts")){
+                    interest_three.setText("Martial Arts");
+                }
             case 2:
+                interest_two.setVisibility(View.VISIBLE);
 
+                if (user_info.getInterest2().equals("Sports")) {
+                    interest_two.setText("Sports");
+                }else if (user_info.getInterest2().equals("Art")){
+                    interest_two.setText("Art");
+                }else if (user_info.getInterest2().equals("Cars")){
+                    interest_two.setText("Cars");
+                }else if (user_info.getInterest2().equals("Music")){
+                    interest_two.setText("Music");
+                }else if (user_info.getInterest2().equals("Cooking")){
+                    interest_two.setText("Cooking");
+                }else if (user_info.getInterest2().equals("Anime")){
+                    interest_two.setText("Anime");
+                }else if (user_info.getInterest2().equals("Reading")){
+                    interest_two.setText("Reading");
+                }else if (user_info.getInterest2().equals("Martial Arts")){
+                    interest_two.setText("Martial Arts");
+                }
             case 1:
+                interest_one.setVisibility(View.VISIBLE);
 
+                if (user_info.getInterest1().equals("Sports")) {
+                    interest_one.setText("Sports");
+                }else if (user_info.getInterest1().equals("Art")){
+                    interest_one.setText("Art");
+                }else if (user_info.getInterest1().equals("Cars")){
+                    interest_one.setText("Cars");
+                }else if (user_info.getInterest1().equals("Music")){
+                    interest_one.setText("Music");
+                }else if (user_info.getInterest1().equals("Cooking")){
+                    interest_one.setText("Cooking");
+                }else if (user_info.getInterest1().equals("Anime")){
+                    interest_one.setText("Anime");
+                }else if (user_info.getInterest1().equals("Reading")){
+                    interest_one.setText("Reading");
+                }else if (user_info.getInterest1().equals("Martial Arts")){
+                    interest_one.setText("Martial Arts");
+                }
         }
 
 
