@@ -196,6 +196,17 @@ public class ViewProfile extends AppCompatActivity {
                 }
 
         }
+        //switch statement for interests.
+        switch (given_interests.size()){
+            case 4:
+
+            case 3:
+
+            case 2:
+
+            case 1:
+
+        }
 
 
 
