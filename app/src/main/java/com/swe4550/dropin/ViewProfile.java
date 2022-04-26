@@ -354,6 +354,14 @@ public class ViewProfile extends AppCompatActivity {
             }
         });
 
+        //log out button(husk for database)
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
         //On Other User's Profile
         // Star Clicked: Control taken by Database Team.
         // Point out the key of the user being viewed and the variable holding the rating that was given to them
