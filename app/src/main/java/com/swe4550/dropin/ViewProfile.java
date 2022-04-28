@@ -114,14 +114,6 @@ public class ViewProfile extends AppCompatActivity {
         }
 //event listeners
 
-        //Get user key sent from previous activity stored with key: "USER KEY"
-        setupProfile.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) {
-                Intent ViewProfileAct = new Intent(ViewProfile.this, SetUpProfile.class);
-
-                startActivity(ViewProfileAct);
-            }
-        });
 // End of Get user key sent from previous activity
         //Check if the profile being viewed is the person who is logged in
 
@@ -196,16 +188,16 @@ public class ViewProfile extends AppCompatActivity {
         switch (given_interests.size()){
             case 4:
                 interest_four.setVisibility(View.VISIBLE);
-                interest_four.setText(interestImageDrawable(given_interests.get(3)));
+                interest_four.setText(given_interests.get(3));
             case 3:
                 interest_three.setVisibility(View.VISIBLE);
-                interest_three.setText(interestImageDrawable(given_interests.get(2)));
+                interest_three.setText(given_interests.get(2));
             case 2:
                 interest_two.setVisibility(View.VISIBLE);
-                interest_two.setText(interestImageDrawable(given_interests.get(1)));
+                interest_two.setText(given_interests.get(1));
             case 1:
                 interest_one.setVisibility(View.VISIBLE);
-                interest_one.setText(interestImageDrawable(given_interests.get(0)));
+                interest_one.setText(given_interests.get(0));
         }
 
 
@@ -222,7 +214,8 @@ public class ViewProfile extends AppCompatActivity {
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(ViewProfile.this, LogIn.class));
             }
         });
 
@@ -280,39 +273,5 @@ public class ViewProfile extends AppCompatActivity {
                 throw new IllegalStateException("Unexpected value: " + key);
         }
         return imageInt;
-    }
-
-    //Method sets the correct image resource using the passed in string
-    public String interestImageDrawable(String key){
-        String interestStr;
-        switch(key){
-            case "Sports":
-                interestStr = "Sports";
-                break;
-            case "Art":
-                interestStr = "Art";
-                break;
-            case "Cars":
-                interestStr = "Cars";
-                break;
-            case "Music":
-                interestStr = "Music";
-                break;
-            case "Cooking":
-                interestStr = "Cooking";
-                break;
-            case "Anime":
-                interestStr = "Anime";
-                break;
-            case "Reading":
-                interestStr = "Reading";
-                break;
-            case "Martial Arts":
-                interestStr = "Martial Arts";
-                break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + key);
-        }
-        return interestStr;
     }
 }
