@@ -180,84 +180,16 @@ public class ViewProfile extends AppCompatActivity {
         switch (given_games.size()){
             case 4:
                 game_four.setVisibility(View.VISIBLE);
-
-                if (user_info.getGame4().equals("Elden Ring")) {
-                game_four.setImageResource(R.drawable.elden_ring_game_image);
-                }else if (user_info.getGame4().equals("Fortnite")){
-                game_four.setImageResource(R.drawable.fortnite_game_image);
-                }else if (user_info.getGame4().equals("Apex Legends")){
-                game_four.setImageResource(R.drawable.apex_legends_game_image);
-                }else if (user_info.getGame4().equals("Call of Duty Warzone")){
-                game_four.setImageResource(R.drawable.callofduty_warzone_game_image);
-                }else if (user_info.getGame4().equals("Rocket League")){
-                game_four.setImageResource(R.drawable.rocket_league_game_image);
-                }else if (user_info.getGame4().equals("Minecraft")){
-                game_four.setImageResource(R.drawable.minecraft_game_image);
-                }else if (user_info.getGame4().equals("Grand Theft Auto Online")){
-                game_four.setImageResource(R.drawable.grand_theft_auto_game_image);
-                }else if (user_info.getGame4().equals("Fallout 76")){
-                game_four.setImageResource(R.drawable.fallout_76_game_image);
-                }
+                game_four.setImageResource(gameImageDrawable(given_games.get(3)));
             case 3:
                 game_three.setVisibility(View.VISIBLE);
-
-                if (user_info.getGame3().equals("Elden Ring")) {
-                    game_three.setImageResource(R.drawable.elden_ring_game_image);
-                }else if (user_info.getGame3().equals("Fortnite")){
-                    game_three.setImageResource(R.drawable.fortnite_game_image);
-                }else if (user_info.getGame3().equals("Apex Legends")){
-                    game_three.setImageResource(R.drawable.apex_legends_game_image);
-                }else if (user_info.getGame3().equals("Call of Duty Warzone")){
-                    game_three.setImageResource(R.drawable.callofduty_warzone_game_image);
-                }else if (user_info.getGame3().equals("Rocket League")){
-                    game_three.setImageResource(R.drawable.rocket_league_game_image);
-                }else if (user_info.getGame3().equals("Minecraft")){
-                    game_three.setImageResource(R.drawable.minecraft_game_image);
-                }else if (user_info.getGame3().equals("Grand Theft Auto Online")){
-                    game_three.setImageResource(R.drawable.grand_theft_auto_game_image);
-                }else if (user_info.getGame3().equals("Fallout 76")){
-                    game_three.setImageResource(R.drawable.fallout_76_game_image);
-                }
+                game_three.setImageResource(gameImageDrawable(given_games.get(2)));
             case 2:
                 game_two.setVisibility(View.VISIBLE);
-
-                if (user_info.getGame2().equals("Elden Ring")) {
-                    game_two.setImageResource(R.drawable.elden_ring_game_image);
-                }else if (user_info.getGame2().equals("Fortnite")){
-                    game_two.setImageResource(R.drawable.fortnite_game_image);
-                }else if (user_info.getGame2().equals("Apex Legends")){
-                    game_two.setImageResource(R.drawable.apex_legends_game_image);
-                }else if (user_info.getGame2().equals("Call of Duty Warzone")){
-                    game_two.setImageResource(R.drawable.callofduty_warzone_game_image);
-                }else if (user_info.getGame2().equals("Rocket League")){
-                    game_two.setImageResource(R.drawable.rocket_league_game_image);
-                }else if (user_info.getGame2().equals("Minecraft")){
-                    game_two.setImageResource(R.drawable.minecraft_game_image);
-                }else if (user_info.getGame2().equals("Grand Theft Auto Online")){
-                    game_two.setImageResource(R.drawable.grand_theft_auto_game_image);
-                }else if (user_info.getGame2().equals("Fallout 76")){
-                    game_two.setImageResource(R.drawable.fallout_76_game_image);
-                }
+                game_two.setImageResource(gameImageDrawable(given_games.get(1)));
             case 1:
                 game_one.setVisibility(View.VISIBLE);
-
-                if (user_info.getGame1().equals("Elden Ring")) {
-                    game_one.setImageResource(R.drawable.elden_ring_game_image);
-                }else if (user_info.getGame1().equals("Fortnite")){
-                    game_one.setImageResource(R.drawable.fortnite_game_image);
-                }else if (user_info.getGame1().equals("Apex Legends")){
-                    game_one.setImageResource(R.drawable.apex_legends_game_image);
-                }else if (user_info.getGame1().equals("Call of Duty Warzone")){
-                    game_one.setImageResource(R.drawable.callofduty_warzone_game_image);
-                }else if (user_info.getGame1().equals("Rocket League")){
-                    game_one.setImageResource(R.drawable.rocket_league_game_image);
-                }else if (user_info.getGame1().equals("Minecraft")){
-                    game_one.setImageResource(R.drawable.minecraft_game_image);
-                }else if (user_info.getGame1().equals("Grand Theft Auto Online")){
-                    game_one.setImageResource(R.drawable.grand_theft_auto_game_image);
-                }else if (user_info.getGame1().equals("Fallout 76")){
-                    game_one.setImageResource(R.drawable.fallout_76_game_image);
-                }
+                game_one.setImageResource(gameImageDrawable(given_games.get(0)));
 
         }
         //switch statement for interests.
@@ -382,5 +314,72 @@ public class ViewProfile extends AppCompatActivity {
 }
 
     private void getratingExists() {
+    }
+
+    //Method sets the correct image resource using the passed in string
+    public int gameImageDrawable(String key){
+        int imageInt;
+        switch(key){
+            case "Elden Ring":
+                imageInt = R.drawable.elden_ring_game_image;
+                break;
+            case "Fortnite":
+                imageInt = R.drawable.fortnite_game_image;
+                break;
+            case "Apex Legends":
+                imageInt = R.drawable.apex_legends_game_image;
+                break;
+            case "Call of Duty Warzone":
+                imageInt = R.drawable.callofduty_warzone_game_image;
+                break;
+            case "Rocket League":
+                imageInt = R.drawable.rocket_league_game_image;
+                break;
+            case "Minecraft":
+                imageInt = R.drawable.minecraft_game_image;
+                break;
+            case "Grand Theft Auto Online":
+                imageInt = R.drawable.grand_theft_auto_game_image;
+                break;
+            case "Fallout 76":
+                imageInt = R.drawable.fallout_76_game_image;
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + key);
+        }
+        return imageInt;
+    }
+    //Method sets the correct image resource using the passed in string
+    public String interestImageDrawable(String key){
+        String interestStr;
+        switch(key){
+            case "Sports":
+                interestStr = "Sports";
+                break;
+            case "Art":
+                interestStr = "Art";
+                break;
+            case "Cars":
+                interestStr = "Cars";
+                break;
+            case "Music":
+                interestStr = "Music";
+                break;
+            case "Cooking":
+                interestStr = "Cooking";
+                break;
+            case "Anime":
+                interestStr = "Anime";
+                break;
+            case "Reading":
+                interestStr = "Reading";
+                break;
+            case "Martial Arts":
+                interestStr = "Martial Arts";
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + key);
+        }
+        return interestStr;
     }
 }
