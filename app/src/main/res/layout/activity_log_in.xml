@@ -81,23 +81,24 @@
         android:id="@+id/login_btn"
         android:layout_width="113dp"
         android:layout_height="56dp"
-        android:layout_above="@id/signup_btn"
+        android:layout_below="@+id/user_password"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="17dp"
+        android:layout_marginTop="90dp"
         android:backgroundTint="@color/button"
         android:text="@string/login_btn"
         android:textAlignment="center"
         android:textColor="@color/text" />
 
     <Button
-        android:id="@+id/signup_btn"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/signup_new_btn"
         android:layout_width="113dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/login_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
         android:backgroundTint="@color/button"
-        android:text="@string/signup_btn"
-        android:textColor="@color/text" />
+        android:text="@string/signup_new_btn"
+        android:textColor="@color/text"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
 </RelativeLayout>

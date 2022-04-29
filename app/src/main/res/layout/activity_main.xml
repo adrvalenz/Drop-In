@@ -330,17 +330,17 @@
 
     <Button
         android:id="@+id/pokes_btn"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:layout_below="@id/summary_5"
         android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
         android:layout_marginTop="5dp"
+        android:backgroundTint="@color/button"
         android:gravity="center"
         android:text="@string/pokes_text"
-        android:textSize="31sp"
         android:textColor="@color/text"
-        android:backgroundTint="@color/button" />
+        android:textSize="31sp" />
 
     <Button
         android:id="@+id/profile_btn"

@@ -114,11 +114,11 @@
 
     <Button
         android:id="@+id/signup_new_btn"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
         android:layout_width="113dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/user_new_password_confirm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
         android:backgroundTint="@color/button"
         android:text="@string/signup_new_btn"
         android:textColor="@color/text"
