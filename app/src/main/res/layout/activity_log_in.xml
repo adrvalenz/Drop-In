@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
-
     android:id="@+id/coordinatorLayout"
+    android:background="@color/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    app:layoutDescription="@xml/activity_log_in_scene3"
     tools:context=".LogIn">
 
     <ImageView
@@ -34,28 +33,29 @@
         android:textSize="48sp" />
 
     <TextView
-        android:id="@+id/log_in_text"
+        android:id="@+id/sign_up_text"
         android:layout_width="215dp"
         android:layout_height="81dp"
         android:layout_below="@id/drop_in_logo"
         android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
-        android:text="@string/log_in_text"
+        android:text="@string/sign_up_text"
         android:textColor="@color/text"
-        android:textSize="60sp" />
+        android:textSize="60sp"
+        tools:ignore="DuplicateIds" />
 
     <EditText
-        android:id="@+id/user_email"
+        android:id="@+id/email"
         style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
         android:layout_width="221dp"
         android:layout_height="56dp"
-        android:layout_below="@id/log_in_text"
+        android:layout_below="@id/sign_up_text"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
         android:background="@drawable/curved"
         android:ems="10"
-        android:hint="@string/email"
+        android:hint="@string/user_new_email"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
         android:textColor="@color/text"
@@ -67,7 +67,7 @@
         style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
         android:layout_width="221dp"
         android:layout_height="56dp"
-        android:layout_below="@id/user_email"
+        android:layout_below="@id/email"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
         android:background="@drawable/curved"
@@ -85,21 +85,21 @@
         android:layout_height="56dp"
         android:layout_below="@+id/user_password"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="80dp"
         android:backgroundTint="@color/button"
         android:text="@string/login_btn"
-        android:textAlignment="center"
-        android:textColor="@color/text" />
+        android:textColor="@color/text"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/signup_new_btn"
+        android:id="@+id/signup_btn"
         android:layout_width="113dp"
         android:layout_height="56dp"
         android:layout_below="@+id/login_btn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
         android:backgroundTint="@color/button"
-        android:text="@string/signup_new_btn"
+        android:text="@string/signup_btn"
         android:textColor="@color/text"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
