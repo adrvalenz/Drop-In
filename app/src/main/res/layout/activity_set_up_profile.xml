@@ -1,512 +1,477 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent"
+
+    android:layout_height="match_parent"
     android:layout_width="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@color/background"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".SetUpProfile">
+        android:background="@color/background">
 
         <ImageView
             android:id="@+id/user_pfp"
+            android:layout_alignParentStart="true"
             android:layout_width="76dp"
             android:layout_height="76dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
             android:contentDescription="@+id/user_pfp"
             android:elevation="2dp"
             android:visibility="visible"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/grey_background_circle"/>
 
         <TextView
             android:id="@+id/user_name"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="76dp"
-            android:layout_marginTop="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:background="@drawable/curved"
+            android:gravity="center"
             android:text="@string/user_name"
             android:textAlignment="center"
             android:textColor="@color/text"
-            android:textSize="45sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="45sp" />
 
         <TextView
             android:id="@+id/biography_text"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_below="@id/user_name"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
             android:text="@string/biography_text"
             android:textColor="@color/text"
-            android:textSize="45sp"
-            app:layout_constraintBottom_toTopOf="@+id/biography"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/user_name" />
+            android:textSize="45sp" />
 
         <EditText
             android:id="@+id/biography"
             style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
-            android:layout_width="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/biography_text"
+            android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/curved"
-            android:textAlignment="center"
-            android:textColor="@color/text"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/biography_text"
-            android:inputType="text"
+            android:gravity="center"
             android:hint="@string/biography"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/text"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/profile_pic_text"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_below="@id/biography"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
             android:text="@string/profile_pic_text"
             android:textColor="@color/text"
-            android:textSize="45sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/biography" />
+            android:textSize="45sp" />
 
         <Button
             android:id="@+id/pfp_1"
             android:layout_width="76dp"
-            android:layout_height="76dp"
-            android:layout_marginStart="41dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/profile_pic_text"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
             android:background="@android:color/transparent"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/xbox_icon_logo"
             android:layout_width="76dp"
-            android:layout_height="76dp"
-            android:layout_marginStart="41dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/profile_pic_text"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
             android:contentDescription="@+id/xbox_icon_logo"
             android:elevation="2dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profile_pic_text"
-            app:srcCompat="@drawable/xbox_icon_logo" />
+            app:srcCompat="@drawable/xbox_icon_logo"/>
 
         <Button
             android:id="@+id/pfp_2"
             android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/profile_pic_text"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/pfp_1"
             android:background="@android:color/transparent"
-            android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@id/pfp_1"
-            app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/personal_computer_icon_logo"
             android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/profile_pic_text"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/xbox_icon_logo"
+            android:contentDescription="@+id/personal_computer_icon_logo"
             android:elevation="2dp"
-            app:layout_constraintStart_toEndOf="@+id/pfp_1"
-            app:layout_constraintTop_toBottomOf="@+id/profile_pic_text"
-            app:srcCompat="@drawable/personal_computer_icon_logo"
-            android:contentDescription="@+id/personal_computer_icon_logo" />
+            app:srcCompat="@drawable/personal_computer_icon_logo" />
 
         <Button
             android:id="@+id/pfp_3"
             android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/profile_pic_text"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/pfp_2"
             android:background="@android:color/transparent"
-            android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@+id/pfp_2"
-            app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/nintendo_switch_icon_logo"
             android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/profile_pic_text"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/personal_computer_icon_logo"
+            android:contentDescription="@+id/nintendo_switch_icon_logo"
             android:elevation="2dp"
-            app:layout_constraintStart_toEndOf="@+id/pfp_2"
-            app:layout_constraintTop_toBottomOf="@+id/profile_pic_text"
-            app:srcCompat="@drawable/nintendo_switch_icon_logo"
-            android:contentDescription="@+id/nintendo_switch_icon_logo" />
+            app:srcCompat="@drawable/nintendo_switch_icon_logo" />
 
         <Button
             android:id="@+id/pfp_4"
             android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/profile_pic_text"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/pfp_3"
             android:background="@android:color/transparent"
-            android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@+id/pfp_3"
-            app:layout_constraintTop_toBottomOf="@+id/profile_pic_text" />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/playstation_icon_logo"
             android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_height="65dp"
+            android:layout_below="@id/profile_pic_text"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/nintendo_switch_icon_logo"
+            android:contentDescription="@+id/playstation_icon_logo"
             android:elevation="2dp"
-            app:layout_constraintStart_toEndOf="@+id/pfp_3"
-            app:layout_constraintTop_toBottomOf="@+id/profile_pic_text"
-            app:srcCompat="@drawable/playstation_icon_logo"
-            android:contentDescription="@+id/playstation_icon_logo" />
+            app:srcCompat="@drawable/playstation_icon_logo" />
 
         <TextView
             android:id="@+id/video_games_played_text"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_below="@id/pfp_1"
             android:text="@string/video_games_played_text"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
             android:textColor="@color/text"
-            android:textSize="45sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pfp_1" />
+            android:textSize="45sp" />
 
         <Button
             android:id="@+id/game_1"
             android:layout_width="76dp"
-            android:layout_height="76dp"
-            android:layout_marginStart="41dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/video_games_played_text"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
             android:background="@android:color/transparent"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/elden_ring"
             android:layout_width="76dp"
-            android:layout_height="76dp"
-            android:layout_marginStart="41dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/video_games_played_text"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:contentDescription="@+id/elden_ring"
             android:elevation="2dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/video_games_played_text"
-            app:srcCompat="@drawable/elden_ring_game_image"
-            android:contentDescription="@+id/elden_ring" />
+            app:srcCompat="@drawable/elden_ring_game_image" />
 
         <Button
             android:id="@+id/game_2"
             android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/video_games_played_text"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/game_1"
             android:background="@android:color/transparent"
-            android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@+id/game_1"
-            app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/fortnite"
             android:layout_width="76dp"
-            android:layout_height="76dp"
-            app:srcCompat="@drawable/fortnite_game_image"
-            android:elevation="2dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/video_games_played_text"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            app:layout_constraintStart_toEndOf="@+id/game_1"
-            app:layout_constraintTop_toBottomOf="@+id/video_games_played_text"
-            android:contentDescription="@+id/fortnite" />
+            android:layout_toEndOf="@id/elden_ring"
+            android:contentDescription="@+id/fortnite"
+            android:elevation="2dp"
+            app:srcCompat="@drawable/fortnite_game_image" />
 
         <Button
             android:id="@+id/game_3"
             android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/video_games_played_text"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/game_2"
             android:background="@android:color/transparent"
-            android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@+id/game_2"
-            app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/apex_legends"
             android:layout_width="76dp"
-            android:layout_height="76dp"
-            app:srcCompat="@drawable/apex_legends_game_image"
-            android:elevation="2dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/video_games_played_text"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            app:layout_constraintStart_toEndOf="@+id/game_2"
-            app:layout_constraintTop_toBottomOf="@+id/video_games_played_text"
-            android:contentDescription="@+id/apex_legends" />
+            android:layout_toEndOf="@id/fortnite"
+            android:contentDescription="@+id/apex_legends"
+            android:elevation="2dp"
+            app:srcCompat="@drawable/apex_legends_game_image" />
 
         <Button
             android:id="@+id/game_4"
             android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/video_games_played_text"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/game_3"
             android:background="@android:color/transparent"
-            android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@+id/game_3"
-            app:layout_constraintTop_toBottomOf="@+id/video_games_played_text" />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/callofduty_warzone"
             android:layout_width="76dp"
-            android:layout_height="76dp"
-            android:elevation="2dp"
-            app:srcCompat="@drawable/callofduty_warzone_game_image"
+            android:layout_height="65dp"
+            android:layout_below="@+id/video_games_played_text"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            app:layout_constraintStart_toEndOf="@+id/game_3"
-            app:layout_constraintTop_toBottomOf="@+id/video_games_played_text"
-            android:contentDescription="@+id/callofduty_warzone" />
+            android:layout_toEndOf="@id/apex_legends"
+            android:contentDescription="@+id/callofduty_warzone"
+            android:elevation="2dp"
+            app:srcCompat="@drawable/callofduty_warzone_game_image" />
 
         <Button
             android:id="@+id/game_5"
             android:layout_width="76dp"
-            android:layout_height="76dp"
-            android:layout_marginStart="41dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/game_1"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
             android:background="@android:color/transparent"
-            android:visibility="visible"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/game_1" />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/rocket_league"
             android:layout_width="76dp"
-            android:layout_height="76dp"
-            android:layout_marginStart="41dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/elden_ring"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:contentDescription="@+id/rocket_league"
             android:elevation="2dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/game_1"
-            app:srcCompat="@drawable/rocket_league_game_image"
-            android:contentDescription="@+id/rocket_league" />
+            app:srcCompat="@drawable/rocket_league_game_image" />
 
         <Button
             android:id="@+id/game_6"
             android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/game_2"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/game_5"
             android:background="@android:color/transparent"
-            android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@+id/game_5"
-            app:layout_constraintTop_toBottomOf="@+id/game_2" />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/minecraft"
             android:layout_width="76dp"
-            android:layout_height="76dp"
-            app:srcCompat="@drawable/minecraft_game_image"
-            android:elevation="2dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/fortnite"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            app:layout_constraintStart_toEndOf="@+id/game_5"
-            app:layout_constraintTop_toBottomOf="@+id/game_2"
-            android:contentDescription="@+id/minecraft" />
+            android:layout_toEndOf="@id/rocket_league"
+            android:contentDescription="@+id/minecraft"
+            android:elevation="2dp"
+            app:srcCompat="@drawable/minecraft_game_image" />
 
         <Button
             android:id="@+id/game_7"
             android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/game_3"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/game_6"
             android:background="@android:color/transparent"
-            android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@+id/game_6"
-            app:layout_constraintTop_toBottomOf="@+id/game_3" />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/grand_theft_auto"
             android:layout_width="76dp"
-            android:layout_height="76dp"
-            android:elevation="2dp"
-            app:srcCompat="@drawable/grand_theft_auto_game_image"
+            android:layout_height="65dp"
+            android:layout_below="@+id/apex_legends"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            app:layout_constraintStart_toEndOf="@+id/game_6"
-            app:layout_constraintTop_toBottomOf="@+id/game_3"
-            android:contentDescription="@+id/grand_theft_auto" />
+            android:layout_toEndOf="@id/minecraft"
+            android:contentDescription="@+id/grand_theft_auto"
+            android:elevation="2dp"
+            app:srcCompat="@drawable/grand_theft_auto_game_image" />
 
         <Button
             android:id="@+id/game_8"
             android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/game_4"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/game_7"
             android:background="@android:color/transparent"
-            android:visibility="visible"
-            app:layout_constraintStart_toEndOf="@+id/game_7"
-            app:layout_constraintTop_toBottomOf="@+id/game_4" />
+            android:visibility="visible" />
 
         <ImageView
             android:id="@+id/fallout_76"
             android:layout_width="76dp"
-            android:layout_height="76dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/callofduty_warzone"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/grand_theft_auto"
+            android:contentDescription="@+id/fallout_76"
             android:elevation="2dp"
-            app:layout_constraintStart_toEndOf="@+id/game_7"
-            app:layout_constraintTop_toBottomOf="@+id/game_4"
-            app:srcCompat="@drawable/fallout_76_game_image"
-            android:contentDescription="@+id/fallout_76" />
+            app:srcCompat="@drawable/fallout_76_game_image" />
 
         <TextView
             android:id="@+id/outside_interest_text"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_below="@id/game_5"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
             android:text="@string/outside_interest_text"
             android:textColor="@color/text"
-            android:textSize="45sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/game_5" />
+            android:textSize="45sp" />
 
         <Button
             android:id="@+id/interest_1"
             android:layout_width="102dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="@color/button"
+            android:layout_height="50dp"
+            android:layout_below="@id/outside_interest_text"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
             android:text="@string/interest_1"
-            android:textColor="@color/text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/outside_interest_text" />
+            android:textAlignment="center"
+            android:backgroundTint="@color/button"
+            android:textColor="@color/text" />
 
         <Button
             android:id="@+id/interest_2"
-            android:layout_width="101dp"
-            android:layout_height="70dp"
+            android:layout_width="102dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/outside_interest_text"
             android:layout_marginStart="2dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/interest_2"
-            android:textColor="@color/text"
+            android:layout_toEndOf="@+id/interest_1"
             android:backgroundTint="@color/button"
-            app:layout_constraintStart_toEndOf="@+id/interest_1"
-            app:layout_constraintTop_toBottomOf="@+id/outside_interest_text" />
+            android:gravity="center"
+            android:text="@string/interest_2"
+            android:textAlignment="center"
+            android:textColor="@color/text" />
 
         <Button
             android:id="@+id/interest_3"
-            android:layout_width="101dp"
-            android:layout_height="70dp"
+            android:layout_width="102dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/outside_interest_text"
             android:layout_marginStart="2dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/interest_2"
             android:backgroundTint="@color/button"
+            android:gravity="center"
             android:text="@string/interest_3"
-            android:textColor="@color/text"
-            app:layout_constraintStart_toEndOf="@+id/interest_2"
-            app:layout_constraintTop_toBottomOf="@+id/outside_interest_text" />
+            android:textAlignment="center"
+            android:textColor="@color/text" />
 
         <Button
             android:id="@+id/interest_4"
-            android:layout_width="101dp"
-            android:layout_height="70dp"
+            android:layout_width="102dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/outside_interest_text"
             android:layout_marginStart="2dp"
-            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/interest_3"
             android:backgroundTint="@color/button"
+            android:gravity="center"
             android:text="@string/interest_4"
-            android:textColor="@color/text"
-            app:layout_constraintStart_toEndOf="@+id/interest_3"
-            app:layout_constraintTop_toBottomOf="@+id/outside_interest_text" />
+            android:textAlignment="center"
+            android:textColor="@color/text" />
 
         <Button
             android:id="@+id/interest_5"
             android:layout_width="102dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/interest_1"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
             android:text="@string/interest_5"
-            android:textColor="@color/text"
+            android:textAlignment="center"
             android:backgroundTint="@color/button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/interest_1" />
+            android:textColor="@color/text" />
 
         <Button
             android:id="@+id/interest_6"
-            android:layout_width="101dp"
-            android:layout_height="70dp"
+            android:layout_width="102dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/interest_2"
             android:layout_marginStart="2dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/interest_6"
-            android:textColor="@color/text"
+            android:layout_toEndOf="@+id/interest_1"
             android:backgroundTint="@color/button"
-            app:layout_constraintStart_toEndOf="@+id/interest_5"
-            app:layout_constraintTop_toBottomOf="@+id/interest_2" />
+            android:gravity="center"
+            android:text="@string/interest_6"
+            android:textAlignment="center"
+            android:textColor="@color/text" />
 
         <Button
             android:id="@+id/interest_7"
-            android:layout_width="101dp"
-            android:layout_height="70dp"
+            android:layout_width="102dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/interest_3"
             android:layout_marginStart="2dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/interest_7"
-            android:textColor="@color/text"
+            android:layout_toEndOf="@+id/interest_6"
             android:backgroundTint="@color/button"
-            app:layout_constraintStart_toEndOf="@+id/interest_6"
-            app:layout_constraintTop_toBottomOf="@+id/interest_3" />
+            android:gravity="center"
+            android:text="@string/interest_7"
+            android:textAlignment="center"
+            android:textColor="@color/text" />
 
         <Button
             android:id="@+id/interest_8"
-            android:layout_width="101dp"
-            android:layout_height="70dp"
+            android:layout_width="102dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/interest_4"
             android:layout_marginStart="2dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/interest_8"
-            android:textColor="@color/text"
+            android:layout_toEndOf="@+id/interest_7"
             android:backgroundTint="@color/button"
-            app:layout_constraintStart_toEndOf="@+id/interest_7"
-            app:layout_constraintTop_toBottomOf="@+id/interest_4" />
+            android:gravity="center"
+            android:text="@string/interest_8"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="13sp" />
 
         <Button
             android:id="@+id/submit_btn"
             android:layout_width="113dp"
             android:layout_height="56dp"
-            android:layout_marginStart="149dp"
-            android:layout_marginTop="200dp"
-            android:layout_marginEnd="149dp"
+            android:layout_below="@+id/interest_1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
             android:backgroundTint="@color/button"
             android:text="@string/submit_btn"
             android:textAlignment="center"
-            android:textColor="@color/text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/outside_interest_text" />
+            android:textColor="@color/text" />
 
         <Button
             android:id="@+id/cancel_btn"
             android:layout_width="113dp"
             android:layout_height="56dp"
-            android:layout_marginStart="149dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="149dp"
+            android:layout_below="@+id/submit_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
             android:backgroundTint="@color/button"
             android:text="@string/cancel_btn"
             android:textAlignment="center"
-            android:textColor="@color/text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/submit_btn" />
+            android:textColor="@color/text" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 </ScrollView>
