@@ -446,7 +446,8 @@
             android:gravity="center"
             android:text="@string/interest_8"
             android:textAlignment="center"
-            android:textColor="@color/text" />
+            android:textColor="@color/text"
+            android:textSize="13sp" />
 
         <Button
             android:id="@+id/submit_btn"
