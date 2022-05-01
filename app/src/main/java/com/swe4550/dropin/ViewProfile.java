@@ -154,9 +154,11 @@ public class ViewProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //inside here
-                //I need to send data here, the data I need to be sent is the number 1
+                setStarImageDrawable("1");
+                setEmptyStars("1");
+                //I need to send data here, the data I need to be sent is the number 1 as a string, and below is the currently viewed user's key
                 String viewed_user_key = getIntent().getStringExtra("USER KEY");
-                star_image_one.setImageResource(gameImageDrawable());
+
 
             }
         });
@@ -164,27 +166,33 @@ public class ViewProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //inside here
-                // I need to send data here, the data I need to be sent is the number 2
+                setStarImageDrawable("2");
+                setEmptyStars("2");
+                // I need to send data here, the data I need to be sent is the number 2 as a string, and below is the currently viewed user's key
                 String viewed_user_key = getIntent().getStringExtra("USER KEY");
-                star_image_two.setImageResource(gameImageDrawable());
+
             }
         });
         star_btn_three.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //inside here
-                // I need to send data here, the data I need to be sent is the number 3
+                setStarImageDrawable("3");
+                setEmptyStars("3");
+                // I need to send data here, the data I need to be sent is the number 3 as a string, and below is the currently viewed user's key
                 String viewed_user_key = getIntent().getStringExtra("USER KEY");
-                star_image_three.setImageResource(gameImageDrawable());
+
             }
         });
         star_btn_four.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //inside here
-                //I need to send data here, the data I need to be sent is the number 4
+                setStarImageDrawable("4");
+                setEmptyStars("4");
+                //I need to send data here, the data I need to be sent is the number 4 as a string, and below is the currently viewed user's key
                 String viewed_user_key = getIntent().getStringExtra("USER KEY");
-                star_image_four.setImageResource(gameImageDrawable());
+
 
             }
         });
@@ -192,28 +200,24 @@ public class ViewProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //inside here
-                //I need to send data here, the data I need to be sent is the number 5
+                setStarImageDrawable("5");
+                setEmptyStars("5");
+                //I need to send data here, the data I need to be sent is the number 5 as a string, and below is the currently viewed user's key
                 String viewed_user_key = getIntent().getStringExtra("USER KEY");
-                star_image_five.setImageResource(gameImageDrawable());
+
 
             }
         });
-        // Database Code here: Set the star rating of the user who's profile ...
+        //specify the key of the user being viewed and the rating given with a comment - leave space for the
+        pokeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // here is the user that is currently signed in:
+                String current_user = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                //Database code and stuff starts here
 
-
-        //end of Database code
-
-        //Turn the correct amount of star ImageViews into the yellow filled version depending on which star the user clicked on
-        ImageView star_image_one filled_star.png
-        star_image_two.setImageResource(gameImageDrawable(ImageView));
-        star_image_three.setImageResource(gameImageDrawable(ImageView));
-        star_image_four.setImageResource(gameImageDrawable(ImageView));
-        ImageView star_image_five;
-
-
-
-        //Specify the key of the user being viewed and the rating given with a comment
-        //THe key of the user is "USER KEY" and the ratings given are star_btn_one through star_btn_five
+            }
+        });
 
     }
 //Database code after PokeButton Starts Here
@@ -225,37 +229,40 @@ public class ViewProfile extends AppCompatActivity {
 
 
     //Method sets the correct image resource using the passed in string
-    public int gameImageDrawable(String key){
+    private void setStarImageDrawable(String key){
         int imageInt;
         switch(key){
-            case "Elden Ring":
-                imageInt = R.drawable.elden_ring_game_image;
-                break;
-            case "Fortnite":
-                imageInt = R.drawable.fortnite_game_image;
-                break;
-            case "Apex Legends":
-                imageInt = R.drawable.apex_legends_game_image;
-                break;
-            case "Call of Duty Warzone":
-                imageInt = R.drawable.callofduty_warzone_game_image;
-                break;
-            case "Rocket League":
-                imageInt = R.drawable.rocket_league_game_image;
-                break;
-            case "Minecraft":
-                imageInt = R.drawable.minecraft_game_image;
-                break;
-            case "Grand Theft Auto Online":
-                imageInt = R.drawable.grand_theft_auto_game_image;
-                break;
-            case "Fallout 76":
-                imageInt = R.drawable.fallout_76_game_image;
-                break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + key);
+            case "5":
+                star_image_five.setImageResource(R.drawable.filled_star);
+            case "4":
+                star_image_four.setImageResource(R.drawable.filled_star);
+
+            case "3":
+                star_image_three.setImageResource(R.drawable.filled_star);
+
+            case "2":
+                star_image_two.setImageResource(R.drawable.filled_star);
+
+            case "1":
+                star_image_one.setImageResource(R.drawable.filled_star);
+
                 //imageInt = R.drawable.grey_background_circle;
         }
-        return imageInt;
+       // return imageInt;
+    }
+    private void setEmptyStars(String key){
+        switch(key){
+            case "1":
+                star_image_two.setImageResource(R.drawable.empty_star);
+            case "2":
+                star_image_three.setImageResource(R.drawable.empty_star);
+            case "3":
+                star_image_four.setImageResource(R.drawable.empty_star);
+            case "4":
+                star_image_five.setImageResource(R.drawable.empty_star);
+
+        }
+
     }
 }
+
