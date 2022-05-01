@@ -3,23 +3,22 @@ package com.swe4550.dropin;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-import org.w3c.dom.Text;
-
-import java.security.Key;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ViewProfile extends AppCompatActivity {
 
-    //ViewProfile bonding variables
+    //bonded the variables
     User user_info;
     String user_key;
     ImageView userPfp;
@@ -49,15 +48,14 @@ public class ViewProfile extends AppCompatActivity {
     TextView poke_text;
     TextView rate_text;
     ImageView setupProfileImg;
-    // end of bonding variables
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_profile);
-        userPfp = findViewById(R.id.user_pfp);
+
+        //setting the variables to their UI counterparts
+        userPfp = (ImageView)findViewById(R.id.user_pfp);
         userName = findViewById(R.id.user_name);
         bio = findViewById(R.id.biography);
         game_one = findViewById(R.id.game_1);
@@ -84,7 +82,6 @@ public class ViewProfile extends AppCompatActivity {
         poke_text = findViewById(R.id.poke_txt);
         rate_text = findViewById(R.id.rate_txt);
         setupProfileImg = findViewById(R.id.setup_profile_img);
-
 
 
         //if yes
@@ -117,23 +114,15 @@ public class ViewProfile extends AppCompatActivity {
         }
 //event listeners
 
-        //Get user key sent from previous activity stored with key: "USER KEY"
-        setupProfile.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) {
-                Intent ViewProfileAct = new Intent(ViewProfile.this, SetUpProfile.class);
-
-                startActivity(ViewProfileAct);
-            }
-        });
 // End of Get user key sent from previous activity
         //Check if the profile being viewed is the person who is logged in
 
         //getIntent().putExtra("USER KEY", FirebaseAuth.getInstance().getCurrentUser().getUid());
-       // if (setupProfile.getText().toString().equals(logoutBtn.FirebaseAuth.getInstance().getCurrentUser().getUid))
+        // if (setupProfile.getText().toString().equals(logoutBtn.FirebaseAuth.getInstance().getCurrentUser().getUid))
 
 
-            // End of Check (now for the yes or no)
-    // end of yes
+        // End of Check (now for the yes or no)
+        // end of yes
         //if no
         //Database code here: download the user information.....
 
@@ -147,22 +136,95 @@ public class ViewProfile extends AppCompatActivity {
 
         //End of Database code
 
-        //Find how many interests/games are non-empty (matthew's code)
+        //(start of matthew's code)
+        //setting the profile picture to the one that they chose before.
+        if (user_info.getPfp().equals("Xbox")) {
+            userPfp.setImageResource(R.drawable.xbox_icon_logo);
+        } else if (user_info.getPfp().equals("Computer")) {
+            userPfp.setImageResource(R.drawable.personal_computer_icon_logo);
+        } else if (user_info.getPfp().equals("Nintendo")) {
+            userPfp.setImageResource(R.drawable.nintendo_switch_icon_logo);
+        } else if (user_info.getPfp().equals("Playstation")) {
+            userPfp.setImageResource(R.drawable.playstation_icon_logo);
+        }
 
 
+        //setting the users user name.
+        userName.setText(user_info.getUserName());
+
+        // setting the users Bio
+        bio.setText(user_info.getBiography());
+
+        //displaying the games and interests.
+        ArrayList<String> given_games = new ArrayList<>();
+        ArrayList<String> given_interests = new ArrayList<>();
+        ArrayList<String> games = new ArrayList<>(Arrays.asList(user_info.getGame1(),user_info.getGame2(),user_info.getGame3(),user_info.getGame4()));
+        ArrayList<String> interests = new ArrayList<>(Arrays.asList(user_info.getInterest1(),user_info.getInterest2(),user_info.getInterest3(),user_info.getInterest4()));
+        for(int U = 0; U < interests.size(); U++) {
+            if(!interests.get(U).equals(" ")){
+                given_interests.add(interests.get(U));
+            }
+            if(!games.get(U).equals(" ")){
+                given_games.add(games.get(U));
+            }
+        }
+
+        switch (given_games.size()){
+            case 4:
+                game_four.setVisibility(View.VISIBLE);
+                game_four.setImageResource(gameImageDrawable(given_games.get(3)));
+            case 3:
+                game_three.setVisibility(View.VISIBLE);
+                game_three.setImageResource(gameImageDrawable(given_games.get(2)));
+            case 2:
+                game_two.setVisibility(View.VISIBLE);
+                game_two.setImageResource(gameImageDrawable(given_games.get(1)));
+            case 1:
+                game_one.setVisibility(View.VISIBLE);
+                game_one.setImageResource(gameImageDrawable(given_games.get(0)));
+
+        }
+        //switch statement for interests.
+        switch (given_interests.size()){
+            case 4:
+                interest_four.setVisibility(View.VISIBLE);
+                interest_four.setText(given_interests.get(3));
+            case 3:
+                interest_three.setVisibility(View.VISIBLE);
+                interest_three.setText(given_interests.get(2));
+            case 2:
+                interest_two.setVisibility(View.VISIBLE);
+                interest_two.setText(given_interests.get(1));
+            case 1:
+                interest_one.setVisibility(View.VISIBLE);
+                interest_one.setText(given_interests.get(0));
+        }
 
 
+        //on user's profile(matthew code)
+        // edit profile button
+        setupProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ViewProfile.this, SetUpProfile.class));
+            }
+        });
 
-
-        // (Display viewed user's information) end of code
-
+        //log out button(husk for database)
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(ViewProfile.this, LogIn.class));
+            }
+        });
 
         //On Other User's Profile
         // Star Clicked: Control taken by Database Team.
         // Point out the key of the user being viewed and the variable holding the rating that was given to them
         int User;
-        char getRating();
-    getratingExists();
+        char getRating;
+        getratingExists();
 
 
 
@@ -174,5 +236,42 @@ public class ViewProfile extends AppCompatActivity {
         //end of Database code
 
 
+}
+
+    private void getratingExists() {
+    }
+
+    //Method sets the correct image resource using the passed in string
+    public int gameImageDrawable(String key){
+        int imageInt;
+        switch(key){
+            case "Elden Ring":
+                imageInt = R.drawable.elden_ring_game_image;
+                break;
+            case "Fortnite":
+                imageInt = R.drawable.fortnite_game_image;
+                break;
+            case "Apex Legends":
+                imageInt = R.drawable.apex_legends_game_image;
+                break;
+            case "Call of Duty Warzone":
+                imageInt = R.drawable.callofduty_warzone_game_image;
+                break;
+            case "Rocket League":
+                imageInt = R.drawable.rocket_league_game_image;
+                break;
+            case "Minecraft":
+                imageInt = R.drawable.minecraft_game_image;
+                break;
+            case "Grand Theft Auto Online":
+                imageInt = R.drawable.grand_theft_auto_game_image;
+                break;
+            case "Fallout 76":
+                imageInt = R.drawable.fallout_76_game_image;
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + key);
+        }
+        return imageInt;
     }
 }
