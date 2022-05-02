@@ -20,7 +20,6 @@ public class ViewProfile extends AppCompatActivity {
 
     //bonded the variables
     User user_info;
-    String user_key;
     ImageView userPfp;
     TextView userName;
     EditText bio;
@@ -222,11 +221,71 @@ public class ViewProfile extends AppCompatActivity {
         //On Other User's Profile
         // Star Clicked: Control taken by Database Team.
         // Point out the key of the user being viewed and the variable holding the rating that was given to them
-        int User;
-        char getRating;
-        getratingExists();
+        star_btn_one.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //inside here
+                setStarImageDrawable("1");
+                setEmptyStars("1");
+                //I need to send data here, the data I need to be sent is the number 1 as a string, and below is the currently viewed user's key
+                String viewed_user_key = getIntent().getStringExtra("USER KEY");
+            }
+        });
 
+        star_btn_two.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //inside here
+                setStarImageDrawable("2");
+                setEmptyStars("2");
+                // I need to send data here, the data I need to be sent is the number 2 as a string, and below is the currently viewed user's key
+                String viewed_user_key = getIntent().getStringExtra("USER KEY");
+            }
+        });
 
+        star_btn_three.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //inside here
+                setStarImageDrawable("3");
+                setEmptyStars("3");
+                // I need to send data here, the data I need to be sent is the number 3 as a string, and below is the currently viewed user's key
+                String viewed_user_key = getIntent().getStringExtra("USER KEY");
+
+            }
+        });
+
+        star_btn_four.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //inside here
+                setStarImageDrawable("4");
+                setEmptyStars("4");
+                //I need to send data here, the data I need to be sent is the number 4 as a string, and below is the currently viewed user's key
+                String viewed_user_key = getIntent().getStringExtra("USER KEY");
+            }
+        });
+
+        star_btn_five.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //inside here
+                setStarImageDrawable("5");
+                setEmptyStars("5");
+                //I need to send data here, the data I need to be sent is the number 5 as a string, and below is the currently viewed user's key
+                String viewed_user_key = getIntent().getStringExtra("USER KEY");
+            }
+        });
+
+        pokeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // here is the user that is currently signed in:
+                String current_user = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                //Database code and stuff starts here
+
+            }
+        });
 
 
 
@@ -238,8 +297,37 @@ public class ViewProfile extends AppCompatActivity {
 
 }
 
-    private void getratingExists() {
+    //Method sets the correct image resource using the passed in string
+    private void setStarImageDrawable(String key){
+        switch(key){
+            case "5":
+                star_image_five.setImageResource(R.drawable.filled_star);
+            case "4":
+                star_image_four.setImageResource(R.drawable.filled_star);
+            case "3":
+                star_image_three.setImageResource(R.drawable.filled_star);
+            case "2":
+                star_image_two.setImageResource(R.drawable.filled_star);
+            case "1":
+                star_image_one.setImageResource(R.drawable.filled_star);
+                //imageInt = R.drawable.grey_background_circle;
+        }
     }
+
+    private void setEmptyStars(String key){
+        switch(key){
+            case "1":
+                star_image_two.setImageResource(R.drawable.empty_star);
+            case "2":
+                star_image_three.setImageResource(R.drawable.empty_star);
+            case "3":
+                star_image_four.setImageResource(R.drawable.empty_star);
+            case "4":
+                star_image_five.setImageResource(R.drawable.empty_star);
+
+        }
+    }
+
 
     //Method sets the correct image resource using the passed in string
     public int gameImageDrawable(String key){
