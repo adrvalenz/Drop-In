@@ -5,23 +5,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class PokeView extends AppCompatActivity {
 
     //PokeView bonding variables
     ArrayList<User> poker_list;
+    ArrayList<String> user_keys;
     TextView poker_one;
     TextView poker_two;
     TextView poker_three;
@@ -68,13 +73,57 @@ public class PokeView extends AppCompatActivity {
 //For each user in the arraylist, make an imageView visible.
         //Database function start here, need the list of users that have poked the currently logged in user
         //Database code here
+        user_keys = new ArrayList<String>();
+        //get list of users in database by calling getUsers() and get the list of their keys by calling getUserKeys()
+        DatabaseReference mDatabase;
+        //Get currently signed in user's keys
+        mDatabase = FirebaseDatabase.getInstance().getReference("pokes");
+
+        //Attach valueEventListener to mDatabase object to read all the values
+        mDatabase.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String user_key_string;
+                user_key_string = dataSnapshot.getValue(String.class);
 
 
-        //
-        //Now at this point, poker_list is populated
+
+
+
+
+        //splitting user_keys with Leading and Trailing white space
+        ArrayList<String> split = new ArrayList<>(Arrays.asList(user_key_string.trim().split("\\s+")));
+
+
+
+            //Get reference for User Node
+            DatabaseReference mDatabase2 = FirebaseDatabase.getInstance().getReference("Users");
+            //Attach valueEventListener to mDatabase object to read all the values
+            mDatabase2.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    poker_list = new ArrayList<User>();
+
+                    User temp_user;
+                    if(dataSnapshot.exists()) {
+                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                            for(int i = 0; i < split.size(); i++) {
+                                if (snapshot.getValue(String.class).equals(split.get(i))) {
+                                    i++;
+                                    temp_user = snapshot.getValue(User.class);
+                                    poker_list.add(temp_user);
+                                }
+                            }
+                        }
+                    }
+
+
+
+                    //
+                    //Now at this point, poker_list is populated
 //String game_three = poker_list.get(0).getGame3();
 
-switch(poker_list.size()){
+            switch(poker_list.size()){
     case 5:
         pfp_five.setVisibility(View.VISIBLE);
         pfp_five.setImageResource(getImageDrawable(poker_list.get(4).getPfp()));
@@ -118,6 +167,23 @@ profileBtn.setOnClickListener(new View.OnClickListener() {
                     startActivity(new Intent(PokeView.this, Discover.class));
                 }
         });
+    }
+
+    @Override
+    public void onCancelled(@NonNull DatabaseError error) {
+
+    }
+
+});
+    }
+
+
+
+    @Override
+    public void onCancelled(@NonNull DatabaseError error) {
+
+    }
+});
     }
 //Database method no longer needed here/ends here
 
