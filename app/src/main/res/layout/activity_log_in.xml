@@ -46,7 +46,7 @@
         tools:ignore="DuplicateIds" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/user_email"
         style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
         android:layout_width="221dp"
         android:layout_height="56dp"
@@ -67,7 +67,7 @@
         style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
         android:layout_width="221dp"
         android:layout_height="56dp"
-        android:layout_below="@id/email"
+        android:layout_below="@id/user_email"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
         android:background="@drawable/curved"
