@@ -81,13 +81,7 @@ public class ViewProfile extends AppCompatActivity {
         poke_text = findViewById(R.id.poke_txt);
         rate_text = findViewById(R.id.rate_txt);
         setupProfileImg = findViewById(R.id.setup_profile_img);
-
-
-        //if yes
-        //Set log-out and edit profile buttons to visible
-        //set each star, rate text, Poke text, and the Poke button to invisible
-        //Set the logout button, and the edit profile button that takes the user to "SetupProfile" Activity
-        // to VISIBLE
+        //User key from previous activity retrieved
         String viewed_user_key = getIntent().getStringExtra("USER KEY");
         if (viewed_user_key.equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
 
@@ -111,31 +105,10 @@ public class ViewProfile extends AppCompatActivity {
             poke_text.setVisibility(View.INVISIBLE);
             pokeBtn.setVisibility(View.INVISIBLE);
         }
-//event listeners
-
-// End of Get user key sent from previous activity
-        //Check if the profile being viewed is the person who is logged in
-
-        //getIntent().putExtra("USER KEY", FirebaseAuth.getInstance().getCurrentUser().getUid());
-        // if (setupProfile.getText().toString().equals(logoutBtn.FirebaseAuth.getInstance().getCurrentUser().getUid))
-
-
-        // End of Check (now for the yes or no)
-        // end of yes
-        //if no
-        //Database code here: download the user information.....
+        //Database code here, populate user_info with information of the user that is currently being viewed, whos key is in viewed_user_key
 
 
 
-
-
-
-
-
-
-        //End of Database code
-
-        //(start of matthew's code)
         //setting the profile picture to the one that they chose before.
         if (user_info.getPfp().equals("Xbox")) {
             userPfp.setImageResource(R.drawable.xbox_icon_logo);
@@ -167,7 +140,7 @@ public class ViewProfile extends AppCompatActivity {
                 given_games.add(games.get(U));
             }
         }
-
+        //switch statement for games
         switch (given_games.size()){
             case 4:
                 game_four.setVisibility(View.VISIBLE);
@@ -282,17 +255,14 @@ public class ViewProfile extends AppCompatActivity {
             public void onClick(View v) {
                 // here is the user that is currently signed in:
                 String current_user = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                //and this is the user that is currently being viewed:
+                String viewed_user_key = getIntent().getStringExtra("USER KEY");
                 //Database code and stuff starts here
 
             }
         });
 
-
-
-        // Database Code here: Set the star rating of the user who's profile ...
-
-
-        //end of Database code
+        //end of database code
 
 
 }
