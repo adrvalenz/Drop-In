@@ -109,7 +109,6 @@ public class PokeView extends AppCompatActivity {
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                             for(int i = 0; i < split.size(); i++) {
                                 if (snapshot.getValue(String.class).equals(split.get(i))) {
-                                    i++;
                                     temp_user = snapshot.getValue(User.class);
                                     poker_list.add(temp_user);
                                 }
