@@ -305,24 +305,12 @@ public class ViewProfile extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) { }
         });
 
-        DatabaseReference starDatabase = FirebaseDatabase.getInstance().getReference("starratings");
 
-        starDatabase.child(userID).addValueEventListener(new ValueEventListener() {
+        pokeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                //sets a string into the users star [userkey]space.. string
-                String userPokes = snapshot.getValue(String.class);
-
-                pokeBtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        sendPoke(viewed_user_key);
-                    }
-                });
+            public void onClick(View v) {
+                sendPoke(viewed_user_key);
             }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) { }
         });
         //end of database code
 }
@@ -373,40 +361,63 @@ public class ViewProfile extends AppCompatActivity {
         String userID = user.getUid();
         DatabaseReference pokeDatabase = FirebaseDatabase.getInstance().getReference("pokes");
 
-        pokeDatabase.child(userID).addValueEventListener(new ValueEventListener() {
+        pokeDatabase.child(key).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String userPokes = snapshot.getValue(String.class);
                 String[] Pokes = userPokes.split(" ", 0);
 
-                if (Arrays.asList(Pokes).contains(key)){
+                //remove poke from viewed user
+                if (Arrays.asList(Pokes).contains(userID)){
                     List<String> list = new ArrayList<String>(Arrays.asList(Pokes));
-                    list.removeAll(Arrays.asList(key));
+                    list.removeAll(Arrays.asList(userID));
                     Pokes = list.toArray(new String[0]);
-                }
-                if (Pokes.length == 5){
-                    List<String> list = new ArrayList<String>(Arrays.asList(Pokes));
-                    list.remove(0);
-                    Pokes =  Pokes = list.toArray(new String[0]);
 
-                    Toast.makeText(ViewProfile.this, "Removed oldest Poke",
+                    Toast.makeText(ViewProfile.this, "Unpoked user.",
                             Toast.LENGTH_LONG).show();
                 }
 
-                for (int i = 0; i < Pokes.length; i++){
-                    userPokes = userPokes + Pokes[i] + " ";
-                }
-                userPokes = userPokes + " ";
+                //if 5 pokes, remove last poke and add new one
+                else if (Pokes.length == 5){
+                    List<String> list = new ArrayList<String>(Arrays.asList(Pokes));
+                    list.remove(0);
+                    list.add(userID);
+                    Pokes =  list.toArray(new String[0]);
 
-                pokeDatabase.child(userID).setValue(userPokes).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    Toast.makeText(ViewProfile.this, "Removed oldest Poke and Poked new user.",
+                            Toast.LENGTH_LONG).show();
+                }
+
+                //if < 5 pokes, add new poke
+                else {
+                    List<String> list = new ArrayList<String>(Arrays.asList(Pokes));
+                    list.add(userID);
+                    Pokes =  list.toArray(new String[0]);
+
+                    Toast.makeText(ViewProfile.this, "Poked new user.",
+                            Toast.LENGTH_LONG).show();
+                }
+
+                //clear userPokes
+                userPokes = "";
+
+                if (Pokes.length != 0){
+                    for (int i = 0; i < Pokes.length; i++){
+                        userPokes = userPokes + Pokes[i] + " ";
+                    }
+                }
+                else {
+                    userPokes = " ";
+                }
+
+                pokeDatabase.child(key).setValue(userPokes).addOnFailureListener(new OnFailureListener() {
                     @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(ViewProfile.this, "Sent new Poke",
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(ViewProfile.this, "Poked failed to send.",
                                 Toast.LENGTH_LONG).show();
                     }
                 });
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
