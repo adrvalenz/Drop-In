@@ -1,5 +1,6 @@
 package com.swe4550.dropin;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,10 +12,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ViewProfile extends AppCompatActivity {
 
@@ -105,167 +116,304 @@ public class ViewProfile extends AppCompatActivity {
             poke_text.setVisibility(View.INVISIBLE);
             pokeBtn.setVisibility(View.INVISIBLE);
         }
+
         //Database code here, populate user_info with information of the user that is currently being viewed, whos key is in viewed_user_key
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Users");
 
-
-
-        //setting the profile picture to the one that they chose before.
-        if (user_info.getPfp().equals("Xbox")) {
-            userPfp.setImageResource(R.drawable.xbox_icon_logo);
-        } else if (user_info.getPfp().equals("Computer")) {
-            userPfp.setImageResource(R.drawable.personal_computer_icon_logo);
-        } else if (user_info.getPfp().equals("Nintendo")) {
-            userPfp.setImageResource(R.drawable.nintendo_switch_icon_logo);
-        } else if (user_info.getPfp().equals("Playstation")) {
-            userPfp.setImageResource(R.drawable.playstation_icon_logo);
-        }
-
-
-        //setting the users user name.
-        userName.setText(user_info.getUserName());
-
-        // setting the users Bio
-        bio.setText(user_info.getBiography());
-
-        //displaying the games and interests.
-        ArrayList<String> given_games = new ArrayList<>();
-        ArrayList<String> given_interests = new ArrayList<>();
-        ArrayList<String> games = new ArrayList<>(Arrays.asList(user_info.getGame1(),user_info.getGame2(),user_info.getGame3(),user_info.getGame4()));
-        ArrayList<String> interests = new ArrayList<>(Arrays.asList(user_info.getInterest1(),user_info.getInterest2(),user_info.getInterest3(),user_info.getInterest4()));
-        for(int U = 0; U < interests.size(); U++) {
-            if(!interests.get(U).equals(" ")){
-                given_interests.add(interests.get(U));
-            }
-            if(!games.get(U).equals(" ")){
-                given_games.add(games.get(U));
-            }
-        }
-        //switch statement for games
-        switch (given_games.size()){
-            case 4:
-                game_four.setVisibility(View.VISIBLE);
-                game_four.setImageResource(gameImageDrawable(given_games.get(3)));
-            case 3:
-                game_three.setVisibility(View.VISIBLE);
-                game_three.setImageResource(gameImageDrawable(given_games.get(2)));
-            case 2:
-                game_two.setVisibility(View.VISIBLE);
-                game_two.setImageResource(gameImageDrawable(given_games.get(1)));
-            case 1:
-                game_one.setVisibility(View.VISIBLE);
-                game_one.setImageResource(gameImageDrawable(given_games.get(0)));
-
-        }
-        //switch statement for interests.
-        switch (given_interests.size()){
-            case 4:
-                interest_four.setVisibility(View.VISIBLE);
-                interest_four.setText(given_interests.get(3));
-            case 3:
-                interest_three.setVisibility(View.VISIBLE);
-                interest_three.setText(given_interests.get(2));
-            case 2:
-                interest_two.setVisibility(View.VISIBLE);
-                interest_two.setText(given_interests.get(1));
-            case 1:
-                interest_one.setVisibility(View.VISIBLE);
-                interest_one.setText(given_interests.get(0));
-        }
-
-
-        //on user's profile(matthew code)
-        // edit profile button
-        setupProfile.setOnClickListener(new View.OnClickListener() {
+        mDatabase.child(viewed_user_key).addValueEventListener(new ValueEventListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(ViewProfile.this, SetUpProfile.class));
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                user_info = snapshot.getValue(User.class);
+
+                //setting the profile picture to the one that they chose before.
+                if (user_info.getPfp().equals("Xbox")) {
+                    userPfp.setImageResource(R.drawable.xbox_icon_logo);
+                } else if (user_info.getPfp().equals("Computer")) {
+                    userPfp.setImageResource(R.drawable.personal_computer_icon_logo);
+                } else if (user_info.getPfp().equals("Nintendo")) {
+                    userPfp.setImageResource(R.drawable.nintendo_switch_icon_logo);
+                } else if (user_info.getPfp().equals("Playstation")) {
+                    userPfp.setImageResource(R.drawable.playstation_icon_logo);
+                }
+
+
+                //setting the users user name.
+                userName.setText(user_info.getUserName());
+
+                // setting the users Bio
+                bio.setText(user_info.getBiography());
+
+                //displaying the games and interests.
+                ArrayList<String> given_games = new ArrayList<>();
+                ArrayList<String> given_interests = new ArrayList<>();
+                ArrayList<String> games = new ArrayList<>(Arrays.asList(user_info.getGame1(),user_info.getGame2(),user_info.getGame3(),user_info.getGame4()));
+                ArrayList<String> interests = new ArrayList<>(Arrays.asList(user_info.getInterest1(),user_info.getInterest2(),user_info.getInterest3(),user_info.getInterest4()));
+                for(int U = 0; U < interests.size(); U++) {
+                    if(!interests.get(U).equals(" ")){
+                        given_interests.add(interests.get(U));
+                    }
+                    if(!games.get(U).equals(" ")){
+                        given_games.add(games.get(U));
+                    }
+                }
+                //switch statement for games
+                switch (given_games.size()){
+                    case 4:
+                        game_four.setVisibility(View.VISIBLE);
+                        game_four.setImageResource(gameImageDrawable(given_games.get(3)));
+                    case 3:
+                        game_three.setVisibility(View.VISIBLE);
+                        game_three.setImageResource(gameImageDrawable(given_games.get(2)));
+                    case 2:
+                        game_two.setVisibility(View.VISIBLE);
+                        game_two.setImageResource(gameImageDrawable(given_games.get(1)));
+                    case 1:
+                        game_one.setVisibility(View.VISIBLE);
+                        game_one.setImageResource(gameImageDrawable(given_games.get(0)));
+
+                }
+                //switch statement for interests.
+                switch (given_interests.size()){
+                    case 4:
+                        interest_four.setVisibility(View.VISIBLE);
+                        interest_four.setText(given_interests.get(3));
+                    case 3:
+                        interest_three.setVisibility(View.VISIBLE);
+                        interest_three.setText(given_interests.get(2));
+                    case 2:
+                        interest_two.setVisibility(View.VISIBLE);
+                        interest_two.setText(given_interests.get(1));
+                    case 1:
+                        interest_one.setVisibility(View.VISIBLE);
+                        interest_one.setText(given_interests.get(0));
+                }
+
+
+                //on user's profile(matthew code)
+                // edit profile button
+                setupProfile.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(new Intent(ViewProfile.this, SetUpProfile.class));
+                    }
+                });
+
+                //log out button(husk for database)
+                logoutBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        FirebaseAuth.getInstance().signOut();
+                        startActivity(new Intent(ViewProfile.this, LogIn.class));
+                    }
+                });
             }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
         });
 
-        //log out button(husk for database)
-        logoutBtn.setOnClickListener(new View.OnClickListener() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        DatabaseReference pokeDatabase = FirebaseDatabase.getInstance().getReference("pokes");
+        String userID = user.getUid();
+
+        pokeDatabase.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(ViewProfile.this, LogIn.class));
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //sets a string into the users rating [rating][userkey]space.. string
+                String userRatings = snapshot.getValue(String.class);
+
+                //Get rating of viewed user if it exist
+                if (userRatings.contains(viewed_user_key)) {
+                    int ratingIndex = userRatings.indexOf(viewed_user_key) - 1;
+                    char rating = userRatings.charAt(ratingIndex);
+                }
+
+                //On Other User's Profile
+                // Point out the key of the user being viewed and the variable holding the rating that was given to them
+                star_btn_one.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //inside here
+                        setStarImageDrawable("1");
+                        setEmptyStars("1");
+                        String rating = "1";
+
+                        //I need to send data here, the data I need to be sent is the number 1 as a string, and below is the currently viewed user's key
+                        //String viewed_user_key = getIntent().getStringExtra("USER KEY");
+                        editStarRating(rating, viewed_user_key);
+                    }
+                });
+
+                star_btn_two.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //inside here
+                        setStarImageDrawable("2");
+                        setEmptyStars("2");
+                        String rating = "2";
+
+                        // I need to send data here, the data I need to be sent is the number 2 as a string, and below is the currently viewed user's key
+                        //String viewed_user_key = getIntent().getStringExtra("USER KEY");
+                        editStarRating(rating, viewed_user_key);
+                    }
+                });
+
+                star_btn_three.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //inside here
+                        setStarImageDrawable("3");
+                        setEmptyStars("3");
+                        String rating = "3";
+
+                        // I need to send data here, the data I need to be sent is the number 3 as a string, and below is the currently viewed user's key
+                        //String viewed_user_key = getIntent().getStringExtra("USER KEY");
+                        editStarRating(rating, viewed_user_key);
+                    }
+                });
+
+                star_btn_four.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //inside here
+                        setStarImageDrawable("4");
+                        setEmptyStars("4");
+                        String rating = "4";
+
+                        //I need to send data here, the data I need to be sent is the number 4 as a string, and below is the currently viewed user's key
+                        //String viewed_user_key = getIntent().getStringExtra("USER KEY");
+                        editStarRating(rating, viewed_user_key);
+                    }
+                });
+
+                star_btn_five.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //inside here
+                        setStarImageDrawable("5");
+                        setEmptyStars("5");
+                        String rating = "5";
+
+                        //I need to send data here, the data I need to be sent is the number 5 as a string, and below is the currently viewed user's key
+                        //String viewed_user_key = getIntent().getStringExtra("USER KEY");
+                        editStarRating(rating, viewed_user_key);
+                    }
+                });
             }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
         });
 
-        //On Other User's Profile
-        // Star Clicked: Control taken by Database Team.
-        // Point out the key of the user being viewed and the variable holding the rating that was given to them
-        star_btn_one.setOnClickListener(new View.OnClickListener() {
+        DatabaseReference starDatabase = FirebaseDatabase.getInstance().getReference("starratings");
+
+        starDatabase.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
-            public void onClick(View v) {
-                //inside here
-                setStarImageDrawable("1");
-                setEmptyStars("1");
-                //I need to send data here, the data I need to be sent is the number 1 as a string, and below is the currently viewed user's key
-                String viewed_user_key = getIntent().getStringExtra("USER KEY");
-            }
-        });
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //sets a string into the users star [userkey]space.. string
+                String userPokes = snapshot.getValue(String.class);
 
-        star_btn_two.setOnClickListener(new View.OnClickListener() {
+                pokeBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        sendPoke(viewed_user_key);
+                    }
+                });
+            }
+
             @Override
-            public void onClick(View v) {
-                //inside here
-                setStarImageDrawable("2");
-                setEmptyStars("2");
-                // I need to send data here, the data I need to be sent is the number 2 as a string, and below is the currently viewed user's key
-                String viewed_user_key = getIntent().getStringExtra("USER KEY");
-            }
+            public void onCancelled(@NonNull DatabaseError error) { }
         });
-
-        star_btn_three.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //inside here
-                setStarImageDrawable("3");
-                setEmptyStars("3");
-                // I need to send data here, the data I need to be sent is the number 3 as a string, and below is the currently viewed user's key
-                String viewed_user_key = getIntent().getStringExtra("USER KEY");
-
-            }
-        });
-
-        star_btn_four.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //inside here
-                setStarImageDrawable("4");
-                setEmptyStars("4");
-                //I need to send data here, the data I need to be sent is the number 4 as a string, and below is the currently viewed user's key
-                String viewed_user_key = getIntent().getStringExtra("USER KEY");
-            }
-        });
-
-        star_btn_five.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //inside here
-                setStarImageDrawable("5");
-                setEmptyStars("5");
-                //I need to send data here, the data I need to be sent is the number 5 as a string, and below is the currently viewed user's key
-                String viewed_user_key = getIntent().getStringExtra("USER KEY");
-            }
-        });
-
-        pokeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // here is the user that is currently signed in:
-                String current_user = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                //and this is the user that is currently being viewed:
-                String viewed_user_key = getIntent().getStringExtra("USER KEY");
-                //Database code and stuff starts here
-
-            }
-        });
-
         //end of database code
-
-
 }
+    private void editStarRating(String rating, String key){
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String userID = user.getUid();
+        DatabaseReference ratingDatabase = FirebaseDatabase.getInstance().getReference("starratings");
+
+        ratingDatabase.child(userID).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String userRatings = snapshot.getValue(String.class);
+
+                if (userRatings.contains(key)){
+                    int ratingIndex = userRatings.indexOf(key) - 1;
+                    userRatings = userRatings.substring(0, ratingIndex) + rating + userRatings.substring(ratingIndex + 1);
+                    ratingDatabase.child(userID).setValue(userRatings).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(ViewProfile.this, "Error adding rating.",
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
+                else {
+                    userRatings = userRatings + rating + key + " ";
+                    ratingDatabase.child(userID).setValue(userRatings).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(ViewProfile.this, "Error adding rating.",
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(ViewProfile.this, "Error adding rating.",
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void sendPoke(String key){
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String userID = user.getUid();
+        DatabaseReference pokeDatabase = FirebaseDatabase.getInstance().getReference("pokes");
+
+        pokeDatabase.child(userID).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String userPokes = snapshot.getValue(String.class);
+                String[] Pokes = userPokes.split(" ", 0);
+
+                if (Arrays.asList(Pokes).contains(key)){
+                    List<String> list = new ArrayList<String>(Arrays.asList(Pokes));
+                    list.removeAll(Arrays.asList(key));
+                    Pokes = list.toArray(new String[0]);
+                }
+                if (Pokes.length == 5){
+                    List<String> list = new ArrayList<String>(Arrays.asList(Pokes));
+                    list.remove(0);
+                    Pokes =  Pokes = list.toArray(new String[0]);
+
+                    Toast.makeText(ViewProfile.this, "Removed oldest Poke",
+                            Toast.LENGTH_LONG).show();
+                }
+
+                for (int i = 0; i < Pokes.length; i++){
+                    userPokes = userPokes + Pokes[i] + " ";
+                }
+                userPokes = userPokes + " ";
+
+                pokeDatabase.child(userID).setValue(userPokes).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(ViewProfile.this, "Sent new Poke",
+                                Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
 
     //Method sets the correct image resource using the passed in string
     private void setStarImageDrawable(String key){
