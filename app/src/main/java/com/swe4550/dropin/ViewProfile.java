@@ -87,7 +87,7 @@ public class ViewProfile extends AppCompatActivity {
         star_image_four = findViewById(R.id.star_image_4);
         star_image_five = findViewById(R.id.star_image_5);
         setupProfile = findViewById(R.id.setup_profile);
-        logoutBtn = findViewById(R.id.login_btn);
+        logoutBtn = findViewById(R.id.logout_btn);
         pokeBtn = findViewById(R.id.poke_btn);
         poke_text = findViewById(R.id.poke_txt);
         rate_text = findViewById(R.id.rate_txt);
