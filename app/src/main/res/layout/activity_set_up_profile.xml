@@ -474,4 +474,5 @@
             android:textColor="@color/text" />
 
     </RelativeLayout>
+
 </ScrollView>

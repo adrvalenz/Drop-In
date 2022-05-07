@@ -1,366 +1,369 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
 
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    tools:context=".PokeView">
+    android:layout_width="match_parent">
 
-    <TextView
-        android:id="@+id/pokes_text"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/curved"
-        android:text="@string/pokes_text"
-        android:textColor="@color/text"
-        android:textSize="70sp" />
-
-    <ImageView
-        android:id="@+id/drop_in_logo"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_width="153dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/drop_in_logo"
-        android:contentDescription="@+id/drop_in_logo" />
-
-    <Button
-        android:id="@+id/poke_1"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/pokes_text"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/button"
-        android:background="@color/transparent" />
-
-    <ImageView
-        android:id="@+id/pfp_1"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/pokes_text"
-        android:layout_alignParentStart="true"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="10dp"
-        android:visibility="invisible"
-        android:elevation="2dp"
-        app:srcCompat="@drawable/grey_background_circle"
-        android:contentDescription="@+id/pfp_1" />
-
-    <TextView
-        android:id="@+id/user_1"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/pokes_text"
-        android:layout_toEndOf="@id/pfp_1"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:elevation="2dp"
-        android:text=" "
-        android:textColor="@color/text"
-        android:textSize="24sp" />
+        android:background="@color/background">
 
-    <TextView
-        android:id="@+id/poker_1"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/user_1"
-        android:layout_toEndOf="@id/pfp_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
-        android:text=" "
-        android:textColor="@color/text"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/pokes_text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/curved"
+            android:text="@string/pokes_text"
+            android:textColor="@color/text"
+            android:textSize="70sp" />
 
-    <TextView
-        android:id="@+id/wants_to_play_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/poker_1"
-        android:layout_centerHorizontal="true"
-        android:layout_toEndOf="@id/pfp_1"
-        android:elevation="2dp"
-        android:text="@string/wants_to_play_text"
-        android:visibility="invisible"
-        android:textColor="@color/text"
-        android:textSize="24sp" />
+        <ImageView
+            android:id="@+id/drop_in_logo"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="153dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/drop_in_logo"
+            android:contentDescription="@+id/drop_in_logo" />
 
-    <Button
-        android:id="@+id/poke_2"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@id/poke_1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@color/transparent"
-        android:backgroundTint="@color/button" />
+        <Button
+            android:id="@+id/poke_1"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/pokes_text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/button"
+            android:background="@color/transparent" />
 
-    <ImageView
-        android:id="@+id/pfp_2"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/poke_1"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:visibility="invisible"
-        android:elevation="2dp"
-        app:srcCompat="@drawable/grey_background_circle"
-        android:contentDescription="@+id/pfp_2" />
+        <ImageView
+            android:id="@+id/pfp_1"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/pokes_text"
+            android:layout_alignParentStart="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            android:elevation="2dp"
+            app:srcCompat="@drawable/grey_background_circle"
+            android:contentDescription="@+id/pfp_1" />
 
-    <TextView
-        android:id="@+id/user_2"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/poke_1"
-        android:layout_toEndOf="@id/pfp_2"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
-        android:text=" "
-        android:textColor="@color/text"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/user_1"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/pokes_text"
+            android:layout_toEndOf="@id/pfp_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="2dp"
+            android:text=" "
+            android:textColor="@color/text"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/poker_2"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/user_2"
-        android:layout_toEndOf="@id/pfp_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
-        android:text=" "
-        android:textColor="@color/text"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/poker_1"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/user_1"
+            android:layout_toEndOf="@id/pfp_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:text=" "
+            android:textColor="@color/text"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/wants_to_play_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/poker_2"
-        android:layout_centerHorizontal="true"
-        android:layout_toEndOf="@id/pfp_2"
-        android:elevation="2dp"
-        android:text="@string/wants_to_play_text"
-        android:textColor="@color/text"
-        android:textSize="24sp"
-        android:visibility="invisible" />
+        <TextView
+            android:id="@+id/wants_to_play_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/poker_1"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/pfp_1"
+            android:elevation="2dp"
+            android:text="@string/wants_to_play_text"
+            android:visibility="invisible"
+            android:textColor="@color/text"
+            android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/poke_3"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@id/poke_2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@color/transparent"
-        android:backgroundTint="@color/button" />
+        <Button
+            android:id="@+id/poke_2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/poke_1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:backgroundTint="@color/button" />
 
-    <ImageView
-        android:id="@+id/pfp_3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/poke_2"
-        android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@+id/pfp_3"
-        android:elevation="2dp"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/grey_background_circle" />
+        <ImageView
+            android:id="@+id/pfp_2"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/poke_1"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="invisible"
+            android:elevation="2dp"
+            app:srcCompat="@drawable/grey_background_circle"
+            android:contentDescription="@+id/pfp_2" />
 
-    <TextView
-        android:id="@+id/user_3"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/poke_2"
-        android:layout_toEndOf="@id/pfp_3"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
-        android:text=" "
-        android:textColor="@color/text"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/user_2"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/poke_1"
+            android:layout_toEndOf="@id/pfp_2"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:text=" "
+            android:textColor="@color/text"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/poker_3"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/user_3"
-        android:layout_toEndOf="@id/pfp_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
-        android:text=" "
-        android:textColor="@color/text"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/poker_2"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/user_2"
+            android:layout_toEndOf="@id/pfp_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:text=" "
+            android:textColor="@color/text"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/wants_to_play_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/poker_3"
-        android:layout_centerHorizontal="true"
-        android:layout_toEndOf="@id/pfp_3"
-        android:elevation="2dp"
-        android:text="@string/wants_to_play_text"
-        android:textColor="@color/text"
-        android:textSize="24sp"
-        android:visibility="invisible" />
+        <TextView
+            android:id="@+id/wants_to_play_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/poker_2"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/pfp_2"
+            android:elevation="2dp"
+            android:text="@string/wants_to_play_text"
+            android:textColor="@color/text"
+            android:textSize="24sp"
+            android:visibility="invisible" />
 
-    <Button
-        android:id="@+id/poke_4"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/poke_3"
-        android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_height="100dp"
-        android:backgroundTint="@color/button"
-        android:background="@color/transparent" />
+        <Button
+            android:id="@+id/poke_3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/poke_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:backgroundTint="@color/button" />
 
-    <ImageView
-        android:id="@+id/pfp_4"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/poke_3"
-        android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:contentDescription="@+id/pfp_4"
-        android:elevation="2dp"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/grey_background_circle" />
+        <ImageView
+            android:id="@+id/pfp_3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/poke_2"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@+id/pfp_3"
+            android:elevation="2dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/grey_background_circle" />
 
-    <TextView
-        android:id="@+id/user_4"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/poke_3"
-        android:layout_toEndOf="@id/pfp_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:elevation="2dp"
-        android:text=" "
-        android:textColor="@color/text"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/user_3"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/poke_2"
+            android:layout_toEndOf="@id/pfp_3"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:text=" "
+            android:textColor="@color/text"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/poker_4"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/user_4"
-        android:layout_toEndOf="@id/pfp_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
-        android:text=" "
-        android:textColor="@color/text"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/poker_3"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/user_3"
+            android:layout_toEndOf="@id/pfp_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:text=" "
+            android:textColor="@color/text"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/wants_to_play_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/poker_4"
-        android:layout_centerHorizontal="true"
-        android:layout_toEndOf="@id/pfp_4"
-        android:elevation="2dp"
-        android:text="@string/wants_to_play_text"
-        android:textColor="@color/text"
-        android:textSize="24sp"
-        android:visibility="invisible" />
+        <TextView
+            android:id="@+id/wants_to_play_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/poker_3"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/pfp_3"
+            android:elevation="2dp"
+            android:text="@string/wants_to_play_text"
+            android:textColor="@color/text"
+            android:textSize="24sp"
+            android:visibility="invisible" />
 
-    <Button
-        android:id="@+id/poke_5"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@id/poke_4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@color/transparent"
-        android:backgroundTint="@color/button" />
+        <Button
+            android:id="@+id/poke_4"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/poke_3"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/button"
+            android:background="@color/transparent" />
 
-    <ImageView
-        android:id="@+id/pfp_5"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/poke_4"
-        android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:visibility="invisible"
-        android:elevation="2dp"
-        app:srcCompat="@drawable/grey_background_circle"
-        android:contentDescription="@+id/pfp_5" />
+        <ImageView
+            android:id="@+id/pfp_4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/poke_3"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@+id/pfp_4"
+            android:elevation="2dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/grey_background_circle" />
 
-    <TextView
-        android:id="@+id/user_5"
-        android:layout_below="@id/poke_4"
-        android:layout_toEndOf="@id/pfp_5"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
-        android:text=" "
-        android:textColor="@color/text"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/user_4"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/poke_3"
+            android:layout_toEndOf="@id/pfp_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="2dp"
+            android:text=" "
+            android:textColor="@color/text"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/poker_5"
-        android:layout_below="@id/user_5"
-        android:layout_toEndOf="@id/pfp_5"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
-        android:text=" "
-        android:textColor="@color/text"
-        android:textSize="24sp" />
+        <TextView
+            android:id="@+id/poker_4"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/user_4"
+            android:layout_toEndOf="@id/pfp_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:text=" "
+            android:textColor="@color/text"
+            android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/wants_to_play_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/poker_5"
-        android:layout_centerHorizontal="true"
-        android:layout_toEndOf="@id/pfp_4"
-        android:elevation="2dp"
-        android:text="@string/wants_to_play_text"
-        android:textColor="@color/text"
-        android:textSize="24sp"
-        android:visibility="invisible" />
+        <TextView
+            android:id="@+id/wants_to_play_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/poker_4"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/pfp_4"
+            android:elevation="2dp"
+            android:text="@string/wants_to_play_text"
+            android:textColor="@color/text"
+            android:textSize="24sp"
+            android:visibility="invisible" />
 
-    <Button
-        android:id="@+id/discover_btn"
-        android:layout_below="@id/poke_5"
-        android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:text="@string/discover_text"
-        android:textSize="31sp"
-        android:textColor="@color/text"
-        android:backgroundTint="@color/button" />
+        <Button
+            android:id="@+id/poke_5"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/poke_4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:backgroundTint="@color/button" />
 
-    <Button
-        android:id="@+id/profile_btn"
-        android:layout_below="@id/poke_5"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:text="@string/profile_btn"
-        android:textSize="31sp"
-        android:textColor="@color/text"
-        android:backgroundTint="@color/button" />
+        <ImageView
+            android:id="@+id/pfp_5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/poke_4"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            android:elevation="2dp"
+            app:srcCompat="@drawable/grey_background_circle"
+            android:contentDescription="@+id/pfp_5" />
 
+        <TextView
+            android:id="@+id/user_5"
+            android:layout_below="@id/poke_4"
+            android:layout_toEndOf="@id/pfp_5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:text=" "
+            android:textColor="@color/text"
+            android:textSize="24sp" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/poker_5"
+            android:layout_below="@id/user_5"
+            android:layout_toEndOf="@id/pfp_5"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:text=" "
+            android:textColor="@color/text"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/wants_to_play_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/poker_5"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/pfp_4"
+            android:elevation="2dp"
+            android:text="@string/wants_to_play_text"
+            android:textColor="@color/text"
+            android:textSize="24sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/discover_btn"
+            android:layout_below="@id/poke_5"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/discover_text"
+            android:textSize="31sp"
+            android:textColor="@color/text"
+            android:backgroundTint="@color/button" />
+
+        <Button
+            android:id="@+id/profile_btn"
+            android:layout_below="@id/poke_5"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/profile_btn"
+            android:textSize="31sp"
+            android:textColor="@color/text"
+            android:backgroundTint="@color/button" />
+
+    </RelativeLayout>
+
+</ScrollView>
