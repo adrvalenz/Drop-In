@@ -22,17 +22,6 @@
            android:gravity="center"
            android:orientation="vertical">
 
-           <TextView
-               android:id="@+id/app_name"
-               android:layout_width="227dp"
-               android:layout_height="156dp"
-               android:fontFamily="sans-serif-medium"
-               android:rotation="-37"
-               android:text="@string/app_name"
-               android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-               android:textColor="@color/text"
-               android:textSize="48sp" />
-
            <ImageView
                android:id="@+id/drop_in_logo"
                android:layout_width="349dp"
@@ -41,66 +30,73 @@
                android:contentDescription="@string/drop_in_logo"
                app:srcCompat="@drawable/drop_in_logo" />
 
-           <TextView
-               android:id="@+id/sign_up_text"
-               android:layout_width="215dp"
-               android:layout_height="81dp"
-               android:fontFamily="sans-serif-medium"
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
                android:gravity="center"
-               android:text="@string/sign_up_text"
-               android:textColor="@color/text"
-               android:textSize="60sp"
-               tools:ignore="DuplicateIds" />
+               android:orientation="vertical">
 
-           <EditText
-               android:id="@+id/user_email"
-               style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
-               android:layout_width="221dp"
-               android:layout_height="56dp"
-               android:layout_marginTop="12dp"
-               android:background="@drawable/curved"
-               android:ems="10"
-               android:hint="@string/user_new_email"
-               android:inputType="textEmailAddress"
-               android:textAlignment="center"
-               android:textColor="@color/text"
-               android:textSize="24sp"
-               tools:ignore="Autofill" />
+               <TextView
+                   android:id="@+id/sign_up_text"
+                   android:layout_width="215dp"
+                   android:layout_height="81dp"
+                   android:fontFamily="sans-serif-medium"
+                   android:gravity="center"
+                   android:text="@string/sign_up_text"
+                   android:textColor="@color/text"
+                   android:textSize="60sp"
+                   tools:ignore="DuplicateIds" />
 
-           <EditText
-               android:id="@+id/user_password"
-               style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
-               android:layout_width="221dp"
-               android:layout_height="56dp"
-               android:layout_marginTop="12dp"
-               android:background="@drawable/curved"
-               android:ems="10"
-               android:hint="@string/user_password"
-               android:inputType="textPassword"
-               android:textAlignment="center"
-               android:textColor="@color/text"
-               android:textSize="24sp"
-               tools:ignore="Autofill" />
+               <EditText
+                   android:id="@+id/user_email"
+                   style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
+                   android:layout_width="221dp"
+                   android:layout_height="56dp"
+                   android:layout_marginTop="12dp"
+                   android:background="@drawable/curved"
+                   android:ems="10"
+                   android:hint="@string/user_new_email"
+                   android:inputType="textEmailAddress"
+                   android:textAlignment="center"
+                   android:textColor="@color/text"
+                   android:textSize="24sp"
+                   tools:ignore="Autofill" />
 
-           <Button
-               android:id="@+id/login_btn"
-               android:layout_width="113dp"
-               android:layout_height="56dp"
-               android:layout_marginTop="80dp"
-               android:backgroundTint="@color/button"
-               android:text="@string/login_btn"
-               android:textColor="@color/text"
-               tools:ignore="DuplicateSpeakableTextCheck" />
+               <EditText
+                   android:id="@+id/user_password"
+                   style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
+                   android:layout_width="221dp"
+                   android:layout_height="56dp"
+                   android:layout_marginTop="12dp"
+                   android:background="@drawable/curved"
+                   android:ems="10"
+                   android:hint="@string/user_password"
+                   android:inputType="textPassword"
+                   android:textAlignment="center"
+                   android:textColor="@color/text"
+                   android:textSize="24sp"
+                   tools:ignore="Autofill" />
 
-           <Button
-               android:id="@+id/signup_btn"
-               android:layout_width="113dp"
-               android:layout_height="56dp"
-               android:layout_marginTop="17dp"
-               android:backgroundTint="@color/button"
-               android:text="@string/signup_btn"
-               android:textColor="@color/text"
-               tools:ignore="DuplicateSpeakableTextCheck" />
+               <Button
+                   android:id="@+id/login_btn"
+                   android:layout_width="113dp"
+                   android:layout_height="56dp"
+                   android:layout_marginTop="80dp"
+                   android:backgroundTint="@color/button"
+                   android:text="@string/login_btn"
+                   android:textColor="@color/text"
+                   tools:ignore="DuplicateSpeakableTextCheck" />
+
+               <Button
+                   android:id="@+id/signup_btn"
+                   android:layout_width="113dp"
+                   android:layout_height="56dp"
+                   android:layout_marginTop="17dp"
+                   android:backgroundTint="@color/button"
+                   android:text="@string/signup_btn"
+                   android:textColor="@color/text"
+                   tools:ignore="DuplicateSpeakableTextCheck" />
+           </LinearLayout>
 
        </LinearLayout>
 
