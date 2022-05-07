@@ -10,119 +10,110 @@
     android:gravity="center"
     tools:context=".SignUp">
 
-    <ImageView
-        android:id="@+id/drop_in_logo"
-        android:layout_centerHorizontal="true"
-        android:layout_width="349dp"
-        android:layout_height="228dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/drop_in_logo"
-        app:srcCompat="@drawable/drop_in_logo" />
-
-    <TextView
-        android:id="@+id/app_name"
-        android:layout_width="227dp"
-        android:layout_height="156dp"
-        android:layout_alignStart="@id/drop_in_logo"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="sans-serif-medium"
-        android:rotation="-37"
-        android:text="@string/app_name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/text"
-        android:textSize="48sp" />
-
-    <TextView
-        android:id="@+id/sign_up_text"
-        android:layout_width="215dp"
-        android:layout_height="81dp"
-        android:layout_below="@id/drop_in_logo"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="sans-serif-medium"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:gravity="center"
-        android:text="@string/sign_up_text"
-        android:textColor="@color/text"
-        android:textSize="60sp"
-        tools:ignore="DuplicateIds" />
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/user_new_email"
-        style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
-        android:layout_width="221dp"
-        android:layout_height="56dp"
-        android:layout_below="@id/sign_up_text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/curved"
-        android:ems="10"
-        android:hint="@string/user_new_email"
-        android:inputType="textEmailAddress"
-        android:textAlignment="center"
-        android:textColor="@color/text"
-        android:textSize="24sp"
-        tools:ignore="Autofill" />
+        <ImageView
+            android:id="@+id/drop_in_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/drop_in_logo"
+            app:srcCompat="@drawable/drop_in_logo"
+            android:layout_weight="1"/>
 
-    <EditText
-        android:id="@+id/user_new_name"
-        style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
-        android:layout_width="221dp"
-        android:layout_height="56dp"
-        android:layout_below="@id/user_new_email"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/curved"
-        android:ems="10"
-        android:hint="@string/user_new_name"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textColor="@color/text"
-        android:textSize="24sp"
-        tools:ignore="Autofill" />
+        <TextView
+            android:id="@+id/sign_up_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/sign_up_text"
+            android:textColor="@color/text"
+            android:textSize="60sp"
+            tools:ignore="DuplicateIds"
+            android:layout_weight="0"/>
 
-    <EditText
-        android:id="@+id/user_new_password"
-        style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
-        android:layout_width="221dp"
-        android:layout_height="56dp"
-        android:layout_below="@id/user_new_name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/curved"
-        android:ems="10"
-        android:hint="@string/user_new_password"
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        android:textColor="@color/text"
-        android:textSize="24sp"
-        tools:ignore="Autofill" />
+        <EditText
+            android:id="@+id/user_new_email"
+            style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/curved"
+            android:ems="10"
+            android:hint="@string/user_new_email"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="24sp"
+            tools:ignore="Autofill"
+            android:layout_weight="0"/>
 
-    <EditText
-        android:id="@+id/user_new_password_confirm"
-        style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
-        android:layout_width="221dp"
-        android:layout_height="56dp"
-        android:layout_below="@id/user_new_password"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/curved"
-        android:ems="10"
-        android:hint="@string/user_new_password_confirm"
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        android:textColor="@color/text"
-        android:textSize="24sp"
-        tools:ignore="Autofill" />
+        <EditText
+            android:id="@+id/user_new_name"
+            style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/curved"
+            android:ems="10"
+            android:hint="@string/user_new_name"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="24sp"
+            tools:ignore="Autofill"
+            android:layout_weight="0"/>
 
-    <Button
-        android:id="@+id/signup_new_btn"
-        android:layout_width="113dp"
-        android:layout_height="56dp"
-        android:layout_below="@+id/user_new_password_confirm"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
-        android:backgroundTint="@color/button"
-        android:text="@string/signup_new_btn"
-        android:textColor="@color/text"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        <EditText
+            android:id="@+id/user_new_password"
+            style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/curved"
+            android:ems="10"
+            android:hint="@string/user_new_password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="24sp"
+            tools:ignore="Autofill"
+            android:layout_weight="0"/>
+
+        <EditText
+            android:id="@+id/user_new_password_confirm"
+            style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/curved"
+            android:ems="10"
+            android:hint="@string/user_new_password_confirm"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="24sp"
+            tools:ignore="Autofill"
+            android:layout_weight="0"/>
+
+        <Button
+            android:id="@+id/signup_new_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:backgroundTint="@color/button"
+            android:text="@string/signup_new_btn"
+            android:textColor="@color/text"
+            tools:ignore="DuplicateSpeakableTextCheck"
+            android:layout_weight="0"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
