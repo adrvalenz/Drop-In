@@ -32,7 +32,7 @@
                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                android:textColor="@color/text"
                android:textSize="48sp" />
-
+         
            <ImageView
                android:id="@+id/drop_in_logo"
                android:layout_width="349dp"
@@ -51,36 +51,40 @@
                android:textColor="@color/text"
                android:textSize="60sp"
                tools:ignore="DuplicateIds" />
+=======
+    <EditText
+        android:id="@+id/user_email"
+        style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
+        android:layout_width="221dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/sign_up_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/curved"
+        android:ems="10"
+        android:hint="@string/user_new_email"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        tools:ignore="Autofill" />
 
-           <EditText
-               android:id="@+id/user_email"
-               style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
-               android:layout_width="221dp"
-               android:layout_height="56dp"
-               android:layout_marginTop="12dp"
-               android:background="@drawable/curved"
-               android:ems="10"
-               android:hint="@string/user_new_email"
-               android:inputType="textEmailAddress"
-               android:textAlignment="center"
-               android:textColor="@color/text"
-               android:textSize="24sp"
-               tools:ignore="Autofill" />
-
-           <EditText
-               android:id="@+id/user_password"
-               style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
-               android:layout_width="221dp"
-               android:layout_height="56dp"
-               android:layout_marginTop="12dp"
-               android:background="@drawable/curved"
-               android:ems="10"
-               android:hint="@string/user_password"
-               android:inputType="textPassword"
-               android:textAlignment="center"
-               android:textColor="@color/text"
-               android:textSize="24sp"
-               tools:ignore="Autofill" />
+    <EditText
+        android:id="@+id/user_password"
+        style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
+        android:layout_width="221dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/user_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/curved"
+        android:ems="10"
+        android:hint="@string/user_password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        tools:ignore="Autofill" />
 
            <Button
                android:id="@+id/login_btn"
