@@ -22,17 +22,6 @@
            android:gravity="center"
            android:orientation="vertical">
 
-           <TextView
-               android:id="@+id/app_name"
-               android:layout_width="227dp"
-               android:layout_height="156dp"
-               android:fontFamily="sans-serif-medium"
-               android:rotation="-37"
-               android:text="@string/app_name"
-               android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-               android:textColor="@color/text"
-               android:textSize="48sp" />
-
            <ImageView
                android:id="@+id/drop_in_logo"
                android:layout_width="349dp"
