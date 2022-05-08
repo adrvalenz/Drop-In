@@ -119,6 +119,12 @@ public class ViewProfile extends AppCompatActivity {
             pokeBtn.setVisibility(View.INVISIBLE);
             pokeImage.setVisibility(View.INVISIBLE);
         }
+        //Display star rating if there is one for the currently being viewed user which has now been confirmed to not be the currently logged in user
+        else{
+            //this stuff inside callback or function for getting the starrating
+            setEmptyStars(rating);
+            setStarImageDrawable(rating);
+        }
 
         //Database code here, populate user_info with information of the user that is currently being viewed, whos key is in viewed_user_key
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Users");
