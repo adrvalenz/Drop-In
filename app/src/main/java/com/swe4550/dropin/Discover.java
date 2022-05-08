@@ -102,7 +102,6 @@ public class Discover extends AppCompatActivity {
         DatabaseReference mDatabase;
 
         //Get reference for User Node
-        Log.e("Bruh", "Bruh");
         mDatabase = FirebaseDatabase.getInstance().getReference("Users");
         //Attach valueEventListener to mDatabase object to read all the values
         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
