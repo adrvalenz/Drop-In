@@ -319,10 +319,10 @@ public class ViewProfile extends AppCompatActivity {
         String userID = user.getUid();
         DatabaseReference ratingDatabase = FirebaseDatabase.getInstance().getReference("starratings");
 
-        ratingDatabase.child(userID).addValueEventListener(new ValueEventListener() {
+        ratingDatabase.child(userID).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String userRatings = snapshot.getValue(String.class);
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                String userRatings = task.getResult().getValue(String.class);
 
                 if (userRatings.contains(key)){
                     int ratingIndex = userRatings.indexOf(key) - 1;
@@ -345,13 +345,6 @@ public class ViewProfile extends AppCompatActivity {
                         }
                     });
                 }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(ViewProfile.this, "Error adding rating.",
-                        Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -361,10 +354,10 @@ public class ViewProfile extends AppCompatActivity {
         String userID = user.getUid();
         DatabaseReference pokeDatabase = FirebaseDatabase.getInstance().getReference("pokes");
 
-        pokeDatabase.child(key).addValueEventListener(new ValueEventListener() {
+        pokeDatabase.child(key).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String userPokes = snapshot.getValue(String.class);
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                String userPokes = task.getResult().getValue(String.class);
                 String[] Pokes = userPokes.split(" ", 0);
 
                 //remove poke from viewed user
@@ -407,7 +400,7 @@ public class ViewProfile extends AppCompatActivity {
                     }
                 }
                 else {
-                    userPokes = " ";
+                    userPokes = "test";
                 }
 
                 pokeDatabase.child(key).setValue(userPokes).addOnFailureListener(new OnFailureListener() {
@@ -417,10 +410,6 @@ public class ViewProfile extends AppCompatActivity {
                                 Toast.LENGTH_LONG).show();
                     }
                 });
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
     }
