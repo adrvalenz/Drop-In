@@ -40,6 +40,7 @@
             android:layout_marginEnd="5dp"
             android:contentDescription="@+id/setup_profile"
             android:elevation="2dp"
+            android:background="@color/transparent"
             android:visibility="invisible"/>
 
         <TextView
@@ -66,19 +67,17 @@
             android:textColor="@color/text"
             android:textSize="45sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/biography"
             style="@style/Widget.Material3.TextInputEditText.FilledBox.Dense"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/biography_text"
             android:layout_width="match_parent"
             android:layout_height="140dp"
+            android:layout_below="@id/biography_text"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
             android:background="@drawable/curved"
             android:gravity="center"
-            android:hint="@string/biography"
             android:importantForAutofill="no"
-            android:inputType="text"
             android:textColor="@color/text"
             android:textSize="24sp" />
 
