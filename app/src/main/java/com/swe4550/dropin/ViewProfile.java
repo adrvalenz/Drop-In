@@ -400,7 +400,7 @@ public class ViewProfile extends AppCompatActivity {
                     }
                 }
                 else {
-                    userPokes = "test";
+                    userPokes = " ";
                 }
 
                 pokeDatabase.child(key).setValue(userPokes).addOnFailureListener(new OnFailureListener() {
