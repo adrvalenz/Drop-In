@@ -33,7 +33,7 @@ public class ViewProfile extends AppCompatActivity {
     User user_info;
     ImageView userPfp;
     TextView userName;
-    EditText bio;
+    TextView bio;
     ImageView game_one;
     ImageView game_two;
     ImageView game_three;
@@ -52,6 +52,7 @@ public class ViewProfile extends AppCompatActivity {
     ImageView star_image_three;
     ImageView star_image_four;
     ImageView star_image_five;
+    ImageView pokeImage;
     Button setupProfile;
     Button logoutBtn;
     Button pokeBtn;
@@ -92,6 +93,7 @@ public class ViewProfile extends AppCompatActivity {
         poke_text = findViewById(R.id.poke_txt);
         rate_text = findViewById(R.id.rate_txt);
         setupProfileImg = findViewById(R.id.setup_profile_img);
+        pokeImage = findViewById(R.id.poke_btn_image);
         //User key from previous activity retrieved
         String viewed_user_key = getIntent().getStringExtra("USER KEY");
         if (viewed_user_key.equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
@@ -115,6 +117,7 @@ public class ViewProfile extends AppCompatActivity {
             rate_text.setVisibility(View.INVISIBLE);
             poke_text.setVisibility(View.INVISIBLE);
             pokeBtn.setVisibility(View.INVISIBLE);
+            pokeImage.setVisibility(View.INVISIBLE);
         }
 
         //Database code here, populate user_info with information of the user that is currently being viewed, whos key is in viewed_user_key
