@@ -53,7 +53,6 @@ public class SetUpProfile extends AppCompatActivity {
     Button interest_eight;
     Button submitBtn;
     Button cancelBtn;
-    TextView databaseUsage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
