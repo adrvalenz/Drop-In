@@ -39,7 +39,8 @@
             android:layout_height="100dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/button"
-            android:background="@color/transparent" />
+            android:background="@color/transparent"
+            android:visibility="invisible"/>
 
         <ImageView
             android:id="@+id/pfp_1"
@@ -99,7 +100,8 @@
             android:layout_height="100dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/button"
-            android:background="@color/transparent" />
+            android:background="@color/transparent"
+            android:visibility="invisible"/>
 
         <ImageView
             android:id="@+id/pfp_2"
@@ -159,7 +161,8 @@
             android:layout_marginTop="10dp"
             android:layout_height="100dp"
             android:backgroundTint="@color/button"
-            android:background="@color/transparent" />
+            android:background="@color/transparent"
+            android:visibility="invisible"/>
 
         <ImageView
             android:id="@+id/pfp_3"
@@ -219,7 +222,8 @@
             android:layout_marginTop="10dp"
             android:layout_height="100dp"
             android:backgroundTint="@color/button"
-            android:background="@color/transparent" />
+            android:background="@color/transparent"
+            android:visibility="invisible"/>
 
         <ImageView
             android:id="@+id/pfp_4"
@@ -278,7 +282,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@color/transparent"
-            android:backgroundTint="@color/button" />
+            android:backgroundTint="@color/button"
+            android:visibility="invisible"/>
 
         <ImageView
             android:id="@+id/pfp_5"

@@ -352,10 +352,10 @@
             android:layout_height="50dp"
             android:layout_below="@id/outside_interest_text"
             android:layout_alignParentStart="true"
+            android:backgroundTint="@color/button"
             android:gravity="center"
             android:text="@string/interest_1"
             android:textAlignment="center"
-            android:backgroundTint="@color/button"
             android:textColor="@color/text" />
 
         <Button
