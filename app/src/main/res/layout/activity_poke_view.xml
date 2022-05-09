@@ -55,30 +55,19 @@
             android:visibility="invisible"
             app:srcCompat="@drawable/grey_background_circle" />
 
-        <TextView
-            android:id="@+id/user_1"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/pokes_text"
-            android:layout_toEndOf="@id/pfp_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:elevation="2dp"
-            android:text=" "
-            android:textColor="@color/text"
-            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/poker_1"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/user_1"
-            android:layout_toEndOf="@id/pfp_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/pokes_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/pfp_1"
             android:elevation="2dp"
             android:text=" "
             android:textColor="@color/text"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/wants_to_play_1"
@@ -91,7 +80,7 @@
             android:text="@string/wants_to_play_text"
             android:visibility="invisible"
             android:textColor="@color/text"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/poke_2"
@@ -118,7 +107,7 @@
             android:contentDescription="@+id/pfp_2" />
 
         <TextView
-            android:id="@+id/user_2"
+            android:id="@+id/poker_2"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/poke_1"
             android:layout_toEndOf="@id/pfp_2"
@@ -128,19 +117,7 @@
             android:elevation="2dp"
             android:text=" "
             android:textColor="@color/text"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/poker_2"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/user_2"
-            android:layout_toEndOf="@id/pfp_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="2dp"
-            android:text=" "
-            android:textColor="@color/text"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/wants_to_play_2"
@@ -152,7 +129,7 @@
             android:elevation="2dp"
             android:text="@string/wants_to_play_text"
             android:textColor="@color/text"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:visibility="invisible" />
 
         <Button
@@ -180,7 +157,7 @@
             app:srcCompat="@drawable/grey_background_circle" />
 
         <TextView
-            android:id="@+id/user_3"
+            android:id="@+id/poker_3"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/poke_2"
             android:layout_toEndOf="@id/pfp_3"
@@ -190,19 +167,8 @@
             android:elevation="2dp"
             android:text=" "
             android:textColor="@color/text"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
-        <TextView
-            android:id="@+id/poker_3"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/user_3"
-            android:layout_toEndOf="@id/pfp_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="2dp"
-            android:text=" "
-            android:textColor="@color/text"
-            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/wants_to_play_3"
@@ -214,7 +180,7 @@
             android:elevation="2dp"
             android:text="@string/wants_to_play_text"
             android:textColor="@color/text"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:visibility="invisible" />
 
         <Button
@@ -242,7 +208,7 @@
             app:srcCompat="@drawable/grey_background_circle" />
 
         <TextView
-            android:id="@+id/user_4"
+            android:id="@+id/poker_4"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/poke_3"
             android:layout_toEndOf="@id/pfp_4"
@@ -252,19 +218,7 @@
             android:elevation="2dp"
             android:text=" "
             android:textColor="@color/text"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/poker_4"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/user_4"
-            android:layout_toEndOf="@id/pfp_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="2dp"
-            android:text=" "
-            android:textColor="@color/text"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/wants_to_play_4"
@@ -276,7 +230,7 @@
             android:elevation="2dp"
             android:text="@string/wants_to_play_text"
             android:textColor="@color/text"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:visibility="invisible" />
 
         <Button
@@ -304,7 +258,7 @@
             app:srcCompat="@drawable/grey_background_circle" />
 
         <TextView
-            android:id="@+id/user_5"
+            android:id="@+id/poker_5"
             android:layout_below="@id/poke_4"
             android:layout_toEndOf="@id/pfp_5"
             android:layout_centerHorizontal="true"
@@ -314,19 +268,7 @@
             android:elevation="2dp"
             android:text=" "
             android:textColor="@color/text"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/poker_5"
-            android:layout_below="@id/user_5"
-            android:layout_toEndOf="@id/pfp_5"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="2dp"
-            android:text=" "
-            android:textColor="@color/text"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/wants_to_play_5"
@@ -338,7 +280,7 @@
             android:elevation="2dp"
             android:text="@string/wants_to_play_text"
             android:textColor="@color/text"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:visibility="invisible" />
 
         <Button
