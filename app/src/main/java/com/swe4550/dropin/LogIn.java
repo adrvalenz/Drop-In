@@ -28,12 +28,7 @@ public class LogIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
-        //Check if a user is logged in, send to discover activity if there is one on startup.
-//        if(FirebaseAuth.getInstance().getCurrentUser() != null)
-//        {
-//            FirebaseAuth.getInstance().signOut();
-//        }
-        FirebaseAuth.getInstance().signOut();
+        //Check if user is signed in, if they are, send to discover activity.
         if(FirebaseAuth.getInstance().getCurrentUser() != null)
         {
             startActivity(new Intent(LogIn.this, Discover.class));
