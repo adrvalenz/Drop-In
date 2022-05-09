@@ -115,6 +115,7 @@ public class PokeView extends AppCompatActivity {
                     if(!user_key_string.equals(" ")) {
                         ArrayList<String> split = new ArrayList<>(Arrays.asList(user_key_string.trim().split("\\s+")));
                         poker_list = new ArrayList<User>();
+                        ArrayList<String> temp_list = new ArrayList<>();
 
                         User temp_user;
                         if (dataSnapshot.exists()) {
@@ -123,6 +124,7 @@ public class PokeView extends AppCompatActivity {
                                     if (snapshot.getKey().equals(split.get(i))) {
                                         temp_user = snapshot.getValue(User.class);
                                         poker_list.add(temp_user);
+                                        temp_list.add(snapshot.getKey());
                                     }
                                 }
                             }
@@ -171,7 +173,7 @@ public class PokeView extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 Intent pkg = new Intent(PokeView.this, ViewProfile.class);
-                                pkg.putExtra("USER KEY", split.get(0));
+                                pkg.putExtra("USER KEY", temp_list.get(0));
                                 startActivity(pkg);
                             }
                         });
@@ -179,7 +181,7 @@ public class PokeView extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 Intent pkg = new Intent(PokeView.this, ViewProfile.class);
-                                pkg.putExtra("USER KEY", split.get(1));
+                                pkg.putExtra("USER KEY", temp_list.get(1));
                                 startActivity(pkg);
                             }
                         });
@@ -187,7 +189,7 @@ public class PokeView extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 Intent pkg = new Intent(PokeView.this, ViewProfile.class);
-                                pkg.putExtra("USER KEY", split.get(2));
+                                pkg.putExtra("USER KEY", temp_list.get(2));
                                 startActivity(pkg);
                             }
                         });
@@ -195,7 +197,7 @@ public class PokeView extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 Intent pkg = new Intent(PokeView.this, ViewProfile.class);
-                                pkg.putExtra("USER KEY", split.get(3));
+                                pkg.putExtra("USER KEY", temp_list.get(3));
                                 startActivity(pkg);
                             }
                         });
@@ -203,7 +205,7 @@ public class PokeView extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 Intent pkg = new Intent(PokeView.this, ViewProfile.class);
-                                pkg.putExtra("USER KEY", split.get(4));
+                                pkg.putExtra("USER KEY", temp_list.get(4));
                                 startActivity(pkg);
                             }
                         });
