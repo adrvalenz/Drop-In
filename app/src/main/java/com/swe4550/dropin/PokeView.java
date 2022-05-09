@@ -90,9 +90,11 @@ public class PokeView extends AppCompatActivity {
 
 
 
-
+                ArrayList<String> split;
         //splitting user_keys with Leading and Trailing white space
-        ArrayList<String> split = new ArrayList<>(Arrays.asList(user_key_string.trim().split("\\s+")));
+        if(true) {
+            split = new ArrayList<>(Arrays.asList(user_key_string.trim().split("\\s+")));
+        }
 
 
 
@@ -102,55 +104,55 @@ public class PokeView extends AppCompatActivity {
             mDatabase2.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    poker_list = new ArrayList<User>();
+                    if(!user_key_string.equals(" ")) {
+                        poker_list = new ArrayList<User>();
 
-                    User temp_user;
-                    if(dataSnapshot.exists()) {
-                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                            for(int i = 0; i < split.size(); i++) {
-                                if (snapshot.getValue(String.class).equals(split.get(i))) {
-                                    temp_user = snapshot.getValue(User.class);
-                                    poker_list.add(temp_user);
+                        User temp_user;
+                        if (dataSnapshot.exists()) {
+                            for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                for (int i = 0; i < split.size(); i++) {
+                                    if (snapshot.getValue(String.class).equals(split.get(i))) {
+                                        temp_user = snapshot.getValue(User.class);
+                                        poker_list.add(temp_user);
+                                    }
                                 }
                             }
                         }
-                    }
 
 
-
-                    //
-                    //Now at this point, poker_list is populated
+                        //
+                        //Now at this point, poker_list is populated
 //String game_three = poker_list.get(0).getGame3();
 
-            switch(poker_list.size()){
-    case 5:
-        pfp_five.setVisibility(View.VISIBLE);
-        pfp_five.setImageResource(getImageDrawable(poker_list.get(4).getPfp()));
-        wants_to_playFive.setVisibility(View.VISIBLE);
-        poker_five.setText(poker_list.get(4).getUserName());
-    case 4:
-        pfp_four.setVisibility(View.VISIBLE);
-        pfp_four.setImageResource(getImageDrawable(poker_list.get(3).getPfp()));
-        wants_to_playFour.setVisibility(View.VISIBLE);
-        poker_four.setText(poker_list.get(3).getUserName());
-    case 3:
-        pfp_three.setVisibility(View.VISIBLE);
-        pfp_three.setImageResource(getImageDrawable(poker_list.get(2).getPfp()));
-        wants_to_playThree.setVisibility(View.VISIBLE);
-        poker_three.setText(poker_list.get(2).getUserName());
-    case 2:
-        pfp_two.setVisibility(View.VISIBLE);
-        pfp_two.setImageResource(getImageDrawable(poker_list.get(1).getPfp()));
-        wants_to_playTwo.setVisibility(View.VISIBLE);
-        poker_two.setText(poker_list.get(1).getUserName());
-    case 1:
-        pfp_one.setVisibility(View.VISIBLE);
-        pfp_one.setImageResource(getImageDrawable(poker_list.get(0).getPfp()));
-        wants_to_playOne.setVisibility(View.VISIBLE);
-        poker_one.setText(poker_list.get(0).getUserName());
-}
+                        switch (poker_list.size()) {
+                            case 5:
+                                pfp_five.setVisibility(View.VISIBLE);
+                                pfp_five.setImageResource(getImageDrawable(poker_list.get(4).getPfp()));
+                                wants_to_playFive.setVisibility(View.VISIBLE);
+                                poker_five.setText(poker_list.get(4).getUserName());
+                            case 4:
+                                pfp_four.setVisibility(View.VISIBLE);
+                                pfp_four.setImageResource(getImageDrawable(poker_list.get(3).getPfp()));
+                                wants_to_playFour.setVisibility(View.VISIBLE);
+                                poker_four.setText(poker_list.get(3).getUserName());
+                            case 3:
+                                pfp_three.setVisibility(View.VISIBLE);
+                                pfp_three.setImageResource(getImageDrawable(poker_list.get(2).getPfp()));
+                                wants_to_playThree.setVisibility(View.VISIBLE);
+                                poker_three.setText(poker_list.get(2).getUserName());
+                            case 2:
+                                pfp_two.setVisibility(View.VISIBLE);
+                                pfp_two.setImageResource(getImageDrawable(poker_list.get(1).getPfp()));
+                                wants_to_playTwo.setVisibility(View.VISIBLE);
+                                poker_two.setText(poker_list.get(1).getUserName());
+                            case 1:
+                                pfp_one.setVisibility(View.VISIBLE);
+                                pfp_one.setImageResource(getImageDrawable(poker_list.get(0).getPfp()));
+                                wants_to_playOne.setVisibility(View.VISIBLE);
+                                poker_one.setText(poker_list.get(0).getUserName());
+                        }
 //This is the end of where the database stuff is needed
-
+                    }
 profileBtn.setOnClickListener(new View.OnClickListener() {
     @Override public void onClick(View view) {
         Intent ViewProfileAct = new Intent(PokeView.this, ViewProfile.class);
