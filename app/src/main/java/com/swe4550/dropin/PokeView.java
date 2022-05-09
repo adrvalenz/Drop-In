@@ -90,11 +90,9 @@ public class PokeView extends AppCompatActivity {
 
 
 
-                ArrayList<String> split;
+
+
         //splitting user_keys with Leading and Trailing white space
-        if(true) {
-            split = new ArrayList<>(Arrays.asList(user_key_string.trim().split("\\s+")));
-        }
 
 
 
@@ -105,6 +103,7 @@ public class PokeView extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if(!user_key_string.equals(" ")) {
+                        ArrayList<String> split = new ArrayList<>(Arrays.asList(user_key_string.trim().split("\\s+")));
                         poker_list = new ArrayList<User>();
 
                         User temp_user;
