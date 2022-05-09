@@ -222,10 +222,10 @@ public class ViewProfile extends AppCompatActivity {
         });
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        DatabaseReference pokeDatabase = FirebaseDatabase.getInstance().getReference("pokes");
+        DatabaseReference ratingDatabase = FirebaseDatabase.getInstance().getReference("starratings");
         String userID = user.getUid();
 
-        pokeDatabase.child(userID).addValueEventListener(new ValueEventListener() {
+        ratingDatabase.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 //sets a string into the users rating [rating][userkey]space.. string
@@ -323,6 +323,8 @@ public class ViewProfile extends AppCompatActivity {
         });
         //end of database code
 }
+
+
     private void editStarRating(String rating, String key){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userID = user.getUid();
