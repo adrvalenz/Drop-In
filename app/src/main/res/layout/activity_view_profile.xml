@@ -21,6 +21,16 @@
             android:visibility="visible"
             app:srcCompat="@drawable/grey_background_circle"/>
 
+        <Button
+            android:id="@+id/setup_profile"
+            android:layout_alignParentEnd="true"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_marginEnd="5dp"
+            android:elevation="2dp"
+            android:contentDescription="@+id/setup_profile"
+            android:visibility="invisible"/>
+
         <ImageView
             android:id="@+id/setup_profile_img"
             android:layout_alignParentEnd="true"
@@ -31,16 +41,6 @@
             android:elevation="2dp"
             android:visibility="invisible"
             app:srcCompat="@drawable/purple_gear" />
-
-        <Button
-            android:id="@+id/setup_profile"
-            android:layout_alignParentEnd="true"
-            android:layout_width="76dp"
-            android:layout_height="76dp"
-            android:layout_marginEnd="5dp"
-            android:contentDescription="@+id/setup_profile"
-            android:elevation="2dp"
-            android:visibility="invisible"/>
 
         <TextView
             android:id="@+id/user_name"
@@ -161,7 +161,8 @@
             android:text="@string/interest_1"
             android:textAlignment="center"
             android:textColor="@color/text"
-            android:visibility="invisible" />
+            android:textSize="25sp"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/interest_2"
@@ -174,20 +175,22 @@
             android:text="@string/interest_2"
             android:textAlignment="center"
             android:textColor="@color/text"
-            android:visibility="invisible" />
+            android:textSize="25sp"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/interest_3"
-            android:layout_below="@id/outside_interest_text"
-            android:layout_toEndOf="@id/interest_2"
             android:layout_width="101dp"
             android:layout_height="50dp"
+            android:layout_below="@id/outside_interest_text"
+            android:layout_toEndOf="@id/interest_2"
             android:backgroundTint="@color/button"
             android:gravity="center"
             android:text="@string/interest_3"
             android:textAlignment="center"
             android:textColor="@color/text"
-            android:visibility="invisible" />
+            android:textSize="25sp"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/interest_4"
@@ -200,7 +203,8 @@
             android:text="@string/interest_4"
             android:textAlignment="center"
             android:textColor="@color/text"
-            android:visibility="invisible" />
+            android:textSize="25sp"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/rate_txt"
@@ -325,9 +329,10 @@
             android:id="@+id/poke_btn"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_below="@id/star_image_2"
+            android:layout_below="@id/star_image_3"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginTop="10dp"
             android:contentDescription="@+id/poke_btn"
             android:background="@android:color/transparent"
             android:visibility="visible" />
