@@ -166,7 +166,48 @@ public class PokeView extends AppCompatActivity {
                                 pokeOne.setVisibility(View.VISIBLE);
                         }
 //This is the end of where the database stuff is needed
+                        pokeOne.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent pkg = new Intent(PokeView.this, ViewProfile.class);
+                                pkg.putExtra("USER KEY", split.get(0));
+                                startActivity(pkg);
+                            }
+                        });
+                        pokeTwo.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent pkg = new Intent(PokeView.this, ViewProfile.class);
+                                pkg.putExtra("USER KEY", split.get(1));
+                                startActivity(pkg);
+                            }
+                        });
+                        pokeThree.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent pkg = new Intent(PokeView.this, ViewProfile.class);
+                                pkg.putExtra("USER KEY", split.get(2));
+                                startActivity(pkg);
+                            }
+                        });
+                        pokeFour.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent pkg = new Intent(PokeView.this, ViewProfile.class);
+                                pkg.putExtra("USER KEY", split.get(3));
+                                startActivity(pkg);
+                            }
+                        });
+                        pokeFive.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent pkg = new Intent(PokeView.this, ViewProfile.class);
+                                pkg.putExtra("USER KEY", split.get(4));
+                                startActivity(pkg);
+                            }
+                        });
                     }
+
 profileBtn.setOnClickListener(new View.OnClickListener() {
     @Override public void onClick(View view) {
         Intent ViewProfileAct = new Intent(PokeView.this, ViewProfile.class);
