@@ -44,7 +44,11 @@ public class PokeView extends AppCompatActivity {
     ImageView pfp_five;
     Button discoverBtn;
     Button profileBtn;
-
+    Button pokeOne;
+    Button pokeTwo;
+    Button pokeThree;
+    Button pokeFour;
+    Button pokeFive;
 
 
     @Override
@@ -68,6 +72,12 @@ public class PokeView extends AppCompatActivity {
         pfp_five = findViewById(R.id.pfp_5);
         discoverBtn = findViewById(R.id.discover_btn);
         profileBtn = findViewById(R.id.profile_btn);
+        pokeOne = findViewById(R.id.poke_1);
+        pokeTwo = findViewById(R.id.poke_2);
+        pokeThree = findViewById(R.id.poke_3);
+        pokeFour = findViewById(R.id.poke_4);
+        pokeFive = findViewById(R.id.poke_5);
+
         //getPokerInfo();
 //Call getPokerInfo(), now poker_list and poker_keys are populated.
 //For each user in the arraylist, make an imageView visible.
@@ -129,26 +139,31 @@ public class PokeView extends AppCompatActivity {
                                 pfp_five.setImageResource(getImageDrawable(poker_list.get(4).getPfp()));
                                 wants_to_playFive.setVisibility(View.VISIBLE);
                                 poker_five.setText(poker_list.get(4).getUserName());
+                                pokeFive.setVisibility(View.VISIBLE);
+
                             case 4:
                                 pfp_four.setVisibility(View.VISIBLE);
                                 pfp_four.setImageResource(getImageDrawable(poker_list.get(3).getPfp()));
                                 wants_to_playFour.setVisibility(View.VISIBLE);
                                 poker_four.setText(poker_list.get(3).getUserName());
+                                pokeFour.setVisibility(View.VISIBLE);
                             case 3:
                                 pfp_three.setVisibility(View.VISIBLE);
                                 pfp_three.setImageResource(getImageDrawable(poker_list.get(2).getPfp()));
                                 wants_to_playThree.setVisibility(View.VISIBLE);
-                                poker_three.setText(poker_list.get(2).getUserName());
+                                pokeThree.setVisibility(View.VISIBLE);
                             case 2:
                                 pfp_two.setVisibility(View.VISIBLE);
                                 pfp_two.setImageResource(getImageDrawable(poker_list.get(1).getPfp()));
                                 wants_to_playTwo.setVisibility(View.VISIBLE);
                                 poker_two.setText(poker_list.get(1).getUserName());
+                                pokeTwo.setVisibility(View.VISIBLE);
                             case 1:
                                 pfp_one.setVisibility(View.VISIBLE);
                                 pfp_one.setImageResource(getImageDrawable(poker_list.get(0).getPfp()));
                                 wants_to_playOne.setVisibility(View.VISIBLE);
                                 poker_one.setText(poker_list.get(0).getUserName());
+                                pokeOne.setVisibility(View.VISIBLE);
                         }
 //This is the end of where the database stuff is needed
                     }
