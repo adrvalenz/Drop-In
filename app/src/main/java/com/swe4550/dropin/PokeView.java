@@ -151,7 +151,7 @@ public class PokeView extends AppCompatActivity {
                                 pfp_three.setVisibility(View.VISIBLE);
                                 pfp_three.setImageResource(getImageDrawable(poker_list.get(2).getPfp()));
                                 wants_to_playThree.setVisibility(View.VISIBLE);
-                                poker_four.setText(poker_list.get(2).getUserName());
+                                poker_three.setText(poker_list.get(2).getUserName());
                                 pokeThree.setVisibility(View.VISIBLE);
                             case 2:
                                 pfp_two.setVisibility(View.VISIBLE);
