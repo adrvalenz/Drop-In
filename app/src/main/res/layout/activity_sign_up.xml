@@ -19,13 +19,13 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/drop_in_logo"
+            android:id="@+id/drop_in_logo_with_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_weight="1"
             android:contentDescription="@string/drop_in_logo"
-            app:srcCompat="@drawable/drop_in_logo"
-            android:layout_weight="1"/>
+            app:srcCompat="@drawable/drop_in_logo_with_text"  />
 
         <TextView
             android:id="@+id/sign_up_text"

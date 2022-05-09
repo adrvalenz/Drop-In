@@ -160,7 +160,8 @@
             android:text="@string/interest_1"
             android:textAlignment="center"
             android:textColor="@color/text"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:textSize="25sp"/>
 
         <TextView
             android:id="@+id/interest_2"
@@ -173,7 +174,8 @@
             android:text="@string/interest_2"
             android:textAlignment="center"
             android:textColor="@color/text"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:textSize="25sp"/>
 
         <TextView
             android:id="@+id/interest_3"
@@ -186,7 +188,8 @@
             android:text="@string/interest_3"
             android:textAlignment="center"
             android:textColor="@color/text"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:textSize="25sp"/>
 
         <TextView
             android:id="@+id/interest_4"
@@ -199,7 +202,8 @@
             android:text="@string/interest_4"
             android:textAlignment="center"
             android:textColor="@color/text"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:textSize="25sp"/>
 
         <TextView
             android:id="@+id/rate_txt"
@@ -324,7 +328,7 @@
             android:id="@+id/poke_btn"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_below="@id/star_image_2"
+            android:layout_below="@id/star_image_3"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:contentDescription="@+id/poke_btn"
