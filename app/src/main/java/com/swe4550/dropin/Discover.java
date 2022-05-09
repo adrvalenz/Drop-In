@@ -170,7 +170,7 @@ public class Discover extends AppCompatActivity {
                                     swapped = true;
                                     //Swap user keys positions
                                     temp_string = user_keys.get(jit);
-                                    user_keys.set(jit + 1, user_keys.get(jit + 1));
+                                    user_keys.set(jit, user_keys.get(jit + 1));
                                     user_keys.set(jit + 1, temp_string);
                                 }
                             }
